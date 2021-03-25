@@ -1,0 +1,9 @@
+.task-item{
+  margin: 0px;
+  margin-right: 8px;
+  vertical-align: bottom;
+}
+
+pre {
+  overflow: auto;
+}

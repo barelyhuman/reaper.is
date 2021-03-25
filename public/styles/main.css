@@ -86,9 +86,13 @@ input {
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease;
-  box-shadow: var(--shadow);
   outline: #fff;
   border-radius: 8px;
+}
+
+input[type="text"],
+input[type="password"]{
+  box-shadow: var(--shadow);
 }
 
 a {
