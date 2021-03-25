@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
@@ -18,12 +19,11 @@ import (
 
 // Config
 // TODO: move to a yaml config
-const postsPath = "./posts"
+const contentPath = "./content"
 const templatesPath = "./templates"
-const staticRoot = "./out"
+const outPath = "./out"
 const publicFolder = "./public"
-const slugPrefix = "posts"
-const outPath = staticRoot + "/" + postsPath
+const postIndexPath = "./out/posts/index.html"
 
 type Metadata struct {
 	Published bool   `yaml:"published"`
@@ -44,17 +44,24 @@ type BlogIndex struct {
 var (
 	markdownProcessor goldmark.Markdown
 	parsedTemplates   *template.Template
+	filesForIndex     []Metadata
 )
 
 func main() {
 
 	// Clean existing out directory
-	err := os.RemoveAll(staticRoot)
+	err := os.RemoveAll(outPath)
+
+	err = CopyDir(publicFolder, outPath)
+	if err != nil {
+		log.Fatalln(err)
+	}
 
 	if err != nil {
 		log.Fatalln(err)
 	}
 
+	// Initiate Markdown Processor
 	markdownProcessor = goldmark.New(
 		goldmark.WithExtensions(extension.GFM, extension.Footnote),
 		goldmark.WithParserOptions(
@@ -63,54 +70,18 @@ func main() {
 		goldmark.WithRendererOptions(
 			html.WithHardWraps(),
 			html.WithXHTML(),
+			html.WithUnsafe(),
 		),
 	)
 
-	files, err := ioutil.ReadDir(postsPath)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	var filesForIndex []Metadata
 	parsedTemplates, err = template.ParseGlob(templatesPath + "/*")
 
-	err = CopyDir(publicFolder, staticRoot)
+	err = convertDirectoryToMarkdown(contentPath)
 	if err != nil {
-		log.Fatalln(err)
+		log.Fatal("Failed to convert directory, Error: ", err)
 	}
 
-	err = os.MkdirAll(outPath, os.ModePerm)
-
-	for _, file := range files {
-		fileData, err := ioutil.ReadFile(postsPath + "/" + file.Name())
-
-		if err != nil {
-			log.Panicln("Couldn't read file:"+file.Name(), err)
-		}
-
-		metadata := Metadata{}
-
-		parts := bytes.SplitN(fileData, []byte("---"), 3)
-
-		err = yaml.Unmarshal(parts[1], &metadata)
-
-		if err != nil {
-			log.Println(err)
-		}
-
-		if metadata.Published {
-			fileNameHTML := changeFileExtension(file.Name(), ".md", ".html")
-			metadata.Slug = slugPrefix + "/" + fileNameHTML
-			filesForIndex = append(filesForIndex, metadata)
-			writeToPublic(fileNameHTML, parts[2], metadata)
-		}
-	}
-
-	blogIndexFile, err := os.Create(staticRoot + "/index.html")
+	blogIndexFile, err := os.Create(postIndexPath)
 	defer blogIndexFile.Close()
 
 	sort.Slice(filesForIndex, func(i, j int) bool {
@@ -126,7 +97,7 @@ func changeFileExtension(fileName string, checkFor string, replaceWith string) s
 	return strings.Replace(fileName, checkFor, replaceWith, 1)
 }
 
-func writeToPublic(fileNameHTML string, content []byte, metadata Metadata) {
+func writeToBlog(fileNameHTML string, content []byte, metadata Metadata) {
 	fileToWrite, err := os.Create(outPath + "/" + fileNameHTML)
 	if err != nil {
 		panic(err)
@@ -150,5 +121,115 @@ func writeToPublic(fileNameHTML string, content []byte, metadata Metadata) {
 	}
 
 	fileToWrite.Sync()
+}
 
+func writeToPage(fileNameHTML string, content []byte, metadata Metadata) {
+	fileToWrite, err := os.Create(outPath + "/" + fileNameHTML)
+	if err != nil {
+		panic(err)
+	}
+	defer fileToWrite.Close()
+
+	var toHTML bytes.Buffer
+
+	if err := markdownProcessor.Convert(content, &toHTML); err != nil {
+		panic(err)
+	}
+
+	post := Post{
+		Meta:    metadata,
+		Content: string(toHTML.Bytes()),
+	}
+
+	err = parsedTemplates.ExecuteTemplate(fileToWrite, "simplePageHTML", post)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fileToWrite.Sync()
+}
+
+func convertDirectoryToMarkdown(srcFolder string) error {
+
+	pathPrefix := srcFolder
+	outPathPrefix := "/"
+
+	if srcFolder != contentPath {
+		pathPrefix = contentPath + "/" + srcFolder
+		outPathPrefix = strings.Replace(srcFolder, "./", "", 1)
+	}
+
+	info, err := os.Stat(pathPrefix)
+	if err != nil {
+		return err
+	}
+
+	if !info.IsDir() {
+		return fmt.Errorf("Given source is not a directory")
+	}
+
+	files, err := ioutil.ReadDir(pathPrefix)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, file := range files {
+		if file.IsDir() {
+			return convertDirectoryToMarkdown(file.Name())
+		}
+
+		extension := strings.SplitN(file.Name(), ".", -1)
+
+		if extension[len(extension)-1] != "md" {
+			log.Println("Skipping file, not a markdown file", file.Name())
+			continue
+		}
+
+		os.MkdirAll(outPath+"/"+outPathPrefix, os.ModePerm)
+
+		fileData, err := ioutil.ReadFile(pathPrefix + "/" + file.Name())
+
+		if err != nil {
+			log.Println(err)
+		}
+
+		metadata := Metadata{}
+
+		parts := bytes.SplitN(fileData, []byte("---"), 3)
+
+		fileNameHTML := changeFileExtension(file.Name(), ".md", ".html")
+
+		metadata.Slug = outPathPrefix + "/" + fileNameHTML
+
+		if len(parts) == 3 {
+			err = yaml.Unmarshal(parts[1], &metadata)
+
+			if err != nil {
+				log.Println(err)
+			}
+
+			if metadata.Published {
+				filesForIndex = append(filesForIndex, metadata)
+				writeToBlog(outPathPrefix+"/"+fileNameHTML, parts[2], metadata)
+			}
+		} else {
+			simpleFileName := changeFileExtension(file.Name(), ".md", "")
+			simpleFileName = strings.ReplaceAll(simpleFileName, "-", "")
+			metadata.Title = toTitleCase(simpleFileName)
+			writeToPage(outPathPrefix+"/"+fileNameHTML, fileData, metadata)
+		}
+	}
+
+	return nil
+}
+
+func toTitleCase(toConv string) string {
+	parts := strings.SplitN(toConv, " ", -1)
+	result := []string{}
+	for _, word := range parts {
+		result = append(result,
+			strings.ToUpper(string(word[0]))+word[1:],
+		)
+	}
+	return strings.Join(result, " ")
 }
