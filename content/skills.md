@@ -1,0 +1,23 @@
+# Skills
+
+- **Linux**
+- **React**
+- **Git**
+- **Express**
+- **MongoDB**
+- **Adobe Illustrator**
+- **Python**
+- **Webpack**
+- **Flutter**
+- **Go Lang**
+- **Hasura-Graphql**
+- **Vue.js**
+- **RiotJS**
+- **React Native**
+- **Angular.js**
+- **Angular 2+**
+- **Loopback - Node**
+- **HTML/CSS/JS**
+- **Ruby (Basics)**
+- **Docker**
+- **Graphql**

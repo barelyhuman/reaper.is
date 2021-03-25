@@ -175,7 +175,8 @@ func convertDirectoryToMarkdown(srcFolder string) error {
 
 	for _, file := range files {
 		if file.IsDir() {
-			return convertDirectoryToMarkdown(file.Name())
+			convertDirectoryToMarkdown(file.Name())
+			continue
 		}
 
 		extension := strings.SplitN(file.Name(), ".", -1)
