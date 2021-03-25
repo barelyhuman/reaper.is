@@ -6,7 +6,7 @@ date: 07-09-2020
 
 
 
-A few weeks back I made a [post](https://reaper.im/blog/why-cant-i-sleep) about me not being able to sleep at all and guess what? 
+A few weeks back I made a [post](/posts/why-cant-i-sleep.html) about me not being able to sleep at all and guess what? 
 
 It's gotten worse.
 

@@ -19,7 +19,7 @@ I won't start with TillWhen this time, people are already bored of it so I'll ad
 
 ## Language Updates 
 
-Most people already understand that I've been trying to move out of the web dev scene for a while and while I did use Javascript for the desktop apps while hating on electron (hyprocrite much!?) but recently I've started using Fyne with Golang to build app and the latest example of this is the [Spotify Lite App](https://github.com/barelyhuman/spotify-lite-go/releases) about which you can read [here](https://reaper.im/blog/10122020-Moving-away-from-web-apps---Story-of-Another-experiment).
+Most people already understand that I've been trying to move out of the web dev scene for a while and while I did use Javascript for the desktop apps while hating on electron (hyprocrite much!?) but recently I've started using Fyne with Golang to build app and the latest example of this is the [Spotify Lite App](https://github.com/barelyhuman/spotify-lite-go/releases) about which you can read [here](/posts/10122020-Moving-away-from-web-apps---Story-of-Another-experiment.html).
 
 - Start Practicing Go Lang more frequently
 - Attempting to build CLI and Desktop apps in GO
@@ -61,7 +61,7 @@ I'm sad though that no one's donated yet... I'm kidding, though Its good TillWhe
 
 ## Sleep and Work Updates 
 
-It's all going good, the works going great, I've improved my sleep cycle quite a bit with the solution I wrote a few posts back, you can find it here](https://reaper.im/blog/12102020-The-Fight-with-Ones-brain---My-Sleep-Solution) , No I'm still not on any social websites though my self hosted Email Server idea didn't really go well, though I might use SourceHut's Email Lists , modify it a bit but I'm still not sure about it. 
+It's all going good, the works going great, I've improved my sleep cycle quite a bit with the solution I wrote a few posts back, you can find it here](/posts/12102020-The-Fight-with-Ones-brain---My-Sleep-Solution.html) , No I'm still not on any social websites though my self hosted Email Server idea didn't really go well, though I might use SourceHut's Email Lists , modify it a bit but I'm still not sure about it. 
 
 As for repositories, I've started mirroring repositories on Gitlab and bitbucket for most repos that I have or care about, bitbucket one's are still on private though I like the overall interface of bitbucket but the runners on Github and Gitlab are more functional in my opinion so it's a little hard for me to just jump out of them immediately. 
 

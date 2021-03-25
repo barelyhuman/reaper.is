@@ -5,7 +5,7 @@ date: 2021-03-25
 ---
 
 
-I've written about [getting better at development](https://reaper.im/blog/06012020-Getting-better-at-development) and while I don't know what traction that post got, It doesn't matter since I think it won't hurt to write another one
+I've written about [getting better at development](/posts/06012020-Getting-better-at-development.html) and while I don't know what traction that post got, It doesn't matter since I think it won't hurt to write another one
 
 We'll be talking about a few things here, 
 1. Master your development environment
@@ -34,7 +34,7 @@ And I get it , not everyone's workflow involves using all this, but everyone has
 
 But you wouldn't know that unless you actually went ahead and got curious about what all the tool you are using can offer. The same applies to the code editors you use, the Database GUI's or even source control tools you use. For the longest time I've used sourcetree from atlassian for handing projects and commits just because I like their differ UI , started using Sublime Merge because of the same reasons and the merge conflict handling of sublime merge is amazing, though I hardly get conflicts on personal projects (cause I develop alone, not cause I'm that good!) but the tool comes handy when working with a team from work, still I prefer going ahead and referring the git doc every now and then to see any new sub command addition or checking what other commands I have available.
 
-This helps me decide if I should do a normal squash or a fixup on commits in my [git workflow](https://reaper.im/blog/20210301-Git-Workflow).
+This helps me decide if I should do a normal squash or a fixup on commits in my [git workflow](/posts/20210301-Git-Workflow.html).
 
 There's a million reasons to learn  the tool properly but just take this one. 
 

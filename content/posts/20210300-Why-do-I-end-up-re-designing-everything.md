@@ -6,7 +6,7 @@ date: 2021-03-07
 
 
 I've done this quite a few times when it comes to implementing minimal design across tools and apps that I build.
-So in [this post](https://reaper.im/blog/20210305-UI-Overhaul) I talked about why I re-designed the todo app, when all I wanted to do was a add a filtering functionality but then I redesigned the whole thing.
+So in [this post](/posts/20210305-UI-Overhaul.html) I talked about why I re-designed the todo app, when all I wanted to do was a add a filtering functionality but then I redesigned the whole thing.
 
 And technically, the idea for the colors was taken from the UI i was writing for the [markdown editor](https://mark.reaper.im) which then ended up being the inspiration for me to modify the UI of [commitlog-web](https://commitlog-web.herokuapp.com) through which I created a small library called [themer](https://themer.reaper.im) and now I'm sitting here writing this post indirectly back linking to everything I've created in the past 1.5 days just because I liked the input style I made for a markdown editor.
 
