@@ -90,8 +90,8 @@ input {
   border-radius: 8px;
 }
 
-input[type="text"],
-input[type="password"]{
+input[type='text'],
+input[type='password'] {
   box-shadow: var(--shadow);
 }
 
@@ -312,13 +312,13 @@ input.large {
     --shadow: rgb(15 17 21 / 20%) 0px 3px 6px 0px;
   }
 
-  .button:hover,
-  button:hover {
+  body:not([data-dark-mode]) .button:hover,
+  body:not([data-dark-mode]) button:hover {
     background: var(--fg);
     color: var(--bg);
   }
 
-  input {
+  body:not([data-dark-mode]) input {
     background: #191919;
     color: var(--fg);
   }
