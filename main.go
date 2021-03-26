@@ -26,7 +26,7 @@ const outPath = "./out"
 const publicFolder = "./public"
 const postIndexPath = "./out/posts/index.html"
 const generateRSS = true
-const rssOutPath = "./out/rss.xml"
+const rssOutPath = "./out/blog.xml"
 
 type Metadata struct {
 	Published bool   `yaml:"published"`
