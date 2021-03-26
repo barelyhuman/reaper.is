@@ -1,4 +1,4 @@
-# About
+## About
 
 **Shorter Version**
 Introvert with a god complex who is also a Full-Stack Developer / Principal Engineer. A less wittier version of Dr. Greg House (House MD) basically (One line description)
