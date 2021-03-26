@@ -5,16 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/assets/logo.png">
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    {{template "metaHTML" .}}
+    <meta name="title" content="{{.Meta.Title}}" />
+
     <title>{{.Meta.Title}}</title>
-    <link
-      rel="stylesheet"
-      href="../styles/main.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../styles/blog-extras.css"
-    />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/blog-extras.css" />
   </head>
   <body>
     {{template "headerHTML" .}}
