@@ -43,7 +43,6 @@ a {
 
 * {
   box-sizing: border-box;
-  transition: color, background-color 500ms ease;
 }
 
 body {
