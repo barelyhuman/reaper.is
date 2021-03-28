@@ -79,6 +79,10 @@ func main() {
 	// Clean existing out directory
 	err := os.RemoveAll(outPath)
 
+	if err != nil {
+		log.Fatalln(err)
+	}
+
 	// Copy the public directory to the out folder for the needed public assets
 	err = CopyDir(publicFolder, outPath)
 	if err != nil {
@@ -102,6 +106,10 @@ func main() {
 	// the global variable to use later with other dynamic templates generated later
 	parsedTemplates, err = template.ParseGlob(templatesPath + "/*")
 
+	if err != nil {
+		log.Fatal("Error parsing templates:\n", err)
+	}
+
 	// Convert the given content source from config into markdown/compiled HTML files
 	err = convertDirectoryToMarkdown(contentPath)
 	if err != nil {
@@ -111,6 +119,11 @@ func main() {
 	// Create a blog index file and write contents to it
 	// using the existing blog index template
 	blogIndexFile, err := os.Create(postIndexPath)
+
+	if err != nil {
+		log.Fatal("Failed to create blog index, Error: ", err)
+	}
+
 	defer blogIndexFile.Close()
 
 	sort.Slice(filesForIndex, func(i, j int) bool {
@@ -118,6 +131,11 @@ func main() {
 	})
 
 	err = parsedTemplates.ExecuteTemplate(blogIndexFile, "blogIndexHTML", BlogIndex{Files: filesForIndex})
+
+	if err != nil {
+		log.Fatal("Failed to compiel blogIndexHTML,Error:", err)
+	}
+
 	blogIndexFile.Sync()
 
 	// Generate the rss feed if the config variable is set to true
@@ -298,6 +316,9 @@ func handleUnprocessedTemplate(pathPrefix string, outPathPrefix string, file os.
 	os.MkdirAll(outPath+"/"+outPathPrefix, os.ModePerm)
 
 	fileData, err := ioutil.ReadFile(pathPrefix + "/" + file.Name())
+	if err != nil {
+		log.Fatal("Unable to read file:"+pathPrefix+"/"+file.Name()+"\n Error:", err)
+	}
 
 	if !isMarkdownFile(file) && !isHTMLFileBool {
 		log.Println("Skipping file, not a markdown file", file.Name())
@@ -396,7 +417,7 @@ func writeParsedHTML(filePath string, templates *template.Template, templateName
 	fileToWrite.Sync()
 }
 
-// toTitleCase - simple string convertion for strings to title case style
+// toTitleCase - simple string conversion for strings to title case style
 // eg: a fox => A Fox
 func toTitleCase(toConv string) string {
 	parts := strings.SplitN(toConv, " ", -1)

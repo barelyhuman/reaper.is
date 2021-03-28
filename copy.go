@@ -37,6 +37,7 @@ import (
 	"path/filepath"
 )
 
+// CopyFile - copies the file from one directory to another
 func CopyFile(src, dst string) (err error) {
 	in, err := os.Open(src)
 	if err != nil {
