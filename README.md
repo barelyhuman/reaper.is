@@ -1,5 +1,7 @@
 # reaper.im
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/barelyhuman/reaper.im)](https://goreportcard.com/report/github.com/barelyhuman/reaper.im)
+
 This repository holds the source code for [reaper.im](https://reaper.im) my personal website and blog.
 
 The source code implements a simple static site generator written specifically for this website, if you do like the implementation though leave a star
