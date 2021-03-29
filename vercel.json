@@ -1,0 +1,3 @@
+{
+  "routes": [{ "src": "/blog/(?<blogpath>[^/]*)","status": 308, "headers": { "Location": "https://old.reaper.im/blog/$blogpath" } }]
+}
