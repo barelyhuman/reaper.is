@@ -21,3 +21,7 @@
 >
 > - Kernel Design
 > - Compiler Creation
+
+
+## Other Links 
+- [Games](/games.html)
