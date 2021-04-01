@@ -6,4 +6,15 @@
 
 pre {
   overflow: auto;
+  padding:8px;
+  background: var(--bg-lighter);
+  border-radius: 4px;
+}
+
+img{
+  max-width: 100%;
+}
+
+code{
+  color: var(--fg-lighter);
 }
