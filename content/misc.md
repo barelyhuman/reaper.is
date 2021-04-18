@@ -25,3 +25,4 @@
 
 ## Other Links 
 - [Games](/games.html)
+- [Things](/things.html)
