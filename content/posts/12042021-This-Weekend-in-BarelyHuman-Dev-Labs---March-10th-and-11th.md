@@ -1,5 +1,5 @@
 ---
-title: This Weekend in BarelyHuman Dev Labs - March 10th and 11th
+title: This Weekend in BarelyHuman Dev Labs - April 10th and 11th
 published: true
 date: 12/04/2021
 ---
