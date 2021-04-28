@@ -26,3 +26,4 @@
 ## Other Links 
 - [Games](/games.html)
 - [Things](/things.html)
+- [Cheatsheets](/cheatsheets/index.html)
