@@ -27,3 +27,4 @@
 - [Games](/games.html)
 - [Things](/things.html)
 - [Cheatsheets](/cheatsheets/index.html)
+- [Interesting Stuff](/interesting.html)
