@@ -30,6 +30,7 @@ Tech I like to work with and also things I like to build with the same.
 
 - **MongoDB**
 - **Postgres**
+- **MySQL**
 
 ### Design Tools
 
