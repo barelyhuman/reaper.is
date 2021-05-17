@@ -1,4 +1,4 @@
-.task-item{
+.task-item {
   margin: 0px;
   margin-right: 8px;
   vertical-align: bottom;
@@ -6,15 +6,17 @@
 
 pre {
   overflow: auto;
-  padding:8px;
+  padding: 8px;
   background: var(--bg-lighter);
   border-radius: 4px;
 }
 
-img{
+img {
   max-width: 100%;
+  border: 2px solid black;
+  border-radius: 4px;
 }
 
-code{
+code {
   color: var(--fg-lighter);
 }

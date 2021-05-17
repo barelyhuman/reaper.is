@@ -1,3 +1,5 @@
+github.com/barelyhuman/statico v0.0.0-20210410120412-06976d0a0a22 h1:nBN2hNKZHYYMn9Ql4v6++6OF/mCHL3kuNSO3t6OiPJ4=
+github.com/barelyhuman/statico v0.0.0-20210410120412-06976d0a0a22/go.mod h1:xwGrPZJjOBSeMex5k/FOYwdocn9cOtLvFlsWM3SHjhM=
 github.com/tj/front v0.0.0-20170212063142-739be213b0a1 h1:lA+aPRvltlx2fwv/BnxyYSDQo3pIeqzHgMO5GvK0T9E=
 github.com/tj/front v0.0.0-20170212063142-739be213b0a1/go.mod h1:deJrtusCTptAW4EUn5vBLpl3dhNqPqUwEjWJz5UNxpQ=
 github.com/yuin/goldmark v1.3.3 h1:37BdQwPx8VOSic8eDSWee6QL9mRpZRm9VJp/QugNrW0=
