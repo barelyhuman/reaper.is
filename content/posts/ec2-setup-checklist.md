@@ -14,3 +14,14 @@ date: 2021-02-18T13:46:39.029Z
 <label><input type="checkbox" class="task-item list-style-none" />Map needed domains to Floating IP</label>
 <label><input type="checkbox" class="task-item list-style-none" />Get Repo, configure Repo to deploy to dokku </label>
 <label><input type="checkbox" class="task-item list-style-none" />Refill Cup of Coffee.</label>
+
+
+
+## Document DB Checklist 
+
+Note: VPC Constrained - Won't work for public access
+
+<label><input type="checkbox" class="task-item list-style-none" />Create Cluster.</label>
+<label><input type="checkbox" class="task-item list-style-none" />Make it public via security groups .</label>
+<label><input type="checkbox" class="task-item list-style-none" />Disable TLS if needed .</label>
+<label><input type="checkbox" class="task-item list-style-none" />Restart the cluster.</label>
