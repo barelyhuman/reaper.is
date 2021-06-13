@@ -25,7 +25,7 @@
         <li class="mb-2 list-style-none">
           <a href="/{{.Slug}}"> {{.Title}} </a>
           <p class="m-0 p-0">
-            <small> {{.Date.FormattedDate}} </small>
+            <small> {{.Date.Format "02/01/2006"}} </small>
           </p>
         </li>
         {{end}}

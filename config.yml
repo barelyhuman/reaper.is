@@ -5,3 +5,23 @@ public_folder: "./public"
 post_index_path: "./out/posts/index.html"
 generate_rss: true
 rss_out_path: "./out/blog.xml"
+
+site:
+  name: Reaper
+  link: https://reaper.im
+  description: Minimalist | Developer | Designer
+
+template_names:
+  post_template: "blogPostHTML"
+  post_index_template: "blogIndexHTML"
+  page_template: "simplePageHTML"
+  rss_template: "rssTemplate"
+
+content_path: "./content"
+templates_path: "./templates"
+out_path: "./out"
+public_folder: "./public"
+generate_rss: true
+rss_out_path: "./out/blog.xml"
+indexed_folders:
+  - posts
