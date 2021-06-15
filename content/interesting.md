@@ -9,3 +9,4 @@ Basically collection of links I'd like to share with people
 - [Paper CSS](https://www.getpapercss.com/)
 - [Terminal CSS](https://terminalcss.xyz/)
 - [GraphQL Codegen Best Practices](https://the-guild.dev/blog/graphql-codegen-best-practices)
+- [Tailwind in React Native](https://github.com/vadimdemedes/tailwind-rn)
