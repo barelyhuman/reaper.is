@@ -1,19 +1,23 @@
-.list-style-none{
-    list-style-type: none;
+nav > a {
+  display: inline-block;
 }
 
-.logo-holder{
-    background-image: url("/assets/dark-logo.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height:74px;
-    width:74px;
-    object-fit: contain;
+.list-style-none {
+  list-style-type: none;
+}
+
+.logo-holder {
+  background-image: url("/assets/dark-logo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 74px;
+  width: 74px;
+  object-fit: contain;
 }
 
 @media (prefers-color-scheme: dark) {
-    .logo-holder{
-        background-image: url("/assets/light-logo.png");
-    }   
+  .logo-holder {
+    background-image: url("/assets/light-logo.png");
+  }
 }
