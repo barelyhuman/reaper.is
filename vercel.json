@@ -1,5 +1,4 @@
 {
-  "cleanUrls": true,
   "routes": [
     {
       "src": "/blog/(?<blogpath>[^/]*)",
