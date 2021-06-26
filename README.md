@@ -1,12 +1,14 @@
-# reaper.im
+<h1 align="center">reaper.im</h1>
+<p align="center">My Blog And Portfolio</p>
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/barelyhuman/reaper.im)](https://goreportcard.com/report/github.com/barelyhuman/reaper.im)
+If you like any of my work, you can support me on: https://barelyhuman.dev/donate
 
-This repository holds the source code for [reaper.im](https://reaper.im) my personal website and blog.
+[![](https://img.shields.io/badge/license-mit-black?style=for-the-badge)](LICENSE)
 
-The source code implements a simple static site generator written specifically for this website, if you do like the implementation though leave a star
-so I know that people would want this to be a separate cli tool.
+## Motivation
 
-### Check out my github for more and if you do like something considering buying me a coffee
+Just a space for me writing my thoughts and sometimes some useful stuff to help with development for fellow developers
 
-<a href="https://www.buymeacoffee.com/barelyhuman"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=barelyhuman&button_colour=000000&font_colour=ffffff&font_family=Inter&outline_colour=ffffff&coffee_colour=ffffff"></a>
+## License
+
+[MIT](LICENSE) &copy; Reaper
