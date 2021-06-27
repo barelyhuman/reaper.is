@@ -20,7 +20,7 @@
   <body>
     {{template "headerHTML" .}}
     <main class="container-boundaries">
-      <ul>
+      <ul class="p-0">
         {{range .Files}}
         <li class="mb-2 list-style-none">
           <a href="/{{.Slug}}"> {{.Title}} </a>

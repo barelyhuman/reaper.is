@@ -13,7 +13,8 @@ nav > a {
   background-repeat: no-repeat;
   height: 74px;
   width: 74px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (prefers-color-scheme: dark) {
