@@ -28,16 +28,18 @@ body {
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 button,
 .button {
-  background:var(--bg);
-  color:var(--fg);
+  background: var(--bg);
+  color: var(--fg);
   font-size: 15px;
-  padding: 4px 10px;
-  display: inline-block;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 6px;
   margin: 0 5px;
   outline: #000;
@@ -56,37 +58,38 @@ button:hover {
 }
 
 input {
-  background: var(--bg);
+  background: var(--bg-lighter);
   color: var(--fg);
   border: 0;
-  min-height: 32px;
+  height: 36px;
+  min-width: 250px;
   padding: 0 16px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   outline: #fff;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 input[type="text"],
 input[type="password"] {
   -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
 }
 
 a {
   color: var(--fg);
   text-decoration: underline;
-  text-underline-offset:4px;
+  text-underline-offset: 4px;
 }
 
 p,
@@ -129,11 +132,11 @@ button.icon {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 input.large {
@@ -180,29 +183,33 @@ input.large {
 
 .flex-center {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
 }
 
 .justify-end {
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .flex-col {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .flex-wrap {
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .m-0 {
@@ -334,11 +341,5 @@ input.large {
     --fg-light: #f1f3f5;
     --fg-lighter: #e9ecef;
     --shadow: rgb(15 17 21 / 20%) 0px 3px 6px 0px;
-  }
-
-
-  input {
-    background: #191919;
-    color: var(--fg);
   }
 }

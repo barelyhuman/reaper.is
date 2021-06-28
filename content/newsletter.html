@@ -43,33 +43,44 @@ I develop open source software and tools to ease development and life overall. D
   </head>
   <body>
     <main class="container-boundaries container flex flex-center flex-col">
-      <div class="logo-holder"></div>
-      <h1>Reaper</h1>
-      <div class="flex flex-center flex-col flex-wrap">
-        <div class="flex mb-2 flex-center flex-wrap">
-          <a
-            class="button no-border mr-1 ml-1 mt-2"
-            href="mailto:ahoy@barelyhuman.dev"
-            >Contact</a
-          >
-          <a class="button no-border mr-1 ml-1 mt-2" href="/about.html"
-            >About</a
-          >
-          <a class="button no-border mr-1 ml-1 mt-2" href="/posts/index.html"
-            >Blog</a
-          >
-          <a class="button no-border mr-1 ml-1 mt-2" href="/skills.html"
-            >Skills</a
-          >
-          <a class="button no-border mr-1 ml-1 mt-2" href="/projects.html"
-            >Projects</a
-          >
-          <a class="button no-border mr-1 ml-1 mt-2" href="/newsletter.html"
-            >Newsletter</a
-          >
-        </div>
+      <div class="flex w-100">
+        <a href="/" class="button"><samp> &#60; Back</samp></a>
       </div>
+      <h3 class="w-100">Sign Up to my Newsletter</h3>
+      <p>
+        I'm building apps and tools in the open with total transparency. Every
+        Monday I send out an update on how things are going. Sign up below to
+        get them directly to your inbox
+      </p>
+      <form
+        class="w-100"
+        action="https://buttondown.email/api/emails/embed-subscribe/barelyhuman"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.email/barelyhuman', 'popupwindow')"
+        class="embeddable-buttondown-form"
+      >
+        <div class="flex align-center flex-wrap">
+          <input
+            class="ml-1"
+            placeholder="Enter your email and press Ahoy!"
+            type="email"
+            name="email"
+            id="bd-email"
+          />
+          <input type="hidden" value="1" name="embed" />
+          <button class="button secondary m-1 no-border" type="submit">
+            Subscribe!
+          </button>
+        </div>
+        <p class="w-100">
+          <small>
+            <a href="https://buttondown.email" target="_blank"
+              >Powered by Buttondown.</a
+            >
+          </small>
+        </p>
+      </form>
     </main>
-    {{template "footerHTML" .}}
   </body>
 </html>
