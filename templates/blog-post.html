@@ -21,7 +21,10 @@
       content='{{print "https://reaper.im/" .Meta.Slug}}'
     />
     <meta property="twitter:title" content="{{.Meta.Title}}" />
-    <meta property="twitter:image" content="https://reaper.im/assets/logo.png" />
+    <meta
+      property="twitter:image"
+      content="https://reaper.im/assets/logo.png"
+    />
     <meta name="title" content="{{.Meta.Title}}" />
     <title>{{.Meta.Title}}</title>
     <link rel="stylesheet" href="../styles/main.css" />
@@ -35,6 +38,13 @@
       </article>
       {{.Content}}
     </main>
+    <div class="mt-2 container-boundaries">
+      <hr />
+      You can also subscribe to my
+      <span> <a href="/newsletter.html">Newsletter</a> </span> or
+      <span><a href="/blog.xml">RSS</a></span>
+      if you'd like to receive such posts in your inbox.
+    </div>
     {{template "footerHTML" .}}
   </body>
 </html>

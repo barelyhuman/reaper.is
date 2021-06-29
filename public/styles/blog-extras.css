@@ -18,5 +18,10 @@ img {
 }
 
 code {
-  color: var(--fg-lighter);
+  color: var(--fg-light);
+}
+
+blockquote {
+  padding: 1em 2em;
+  background-color: var(--bg-lighter);
 }
