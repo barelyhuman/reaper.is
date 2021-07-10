@@ -44,9 +44,9 @@ button,
   margin: 0 5px;
   outline: #000;
   text-decoration: none;
-  -webkit-transition: background 0.2s ease;
-  -o-transition: background 0.2s ease;
-  transition: background 0.2s ease;
+  -webkit-transition: text-decoration 0.2s ease;
+  -o-transition: text-decoration 0.2s ease;
+  transition: text-decoration 0.2s ease;
 }
 
 .button:hover,
@@ -54,7 +54,7 @@ button:hover {
   outline: #000;
   cursor: pointer;
   color: var(--fg);
-  background: var(--bg-lighter);
+  text-decoration: underline;
 }
 
 input {
@@ -330,6 +330,11 @@ input.large {
 
 .rounded-circle {
   border-radius: 50%;
+}
+
+.icon svg {
+  height: 16px;
+  width: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
