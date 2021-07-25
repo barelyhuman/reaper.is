@@ -290,6 +290,10 @@ input.large {
   padding-bottom: 16px;
 }
 
+.f-xs {
+  font-size: 0.8rem;
+}
+
 .f-small {
   font-size: 14px;
 }
@@ -359,6 +363,10 @@ input.large {
   background: var(--bg-lighter);
 }
 
+.color-high-contrast {
+  color: #000;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     --bg: #000;
@@ -368,5 +376,9 @@ input.large {
     --fg-light: #f1f3f5;
     --fg-lighter: #e9ecef;
     --shadow: rgb(15 17 21 / 20%) 0px 3px 6px 0px;
+  }
+
+  .color-high-contrast {
+    color: #fff;
   }
 }
