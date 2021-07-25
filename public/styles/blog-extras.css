@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css");
+
 .task-item {
   margin: 0px;
   margin-right: 8px;
@@ -19,6 +21,8 @@ img {
 
 code {
   color: var(--fg-light);
+  font-family: "Hack", monospace;
+  line-height: normal;
 }
 
 blockquote {
