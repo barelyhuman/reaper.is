@@ -2,7 +2,6 @@
 title: Fixing .mjs imports with ESM libraries in Webpack 4
 published: true
 date: 30/07/2021
-image_url: https://og.reaper.im/api?title=Fixing%20.mjs%20imports%20with%20ESM%20libraries%20in%20Webpack%204&fontSize=8&subtitle=by%YOYO
 ---
 
 No long story for this one.
