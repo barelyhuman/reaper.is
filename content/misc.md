@@ -1,3 +1,6 @@
+## Alernate Identities
+- [BarelyHuman](https://barelyhuman.dev)
+
 ## Checklists
 
 - [Checklist for Macbook Setup](/posts/macbook-setup-checklist.html)
