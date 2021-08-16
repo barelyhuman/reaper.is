@@ -27,7 +27,7 @@
 
 
 
-## People to contact
+## Other cool devs
 - [Gautam](https://backendengineer.net/)
 
 ## Other Links 
