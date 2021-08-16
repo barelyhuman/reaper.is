@@ -1,4 +1,4 @@
-## Alernate Identities
+## Alternate Identities
 - [BarelyHuman](https://barelyhuman.dev)
 
 ## Checklists
