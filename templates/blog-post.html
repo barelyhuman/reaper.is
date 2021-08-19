@@ -28,7 +28,12 @@
     <meta name="title" content="{{.Meta.Title}}" />
     <title>{{.Meta.Title}}</title>
     <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/blog-extras.css" />
+    <link
+      rel="stylesheet"
+      href="../styles/blog-extras.css"
+      media="print"
+      onload="this.media='all'"
+    />
   </head>
   <body>
     {{template "headerHTML" .}}

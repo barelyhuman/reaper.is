@@ -9,7 +9,12 @@
     {{template "metaHTML" .}}
     <title>Reaper's Blog</title>
     <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/extras.css" />
+    <link
+      rel="stylesheet"
+      href="../styles/extras.css"
+      media="print"
+      onload="this.media='all'"
+    />
   </head>
   <body>
     {{template "headerHTML" .}}
