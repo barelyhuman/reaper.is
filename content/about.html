@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    {{template "metaHTML" .}}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/png" href="/assets/rounded-dark.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reaper | {{.Meta.Title}}</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="../styles/extras.css"
+      media="print"
+      onload="this.media='all'"
+    />
+  </head>
+  <body>
+    {{template "headerHTML" .}}
+    <main class="container-boundaries pb-1">
+      <article>
+        <h3 id="total-experience">Total Experience</h3>
+        <p id="total-experience-in-years">About 4-5 years now</p>
+        <h3 id="what-i-do">What I do</h3>
+        <p>
+          I develop open source software and tools to ease development and life
+          overall. Dreams of making a living off of open source software.
+        </p>
+        <h3 id="about-me">About me</h3>
+        <p>
+          I'm an introvert, which means I'm not much of a talker but then
+          there's exceptions to that. I talk a lot when it comes to tech and
+          basically enjoying coding and tech in general.
+        </p>
+        <p>You can get in touch for basically anything.</p>
+        <p><a href="mailto:ahoy@barelyhuman.dev">Wish to talk?</a></p>
+      </article>
+    </main>
+    {{template "footerHTML" .}}
+    <script type="module">
+      const years = 1000 * 60 * 60 * 24 * 365;
+
+      const startedOn = new Date("2017-09-01");
+      const expElem = document.getElementById("total-experience-in-years");
+      const diff = new Date().getTime() - startedOn.getTime();
+
+      expElem.innerHTML = `About ${(diff / years).toFixed(2)} Years`;
+    </script>
+  </body>
+</html>
