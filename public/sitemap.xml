@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://reaper.im/</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://reaper.im/about.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/index.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://reaper.im/skills.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://reaper.im/projects.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://reaper.im/newsletter.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://reaper.im/misc.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/should-you-use-hasura.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/custom-roms-and-index.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/fixing-mjs-imports-webpack-4.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/embedding-files-go-lang.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/status-vercel-and-how-did-it.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/product-development-and-a-developers-role-2.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/product-development-and-a-developers-role.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/31052021-Tests-vs-No-Tests.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/31052021-Side-projects-thatve-proven-their-worth.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/24052021-Updates-22nd-and-23rd-May.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/19052021-Code-Deployments-and-Security.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/17052021-Updates-15th-and-16th-May.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/09052021-Updates---8th-and-9th-May.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/26042021-This-Weekend-in-BarelyHuman-Dev-Labs---April-24th-and-25th.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20042021-Why-I-use-Next.js-for-everything-and-why-you-shouldnt-.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/18042021-Phone-Skins-in-India.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/12042021-This-Weekend-in-BarelyHuman-Dev-Labs---March-10th-and-11th.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20210329-update-29-03-2021.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20210304-Getting-Better-at-Development---Part-2.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20210301-This-Weekend-in-the-BarelyHuman-Dev-Labs---March,-20th-and-21st.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20210301-My-Linux-Setup-.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20210302--Handling-heavier-tasks-.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20210301-Weekend-Updates----March-6th-and-7th,-2021.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20210304-Themer-and-how-you-can-handle-dark-mode-a-lot-more.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20210301-Git-Workflow.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20210300-Why-do-I-end-up-re-designing-everything.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20210305-UI-Overhaul.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20210305-reaper.im---Seamless-posts-addition.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20210304-If-you're-seeing-this,-it-all-worked!.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/2021-02-22-Go-Lang-and-Web-Scraping.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/ec2-setup-checklist.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20210206-the-most-used-tool-i-ever-wrote.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/macbook-setup-checklist.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/13012021-Commitlog---an-unneeded-utility.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/10012021-dev-in-simple-terms.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/06012020-Getting-better-at-development.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/25122020-Updates-December-2020.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/10122020-Moving-away-from-web-apps---Story-of-Another-experiment.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/15112020-Crypto-Nonce-and-Association-Flow---Integrating-Slack-Bot-with-Internal-Services.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/15112020-Figma---Design-Tokens---Easing-up-handling-themes-between-apps.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/1112020-Update-October---2020.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/12102020-The-Fight-with-Ones-brain---My-Sleep-Solution.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/30092020-Postgres-ECONNREFUSED-on-127.0.0.1.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/27092020-Updates-27th-September.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/24092020-Setting-up-a-personal-git-server.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/20-09-2020-Building-stuff-you-dont-like.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/09092020-Deciding-on-Web-Technologies.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/07-09-2020-Simple-Design-Tips-for-Developers.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/sleep-gave-up.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/2020-09-02-Things-I-wish-I-did-sooner.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/callbacks-promises-generators-js.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/2020-08-28-Projects-Delays-and-Go-Lang.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/browsers-code-editors.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/off-grid-digitally.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/the-budget-mechs.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/why-cant-i-sleep.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/i-owe-the-oss-community.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/love-faded-wallpapers.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/thinking-straight.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/why-a-look-into-my-brain.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/nextjs-pg-knexjs.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/useful-dokku-commands.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/efficient-software-instead-of-software-that-works.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/get-it-out-of-your-head.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/css-resets-mnmlcss.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/opensource-hiring-platform.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/my-vscode.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/gitscaff-git-repos-boilerplate.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/public-temporary-file-storage-api.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/covid-tracker.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/importance-of-development-tools.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/column-null.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/posts/is-life-hard.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/games.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/things.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/cheatsheets/index.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/interesting.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://reaper.im/cheatsheets/sway.html</loc>
+  <lastmod>2021-08-22T08:03:41+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
