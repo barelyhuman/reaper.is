@@ -1,5 +1,5 @@
 /* Resets */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import "./fonts.css";
 
 :root {
   --color-black-0: #000000;
@@ -24,10 +24,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: 0.95em;
-  line-height: calc(0.95em * 1.8);
+  font-family: "JetBrainsMono Nerd Font Mono", -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  font-size: 1em;
+  line-height: calc(1em * 1.8);
 }
 
 body {
