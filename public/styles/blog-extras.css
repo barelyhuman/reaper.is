@@ -9,7 +9,7 @@
 pre {
   overflow: auto;
   padding: 8px;
-  background: var(--bg-lighter);
+  background: var(--bg-light);
   border-radius: 4px;
 }
 
@@ -27,5 +27,5 @@ code {
 
 blockquote {
   padding: 1em 2em;
-  background-color: var(--bg-lighter);
+  background-color: var(--bg-light);
 }

@@ -2,14 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 :root {
-  --white: #fff;
+  --color-black-0: #000000;
+  --color-black-1: #2a2a2a;
+  --color-black-2: #555555;
+  --color-black-3: #808080;
+  --color-black-4: #aaaaaa;
+  --color-black-5: #d4d4d4;
+  --color-black-6: #ffffff;
+  --white: var(--color-black-6);
   --accent: #ffa94d;
-  --bg: #fff;
-  --bg-light: #f8f9fa;
-  --bg-lighter: #f1f3f5;
-  --fg: #495057;
-  --fg-light: #868e96;
-  --fg-lighter: #adb5bd;
+  --bg: var(--color-black-6);
+  --bg-light: var(--color-black-5);
+  --bg-lighter: var(--color-black-4);
+  --fg: var(--color-black-0);
+  --fg-light: var(--color-black-1);
+  --fg-lighter: var(--color-black-2);
   --shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 }
 
@@ -369,12 +376,12 @@ input.large {
 
 @media (prefers-color-scheme: dark) {
   body {
-    --bg: #000;
-    --bg-light: #212529;
-    --bg-lighter: #343a40;
-    --fg: #f8f9fa;
-    --fg-light: #f1f3f5;
-    --fg-lighter: #e9ecef;
+    --bg: var(--color-black-0);
+    --bg-light: var(--color-black-1);
+    --bg-lighter: var(--color-black-2);
+    --fg: var(--color-black-6);
+    --fg-light: var(--color-black-5);
+    --fg-lighter: var(--color-black-4);
     --shadow: rgb(15 17 21 / 20%) 0px 3px 6px 0px;
   }
 
