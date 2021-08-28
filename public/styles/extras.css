@@ -7,7 +7,7 @@ nav > a {
 }
 
 .logo-holder {
-  background-image: url("/assets/dark-logo.png");
+  background-image: url("/assets/logo.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -20,10 +20,4 @@ nav > a {
 .icon svg {
   height: 16px;
   width: 16px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo-holder {
-    background-image: url("/assets/light-logo.png");
-  }
 }
