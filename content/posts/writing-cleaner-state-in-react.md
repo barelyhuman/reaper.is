@@ -63,7 +63,7 @@ This gives us smaller Component code to deal with while debugging.
 Oh yeah, the original topic was about state...
 Now the other part of having hooks is the sheer quantity that people spam the component code with it and obviously the most used one is `useState`.
 
-As mentioned above, one way is to segregate it to a separate custom hook but if you have like 10-20 `useState` because you are using a form and for some weird reason don't have formik setup in you codebase then you custom hook will also get hard to browser through.
+As mentioned above, one way is to segregate it to a separate custom hook but if you have like 10-20 `useState` because you are using a form and for some weird reason don't have formik setup in you codebase then you custom hook will also get hard to browse through.
 
 And, that's where I really miss the old `setState` from the days of class components and there's been various attempts at libraries that recreate the setState as a hook and I also created one which we'll get to soon but the solution is basically letting the state clone itself and modify just the fields that were modified, not that hard right?
 
