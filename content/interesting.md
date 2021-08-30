@@ -2,6 +2,7 @@
 
 Basically collection of links I'd like to share with people
 
+- [Writing Programs with NCURSES](https://invisible-island.net/ncurses/ncurses-intro.html) an in-depth reference not a blog post
 - [Rob Pike's 5 Rules of Programming](http://users.ece.utexas.edu/~adnan/pike.html)
 
 - [DRYing GitLab CI/CD Pipelines - By Dennis D. Kirkpatrick](https://kenzanmedia.medium.com/drying-gitlab-ci-cd-pipelines-8a56408cf19f)
