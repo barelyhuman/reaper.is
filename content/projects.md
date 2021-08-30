@@ -12,6 +12,7 @@
 - [Todo](https://todo.reaper.im) - Minimal Task List
 - [Pending](https://pending.reaper.im) - Kanban board for when the task list isn't enough
 - [Mailer](https://mailer.reaper.im) - Reusable Nodemon config as a micro service
+- [Open Graph Image Generator](https://og.reaper.im/) - Simple serverless service to generate OG Images
 
 ### CLI Tools
 
@@ -27,5 +28,15 @@
 
 - [spotify-lite-go](https://github.com/barelyhuman/spotify-lite-go) - Liter version to control spotify tracks (needs spotify premium)
 - [blu](https://github.com/barelyhuman/blu) - Bluetooth reset button for Mac OS X, (Unstable)
+
+### NPM Packages
+
+- [@barelyreaper/conch](https://www.npmjs.com/package/@barelyreaper/conch) - A serialized batch promise resolver
+- [logcons](https://www.npmjs.com/package/logcons) - Unicode Icons for node, deno and the browser
+- [depdown](https://www.npmjs.com/package/depdown) - Programmatic dependency installer for node cli tools
+- [react-native-zustand-repack](https://www.npmjs.com/package/react-native-zustand-repack) - React Native Template based on Re.Pack and Zustand
+- [esmwrap](https://www.npmjs.com/package/esmwrap) - Simple ESM wrapper creator for complex libraries
+- [@barelyhuman/wrap](https://www.npmjs.com/package/@barelyhuman/wrap) - Single File Library bundler
+- [@barelyhuman/set-state-hook](https://www.npmjs.com/package/@barelyhuman/set-state-hook) - `this.setState` replacement with an optional mutable state option
 
 **and a lot more at [github/barelyhuman](https://github.com/barelyhuman)**
