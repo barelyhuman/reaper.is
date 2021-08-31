@@ -104,8 +104,9 @@ function useCustomHook() {
       });
     // or 
     */
-    setState((draftState) => {
-      draftState.nested.a = draftState.nested.a + 1;
+
+    setState((prevState, draftState) => {
+      draftState.nested.a = prevState.nested.a + 1;
       return draftState;
     });
   }, []);
