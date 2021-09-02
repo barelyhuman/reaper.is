@@ -2,50 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    {{template "metaHTML" .}}
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/png" href="/assets/rounded-dark.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reaper</title>
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/extras.css" />
-    <title>reaper | Full Stack Developer</title>
-    <meta name="title" content="reaper " />
-    <meta
-      name="description"
-      content="Minimalist | Developer | Designer. 
-I develop open source software and tools to ease development and life overall. Dreams of making a living off of open source software."
-    />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://reaper.im/" />
-    <meta property="og:title" content="Reaper" />
-    <meta
-      property="og:description"
-      content="Minimalist | Developer | Designer. 
-I develop open source software and tools to ease development and life overall. Dreams of making a living off of open source software."
-    />
-    <meta property="og:image" content="https://reaper.im/assets/og-dark.png" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://reaper.im/" />
-    <meta property="twitter:title" content="Reaper " />
-    <meta
-      property="twitter:description"
-      content="Minimalist | Developer | Designer. 
-I develop open source software and tools to ease development and life overall. Dreams of making a living off of open source software."
-    />
-    <meta
-      property="twitter:image"
-      content="https://reaper.im/assets/og-dark.png"
+    <title>Reaper | {{.Meta.Title}}</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="../styles/extras.css"
+      media="print"
+      onload="this.media='all'"
     />
   </head>
   <body>
+    {{template "headerHTML" .}}
     <main class="container-boundaries container flex flex-center flex-col">
-      <div class="flex w-100">
-        <a href="/" class="button"><samp> &#60; Back</samp></a>
-      </div>
       <h3 class="w-100">Sign Up to the BarelyHuman Newsletter</h3>
       <p>
         I'm building apps and tools in the open with total transparency. Every
@@ -62,7 +34,6 @@ I develop open source software and tools to ease development and life overall. D
       >
         <div class="flex align-center flex-wrap">
           <input
-            class="ml-1"
             placeholder="Enter your email and press Ahoy!"
             type="email"
             name="email"
@@ -82,5 +53,6 @@ I develop open source software and tools to ease development and life overall. D
         </p>
       </form>
     </main>
+    {{template "footerHTML" .}}
   </body>
 </html>

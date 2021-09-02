@@ -1,23 +1,44 @@
-nav > a {
-  display: inline-block;
-}
-
 .list-style-none {
   list-style-type: none;
 }
 
-.logo-holder {
-  background-image: url("/assets/logo.svg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 74px;
-  width: 74px;
-  -o-object-fit: contain;
-  object-fit: contain;
+/* courtesy of https://css-tricks.com/snippets/css/typewriter-effect*/
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: typing 4s steps(40, end);
+  position: relative;
 }
 
-.icon svg {
-  height: 16px;
-  width: 16px;
+.typewriter::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 10px;
+  background-color: var(--fg);
+  right: 0;
+  bottom: 0;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: var(--fg);
+  }
 }

@@ -1,4 +1,6 @@
-## Projects
+## Work
+
+This doesn't involve my professional work, which you can find on [LinkedIn](https://www.linkedin.com/in/reaperim/)
 
 ### Mini Tools
 

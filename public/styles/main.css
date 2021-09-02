@@ -110,6 +110,10 @@ a {
   text-underline-offset: 4px;
 }
 
+a:hover {
+  color: var(--bg-lighter);
+}
+
 p,
 li {
   font-size: 16px;
@@ -170,7 +174,7 @@ input.large {
 }
 
 .container {
-  min-height: 85vh;
+  min-height: 75vh;
 }
 
 .text-center {
@@ -220,6 +224,12 @@ input.large {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+}
+
+.justify-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .flex-col {
@@ -296,6 +306,10 @@ input.large {
 
 .p-1 {
   padding: 8px;
+}
+
+.p-2 {
+  padding: 16px;
 }
 
 .pb-1 {
@@ -381,6 +395,16 @@ input.large {
 
 .color-high-contrast {
   color: #000;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.border-b {
+  border-bottom-color: var(--bg-light);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 
 @media (prefers-color-scheme: dark) {
