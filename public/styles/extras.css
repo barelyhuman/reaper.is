@@ -42,3 +42,122 @@
     background-color: var(--fg);
   }
 }
+
+/* circle animation - courtesy of https://xxv.vercel.app/ or https://twitter.com/wv_exe */
+
+.circles {
+  height: 55vmin;
+  width: 55vmin;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3D(-50%, -50%, 0);
+  -ms-transform: translate3D(-50%, -50%, 0);
+  transform: translate3D(-50%, -50%, 0);
+}
+.circle,
+.circles {
+  position: absolute;
+}
+.circle {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 2.5vmin solid transparent;
+  border-radius: 115% 140% 145% 110%/125% 140% 110% 125%;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  border-color: var(--color-black-0);
+}
+.circle:first-child {
+  -webkit-animation: spin1 5.5s linear infinite;
+  animation: spin1 5.5s linear infinite;
+}
+.circle:nth-child(2) {
+  -webkit-animation: spin2 5.5s linear infinite;
+  animation: spin2 5.5s linear infinite;
+}
+.circle:nth-child(3) {
+  -webkit-animation: spin3 5.5s linear infinite;
+  animation: spin3 5.5s linear infinite;
+}
+
+@-webkit-keyframes spin1 {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes spin1 {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@-webkit-keyframes spin2 {
+  0% {
+    -webkit-transform: rotate(72deg);
+    transform: rotate(72deg);
+  }
+  to {
+    -webkit-transform: rotate(-288deg);
+    transform: rotate(-288deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    -webkit-transform: rotate(72deg);
+    transform: rotate(72deg);
+  }
+  to {
+    -webkit-transform: rotate(-288deg);
+    transform: rotate(-288deg);
+  }
+}
+
+@-webkit-keyframes spin3 {
+  0% {
+    -webkit-transform: rotate(-144deg);
+    transform: rotate(-144deg);
+  }
+  to {
+    -webkit-transform: rotate(216deg);
+    transform: rotate(216deg);
+  }
+}
+
+@keyframes spin3 {
+  0% {
+    -webkit-transform: rotate(-144deg);
+    transform: rotate(-144deg);
+  }
+  to {
+    -webkit-transform: rotate(216deg);
+    transform: rotate(216deg);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .circle {
+    border-color: var(--white);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .circle {
+    display: none;
+  }
+}
