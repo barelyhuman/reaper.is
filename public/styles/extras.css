@@ -43,11 +43,15 @@
   }
 }
 
-/* circle animation - courtesy of https://xxv.vercel.app/ or https://twitter.com/wv_exe */
+/* circle animation - unmodified source at https://github.com/xxv-exe/sh */
+
+.tagline {
+  font-size: 0.8rem;
+}
 
 .circles {
-  height: 55vmin;
-  width: 55vmin;
+  height: 60vmin;
+  width: 60vmin;
   margin: 0 auto;
   top: 50%;
   left: 50%;
