@@ -2,6 +2,17 @@
   list-style-type: none;
 }
 
+.logo-container {
+  background: url("/assets/logo.svg?light");
+  height: 64px;
+  width: 64px;
+  opacity: 0.5;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: pulsate 5.5s linear infinite;
+}
+
 /* courtesy of https://css-tricks.com/snippets/css/typewriter-effect*/
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -154,9 +165,28 @@
   }
 }
 
+@keyframes pulsate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .circle {
     border-color: var(--white);
+  }
+
+  .logo-container {
+    background: url("/assets/logo.svg?dark");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
