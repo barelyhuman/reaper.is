@@ -195,3 +195,9 @@
     display: none;
   }
 }
+
+@media screen and (max-height: 600px) {
+  .circle {
+    display: none;
+  }
+}
