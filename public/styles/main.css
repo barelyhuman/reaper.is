@@ -79,9 +79,6 @@ input {
   background: var(--bg-lighter);
   color: var(--fg);
   border: 0;
-  height: 36px;
-  min-width: 250px;
-  padding: 0 16px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -100,8 +97,15 @@ input {
 
 input[type="text"],
 input[type="password"] {
+  height: 36px;
+  min-width: 250px;
+  padding: 0 16px;
   -webkit-box-shadow: var(--shadow);
   box-shadow: var(--shadow);
+}
+
+input[type="checkbox"] {
+  margin-bottom: 8px;
 }
 
 a {
