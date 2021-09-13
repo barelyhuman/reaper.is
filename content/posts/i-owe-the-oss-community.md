@@ -2,6 +2,7 @@
 title: I owe the OSS Community
 date: 2020-08-02T23:23:38.193Z
 published: true
+image_url: https://og.reaper.im/api?fontSize=16&title=I+owe+the+OSS+Community&subtitle=https%3A%2F%2Freaper.im&fontSizeTwo=8&color=%23000
 ---
 
 I've been asked a few times as to how I learn things and Why I support open source so much that I'd like to work for a company that has a dedicated OSS team. I could answer this in one line , or I could write a whole essay.
