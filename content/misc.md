@@ -1,4 +1,10 @@
+## Blog Links
+
+- [Newsletter](/newsletter)
+- [RSS](/blog.xml)
+
 ## Alternate Identities
+
 - [BarelyHuman](https://barelyhuman.dev)
 
 ## Checklists
@@ -25,12 +31,15 @@
 > - Kernel Design
 > - Compiler Creation
 
+## Cool developers
 
-
-## Other cool devs
 - [Gautam](https://backendengineer.net/)
+- [Paco](https://paco.sh/)
+- [Andrew Prifer](https://github.com/AndrewPrifer)
+- [Daishi Kato](https://blog.axlight.com/)
 
-## Other Links 
+## Other Links
+
 - [Games](/games.html)
 - [Things](/things.html)
 - [Cheatsheets](/cheatsheets/index.html)

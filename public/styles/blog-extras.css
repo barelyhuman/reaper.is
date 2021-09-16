@@ -9,7 +9,7 @@
 pre {
   overflow: auto;
   padding: 8px;
-  background: var(--bg-light);
+  background: var(--bg-lighter);
   border-radius: 4px;
 }
 

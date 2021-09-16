@@ -1,22 +1,24 @@
 /* Resets */
-@import url("https://unpkg.com/inter-ui@3.19.3/inter.css");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
 
 :root {
-  --color-black-0: #000000;
-  --color-black-1: #2a2a2a;
-  --color-black-2: #555555;
-  --color-black-3: #808080;
-  --color-black-4: #aaaaaa;
-  --color-black-5: #d4d4d4;
+  --color-black-0: #010101;
+  --color-black-1: #0a0a0a;
+  --color-black-2: #0e0e0e;
+  --color-black-3: #161616;
+  --color-black-4: #2b2b2b;
+  --color-black-5: #cdcdcd;
   --color-black-6: #ffffff;
+  --success: #6db95a;
+  --error: #dd5e5e;
   --white: var(--color-black-6);
-  --accent: #ffa94d;
-  --bg: var(--color-black-6);
-  --bg-light: var(--color-black-5);
-  --bg-lighter: var(--color-black-4);
-  --fg: var(--color-black-0);
-  --fg-light: var(--color-black-1);
-  --fg-lighter: var(--color-black-2);
+  --accent: var(--success);
+  --bg: var(--color-black-0);
+  --bg-light: var(--color-black-1);
+  --bg-lighter: var(--color-black-2);
+  --fg: var(--color-black-6);
+  --fg-light: var(--color-black-5);
+  --fg-lighter: var(--color-black-4);
   --shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 }
 
@@ -24,7 +26,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1rem;
   line-height: calc(1rem * 1.8);
 }
@@ -39,75 +41,6 @@ body {
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-}
-
-button,
-.button {
-  background: var(--bg);
-  color: var(--fg);
-  font-size: 15px;
-  padding: 8px 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  margin: 0 5px;
-  outline: #000;
-  text-decoration: none;
-  -webkit-transition: text-decoration 0.2s ease;
-  -o-transition: text-decoration 0.2s ease;
-  transition: text-decoration 0.2s ease;
-}
-
-.button:hover,
-button:hover {
-  outline: #000;
-  cursor: pointer;
-  color: var(--fg);
-  text-decoration: underline;
-}
-
-input {
-  background: var(--bg-lighter);
-  color: var(--fg);
-  border: 0;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  outline: #fff;
-  border-radius: 4px;
-}
-
-input[type="text"],
-input[type="password"] {
-  height: 36px;
-  min-width: 250px;
-  padding: 0 16px;
-  -webkit-box-shadow: var(--shadow);
-  box-shadow: var(--shadow);
-}
-
-input[type="checkbox"] {
-  margin-bottom: 8px;
-}
-
 a {
   color: var(--fg);
   text-decoration: underline;
@@ -115,7 +48,7 @@ a {
 }
 
 a:hover {
-  color: var(--bg-lighter);
+  color: var(--fg-light);
 }
 
 p,
@@ -130,41 +63,6 @@ footer {
 }
 
 /* Classes */
-
-.button.no-border,
-button.no-border {
-  border: 0;
-}
-
-.button.secondary,
-button.secondary {
-  border: 0px;
-  background: var(--bg-lighter);
-}
-
-.button.secondary:hover,
-button.secondary:hover {
-  color: var(--fg);
-  background: var(--bg-light);
-}
-
-.button.icon,
-button.icon {
-  height: 32px;
-  width: 32px;
-  padding: 0;
-  border-radius: 50%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 input.large {
   font-size: 18px;
   line-height: 30px;
@@ -178,7 +76,7 @@ input.large {
 }
 
 .container {
-  min-height: 75vh;
+  min-height: 95vh;
 }
 
 .text-center {
@@ -221,6 +119,8 @@ input.large {
 }
 
 .align-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -383,6 +283,8 @@ input.large {
 .icon svg {
   height: 16px;
   width: 16px;
+  -webkit-transition: 230ms color ease;
+  -o-transition: 230ms color ease;
   transition: 230ms color ease;
 }
 
@@ -409,20 +311,4 @@ input.large {
   border-bottom-color: var(--bg-light);
   border-bottom-width: 1px;
   border-bottom-style: solid;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    --bg: var(--color-black-0);
-    --bg-light: var(--color-black-1);
-    --bg-lighter: var(--color-black-2);
-    --fg: var(--color-black-6);
-    --fg-light: var(--color-black-5);
-    --fg-lighter: var(--color-black-4);
-    --shadow: rgb(15 17 21 / 20%) 0px 3px 6px 0px;
-  }
-
-  .color-high-contrast {
-    color: #fff;
-  }
 }

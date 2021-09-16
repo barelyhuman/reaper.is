@@ -15,8 +15,10 @@
     />
   </head>
   <body>
-    {{template "headerHTML" .}}
-    <main class="container-boundaries container">{{.Content}}</main>
+    <div class="logo-container"></div>
+    <main class="flex flex-center flex-col container-boundaries container">
+      <div>{{.Content}}</div>
+    </main>
     {{template "footerHTML" .}}
   </body>
 </html>

@@ -3,55 +3,20 @@
 }
 
 .logo-container {
-  background: url("/assets/logo.svg?light");
-  height: 64px;
-  width: 64px;
-  opacity: 0.5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  background: url("/assets/logo.svg?dark");
+  min-height: 25%;
+  min-width: 25%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  animation: pulsate 5.5s linear infinite;
-}
-
-/* courtesy of https://css-tricks.com/snippets/css/typewriter-effect*/
-.typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: typing 4s steps(40, end);
-  position: relative;
-}
-
-.typewriter::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 10px;
-  background-color: var(--fg);
-  right: 0;
-  bottom: 0;
-  animation: blink-caret 0.75s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    background-color: transparent;
-  }
-  50% {
-    background-color: var(--fg);
-  }
 }
 
 /* circle animation - unmodified source at https://github.com/xxv-exe/sh */
@@ -60,144 +25,195 @@
   font-size: 0.8rem;
 }
 
-.circles {
-  height: 60vmin;
-  width: 60vmin;
-  margin: 0 auto;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate3D(-50%, -50%, 0);
-  -ms-transform: translate3D(-50%, -50%, 0);
-  transform: translate3D(-50%, -50%, 0);
+.uppercase {
+  text-transform: uppercase;
 }
-.circle,
-.circles {
+
+h1 {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+h2 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 32px;
+}
+
+h3 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+h4 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h5 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+p {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+p.large {
+  font-family: Ubuntu;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+p.small {
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+button {
+  font-family: Ubuntu;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.21em;
+  text-align: left;
+}
+
+.title {
+  font-family: Ubuntu;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  color: var(--fg);
+}
+
+.nav-link:hover {
+  color: var(--fg);
+}
+
+.nav-link:not(:last-child) {
+  margin-right: 16px;
+}
+
+.nav-link::after {
+  content: "";
   position: absolute;
+  top: 50%;
+  left: 0px;
+  background: var(--fg);
+  width: 0px;
+  height: 2px;
+  -webkit-transition: width 250ms ease;
+  -o-transition: width 250ms ease;
+  transition: width 250ms ease;
 }
-.circle {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+
+.nav-link:hover::after {
   width: 100%;
-  height: 100%;
-  border: 2.5vmin solid transparent;
-  border-radius: 115% 140% 145% 110%/125% 140% 110% 125%;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  border-color: var(--color-black-0);
-}
-.circle:first-child {
-  -webkit-animation: spin1 5.5s linear infinite;
-  animation: spin1 5.5s linear infinite;
-}
-.circle:nth-child(2) {
-  -webkit-animation: spin2 5.5s linear infinite;
-  animation: spin2 5.5s linear infinite;
-}
-.circle:nth-child(3) {
-  -webkit-animation: spin3 5.5s linear infinite;
-  animation: spin3 5.5s linear infinite;
 }
 
-@-webkit-keyframes spin1 {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  to {
-    -webkit-transform: rotate(1turn);
-    transform: rotate(1turn);
-  }
+button {
+  min-width: 114px;
+  height: 40px;
+  padding-left: 14px;
+  padding-right: 14px;
+  background: var(--fg);
+  color: var(--bg);
+  border: 0px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 30px;
+  position: relative;
 }
 
-@keyframes spin1 {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  to {
-    -webkit-transform: rotate(1turn);
-    transform: rotate(1turn);
-  }
+button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  background: var(--bg);
+  width: 0px;
+  height: 2px;
+  -webkit-transition: width 250ms ease;
+  -o-transition: width 250ms ease;
+  transition: width 250ms ease;
 }
 
-@-webkit-keyframes spin2 {
-  0% {
-    -webkit-transform: rotate(72deg);
-    transform: rotate(72deg);
-  }
-  to {
-    -webkit-transform: rotate(-288deg);
-    transform: rotate(-288deg);
-  }
+button:hover::after {
+  width: 80%;
+  cursor: pointer;
 }
 
-@keyframes spin2 {
-  0% {
-    -webkit-transform: rotate(72deg);
-    transform: rotate(72deg);
-  }
-  to {
-    -webkit-transform: rotate(-288deg);
-    transform: rotate(-288deg);
-  }
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+  height: 48px;
+  background: var(--bg-lighter);
+  color: var(--fg);
+  border-radius: 16px;
+  border: 0px;
+  min-width: 250px;
+  padding: 4px 14px;
+  outline: #000;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-@-webkit-keyframes spin3 {
-  0% {
-    -webkit-transform: rotate(-144deg);
-    transform: rotate(-144deg);
-  }
-  to {
-    -webkit-transform: rotate(216deg);
-    transform: rotate(216deg);
-  }
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  background: var(--color-black-3);
 }
 
-@keyframes spin3 {
-  0% {
-    -webkit-transform: rotate(-144deg);
-    transform: rotate(-144deg);
-  }
-  to {
-    -webkit-transform: rotate(216deg);
-    transform: rotate(216deg);
-  }
-}
-
-@keyframes pulsate {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.75;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .circle {
-    border-color: var(--white);
-  }
-
-  .logo-container {
-    background: url("/assets/logo.svg?dark");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .circle {
-    display: none;
-  }
-}
-
-@media screen and (max-height: 600px) {
-  .circle {
-    display: none;
-  }
+pre {
+  overflow: auto;
+  padding: 8px;
+  background: var(--bg-lighter);
+  border-radius: 4px;
 }

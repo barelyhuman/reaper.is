@@ -12,23 +12,27 @@
     />
   </head>
   <body>
-    <header class="p-2">
-      <div class="flex justify-end p-1">{{template "iconNavHTML" .}}</div>
-    </header>
+    <div class="logo-container"></div>
     <main class="flex flex-center flex-col container-boundaries container">
-      <div class="circles">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
+      <div class="flex align-center w-100 justify-between flex-wrap">
+        <div>
+          <h1 class="title m-0 p-0">Reaper</h1>
+          <p class="small">/developer&bull;minimalist/</p>
+        </div>
+        <nav class="flex align-center">
+          <a href="/contact.html" class="nav-link"> contact </a>
+          <a href="/posts/index.html" class="nav-link">blog</a>
+          <a href="/work.html" class="nav-link">work</a>
+          <a href="/misc.html" class="nav-link">misc</a>
+        </nav>
       </div>
-      <div class="logo-container"></div>
-      <h1 class="m-2 p-0 f-large">Reaper</h1>
-      <div class="flex flex-center">
-        <p class="tagline typewriter">
-          Better at talking to computers than humans.
-        </p>
-      </div>
+      <h4 class="large">
+        I develop open source software and tools to ease development and life
+        overall. Dreams of making a living off of open source software. An
+        introvert, which means I'm not much of a talker but then there's
+        exceptions to that. I talk a lot when it comes to tech and basically
+        enjoying coding and tech in general.
+      </h4>
     </main>
-    {{template "footerHTML" .}}
   </body>
 </html>

@@ -17,20 +17,37 @@
     />
   </head>
   <body>
-    {{template "headerHTML" .}}
-    <main class="container-boundaries">
-      <ul class="p-0">
-        {{range .Files}}
-        <li class="mb-2 list-style-none">
-          <a href="/{{.Slug}}"> {{.Title}} </a>
-          <p class="m-0 p-0">
-            <small> {{.Date.Format "02/01/2006"}} </small>
-          </p>
-        </li>
-        {{end}}
-      </ul>
+    <div class="logo-container"></div>
+    <main class="flex flex-center flex-col container-boundaries">
+      <div>
+        <h1 id="index-title"></h1>
+        <ul class="p-0">
+          {{range .Files}}
+          <li class="mb-2 list-style-none">
+            <a href="/{{.Slug}}"> {{.Title}} </a>
+            <p class="m-0 p-0">
+              <small> {{.Date.Format "02/01/2006"}} </small>
+            </p>
+          </li>
+          {{end}}
+        </ul>
+      </div>
     </main>
     {{template "footerHTML" .}}
   </body>
+  <script>
+    var titleContainer = document.getElementById("index-title");
+    var title = window.location.pathname
+      .replace(/\//g, "")
+      .replace("index.html", "")
+      .replace(/\.html/, "");
+
+    title = title.split(" ");
+    for (var i = 0; i < title.length; i++) {
+      title[i] = title[i].charAt(0).toUpperCase() + title[i].slice(1);
+    }
+
+    titleContainer.innerHTML = title.join(" ");
+  </script>
 </html>
 {{end}}
