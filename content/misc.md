@@ -1,6 +1,6 @@
 ## Blog Links
 
-- [Newsletter](/newsletter)
+- [Newsletter](/newsletter.html)
 - [RSS](/blog.xml)
 
 ## Alternate Identities
