@@ -1,5 +1,6 @@
 ## Blog Links
 
+- [Skills](/skills.html)
 - [Newsletter](/newsletter.html)
 - [RSS](/blog.xml)
 
