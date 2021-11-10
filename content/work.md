@@ -2,6 +2,10 @@
 
 This doesn't involve my professional work, which you can find on [LinkedIn](https://www.linkedin.com/in/reaperim/)
 
+### General Public Projects
+
+Projects for the general public can be found on [barelyhuman.dev](https://barelyhuman.dev).
+
 ### Mini Tools
 
 - [Hen](https://hen.reaper.im) - UI Playground to build React Components
