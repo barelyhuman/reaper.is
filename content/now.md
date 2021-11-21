@@ -1,4 +1,4 @@
-<h2 class="serif" align="center">What I'm doing now</h2>
+<h2>What I'm doing now</h2>
 
 - Learning more about Go and Zig lang
 - Working on [Stone](https://github.com/barelyhuman/stone) and [Taco](https://tacotasks.co)
