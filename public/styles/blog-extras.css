@@ -3,14 +3,14 @@
 .task-item {
   margin: 0px;
   margin-right: 8px;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 pre {
   overflow: auto;
   padding: 8px;
-  background: var(--bg-lighter);
-  border-radius: 4px;
+  border-radius: 6px;
+  border: 2px solid var(--fg);
 }
 
 img {
@@ -19,13 +19,19 @@ img {
   border-radius: 4px;
 }
 
-code {
-  color: var(--fg-light);
+pre > code {
   font-family: "Hack", monospace;
   line-height: normal;
+  font-style: normal;
 }
 
 blockquote {
   padding: 1em 2em;
-  background-color: var(--bg-light);
+  border-left: 4px solid var(--fg);
+}
+
+strong,
+code {
+  font-family: "Lora", serif;
+  font-style: italic;
 }

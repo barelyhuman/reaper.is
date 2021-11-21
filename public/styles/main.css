@@ -1,14 +1,16 @@
 /* Resets */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lora:ital@1&display=swap");
 
 :root {
-  --color-black-0: #010101;
-  --color-black-1: #0a0a0a;
-  --color-black-2: #0e0e0e;
-  --color-black-3: #161616;
-  --color-black-4: #2b2b2b;
-  --color-black-5: #cdcdcd;
-  --color-black-6: #ffffff;
+  --color-black-0: #fff;
+  --color-black-1: #eee;
+  --color-black-2: #ddd;
+  --color-black-3: #999;
+  --color-black-4: #666;
+  --color-black-5: #333;
+  --color-black-6: #171717;
+
   --success: #6db95a;
   --error: #dd5e5e;
   --white: var(--color-black-6);
@@ -26,7 +28,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: calc(1rem * 1.8);
 }
@@ -45,10 +47,13 @@ a {
   color: var(--fg);
   text-decoration: underline;
   text-underline-offset: 4px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: background 250ms ease;
 }
 
 a:hover {
-  color: var(--fg-light);
+  background: var(--bg-light);
 }
 
 p,
@@ -79,6 +84,9 @@ input.large {
   min-height: 95vh;
 }
 
+.text-left {
+  text-align: left;
+}
 .text-center {
   text-align: center;
 }
@@ -311,4 +319,18 @@ input.large {
   border-bottom-color: var(--bg-light);
   border-bottom-width: 1px;
   border-bottom-style: solid;
+}
+
+li {
+  padding: 4px 0 4px 8px;
+  list-style-image: url("/assets/arrow-right-list-size.svg");
+}
+
+.serif {
+  font-family: "Lora", serif;
+  font-style: italic;
+}
+
+.min-height-screen {
+  min-height: 100vh;
 }

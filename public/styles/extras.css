@@ -4,16 +4,16 @@
 
 .logo-container {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 47%;
+  left: 25%;
   z-index: -1;
-  background: url("/assets/logo.svg?dark");
-  min-height: 25%;
-  min-width: 25%;
+  background: url("/assets/logo.svg");
+  min-height: 15%;
+  min-width: 15%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  opacity: 0.2;
+  opacity: 0.35;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -29,8 +29,16 @@
   text-transform: uppercase;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Lora", serif;
+  font-style: italic;
+}
+
 h1 {
-  font-family: "Ubuntu";
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -38,7 +46,6 @@ h1 {
 }
 
 h2 {
-  font-family: Ubuntu;
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
@@ -46,7 +53,6 @@ h2 {
 }
 
 h3 {
-  font-family: Ubuntu;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -54,7 +60,6 @@ h3 {
 }
 
 h4 {
-  font-family: Ubuntu;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -62,7 +67,6 @@ h4 {
 }
 
 h5 {
-  font-family: Ubuntu;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -70,7 +74,7 @@ h5 {
 }
 
 p {
-  font-family: Ubuntu;
+  font-family: Inter;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -78,7 +82,7 @@ p {
 }
 
 p.large {
-  font-family: Ubuntu;
+  font-family: Inter;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -88,7 +92,7 @@ p.large {
 }
 
 p.small {
-  font-family: Ubuntu;
+  font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -98,7 +102,7 @@ p.small {
 }
 
 button {
-  font-family: Ubuntu;
+  font-family: Inter;
   font-size: 10px;
   font-style: normal;
   font-weight: 700;
@@ -108,7 +112,7 @@ button {
 }
 
 .title {
-  font-family: Ubuntu;
+  font-family: Inter;
   font-size: 64px;
   font-style: normal;
   font-weight: 700;

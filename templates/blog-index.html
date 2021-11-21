@@ -23,9 +23,9 @@
         <h1 id="index-title"></h1>
         <ul class="p-0">
           {{range .Files}}
-          <li class="mb-2 list-style-none">
+          <li class="list-style-none">
             <a href="/{{.Slug}}"> {{.Title}} </a>
-            <p class="m-0 p-0">
+            <p class="m-0 p-0 serif">
               <small> {{.Date.Format "02/01/2006"}} </small>
             </p>
           </li>
@@ -41,6 +41,11 @@
       .replace(/\//g, "")
       .replace("index.html", "")
       .replace(/\.html/, "");
+
+    // HACK: since it won't be shown when rendered without JS anyway
+    if (title.toLowerCase() === "posts") {
+      title = "Writing";
+    }
 
     title = title.split(" ");
     for (var i = 0; i < title.length; i++) {
