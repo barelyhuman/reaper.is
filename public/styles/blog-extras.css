@@ -31,7 +31,8 @@ blockquote {
 }
 
 strong,
-code {
+code,
+em {
   font-family: "Lora", serif;
   font-style: italic;
 }
