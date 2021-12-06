@@ -23,6 +23,7 @@ pre > code {
   font-family: "Hack", monospace;
   line-height: normal;
   font-style: normal;
+  border-radius: 6px;
 }
 
 blockquote {

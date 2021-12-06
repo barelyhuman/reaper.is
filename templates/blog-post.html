@@ -37,6 +37,13 @@
       media="print"
       onload="this.media='all'"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/base16/dracula.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/javascript.min.js"></script>
   </head>
   <body>
     <main class="container-boundaries">
@@ -53,6 +60,9 @@
       if you'd like to receive such posts in your inbox.
     </div>
     {{template "footerHTML" .}}
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>
 {{end}}
