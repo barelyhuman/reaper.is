@@ -2,6 +2,7 @@
 
 Basically collection of links I'd like to share with people
 
+- [Easy OS Background Tasks in React Native](https://medium.com/hackernoon/easy-os-background-tasks-in-react-native-bc4476c48b8a)
 - [Code: Align the happy path to the left edge](https://medium.com/@matryer/line-of-sight-in-code-186dd7cdea88) ,small post about handling control flow while keeping everything readable
 - [Writing Programs with NCURSES](https://invisible-island.net/ncurses/ncurses-intro.html) an in-depth reference not a blog post
 - [Rob Pike's 5 Rules of Programming](http://users.ece.utexas.edu/~adnan/pike.html)
