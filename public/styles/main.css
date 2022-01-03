@@ -1,20 +1,20 @@
 /* Resets */
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Lora:ital@1&display=swap");
 
 :root {
-  --color-black-0: #fff;
-  --color-black-1: #eee;
-  --color-black-2: #ddd;
-  --color-black-3: #999;
-  --color-black-4: #666;
-  --color-black-5: #333;
-  --color-black-6: #171717;
+  --color-black-0: #18181b;
+  --color-black-1: #27272a;
+  --color-black-2: #3f3f46;
+  --color-black-3: #52525b;
+  --color-black-4: #e4e4e7;
+  --color-black-5: #f4f4f5;
+  --color-black-6: #fafafa;
 
   --success: #6db95a;
   --error: #dd5e5e;
   --white: var(--color-black-6);
   --accent: var(--success);
+  --logo-accent: var(--white);
   --bg: var(--color-black-0);
   --bg-light: var(--color-black-1);
   --bg-lighter: var(--color-black-2);

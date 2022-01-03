@@ -8,9 +8,9 @@
 
 pre {
   overflow: auto;
-  padding: 8px;
+  padding: 12px;
   border-radius: 6px;
-  border: 2px solid var(--fg);
+  background-color: var(--color-black-1);
 }
 
 img {
@@ -21,7 +21,8 @@ img {
 
 pre > code {
   font-family: "Hack", monospace;
-  line-height: normal;
+  font-size: 0.95rem;
+  line-height: calc(0.95rem * 1.85);
   font-style: normal;
   border-radius: 6px;
 }
