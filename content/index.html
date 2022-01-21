@@ -1,38 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {{template "metaHTML" .}}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reaper</title>
-    <link rel="stylesheet" href="./styles/main.css" />
-    <link
-      rel="stylesheet"
-      href="./styles/extras.css"
-      media="print"
-      onload="this.media='all'"
-    />
+    <style>
+      @import url("https://unpkg.com/zinccolors@0.0.1/css/zinc.min.css");
+      @import url("https://rsms.me/inter/inter.css");
+
+      html,
+      body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        /* the brightest color */
+        --bright: var(--zinc-50);
+        /* the darkest color */
+        --dark: var(--zinc-900);
+
+        /* set of colors that control visual elements */
+        --base: var(--zinc-900);
+        --surface: var(--zinc-800);
+        --text: var(--zinc-400);
+        --dim: var(--zinc-500);
+        --dimmer: var(--zinc-600);
+        --accent: #4f46e5;
+        --success: #98c379;
+
+        /* fonts */
+        --font: "Inter", sans-serif;
+      }
+
+      body {
+        background-color: var(--base);
+        color: var(--text);
+        max-width: 900px;
+        font-family: var(--font);
+        margin: 0 auto;
+        padding: 16px;
+      }
+
+      a {
+        color: var(--text);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        font-weight: 400;
+      }
+
+      a:hover {
+        color: var(--bright);
+      }
+
+      p,
+      article,
+      main {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(16px * 1.5);
+        margin: 8px 0px;
+        padding: 0px;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .center {
+        justify-content: center;
+        align-items: center;
+      }
+      .text-dimmer {
+        color: var(--dimmer);
+      }
+    </style>
   </head>
-  <body>
-    <div class="logo-container"></div>
-    <main class="container-boundaries container">
-      <section class="min-height-screen flex flex-center flex-col">
-        <h2 class="m-0 p-0">Reaper</h2>
-        <p class="small">/developer&bull;minimalist/</p>
-        <div class="flex">
-          <nav>
-            <a class="mr-1 serif" href="/now.html">Now</a>
-            <a class="mr-1 serif" href="/posts/index.html">Writing</a>
-            <a class="mr-1 serif" href="/work.html">Work</a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              class="mr-1 serif"
-              href="https://github.com/barelyhuman"
-              >Github</a
-            >
-            <a class="mr-1 serif" href="/misc.html">Misc</a>
-          </nav>
-        </div>
-      </section>
-    </main>
+  <body class="flex center">
+    <div>
+      <h1>Moved to <a href="https://thoughts.reaper.im">thoughts</a></h1>
+      <p class="text-dimmer">domain space reserved for future ideas</p>
+    </div>
   </body>
 </html>
