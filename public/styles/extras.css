@@ -2,25 +2,6 @@
   list-style-type: none;
 }
 
-.logo-container {
-  position: fixed;
-  top: 47%;
-  left: 25%;
-  z-index: -1;
-  background: url("/assets/logo.svg");
-  min-height: 15%;
-  min-width: 15%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0.35;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* circle animation - unmodified source at https://github.com/xxv-exe/sh */
-
 .tagline {
   font-size: 0.8rem;
 }

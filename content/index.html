@@ -5,89 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reaper</title>
-    <style>
-      @import url("https://unpkg.com/zinccolors@0.0.1/css/zinc.min.css");
-      @import url("https://rsms.me/inter/inter.css");
-
-      html,
-      body {
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      :root {
-        /* the brightest color */
-        --bright: var(--zinc-50);
-        /* the darkest color */
-        --dark: var(--zinc-900);
-
-        /* set of colors that control visual elements */
-        --base: var(--zinc-900);
-        --surface: var(--zinc-800);
-        --text: var(--zinc-400);
-        --dim: var(--zinc-500);
-        --dimmer: var(--zinc-600);
-        --accent: #4f46e5;
-        --success: #98c379;
-
-        /* fonts */
-        --font: "Inter", sans-serif;
-      }
-
-      body {
-        background-color: var(--base);
-        color: var(--text);
-        max-width: 900px;
-        font-family: var(--font);
-        margin: 0 auto;
-        padding: 16px;
-      }
-
-      a {
-        color: var(--text);
-        text-decoration: underline;
-        text-underline-offset: 4px;
-        font-weight: 400;
-      }
-
-      a:hover {
-        color: var(--bright);
-      }
-
-      p,
-      article,
-      main {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: calc(16px * 1.5);
-        margin: 8px 0px;
-        padding: 0px;
-      }
-
-      .flex {
-        display: flex;
-      }
-
-      .center {
-        justify-content: center;
-        align-items: center;
-      }
-      .text-dimmer {
-        color: var(--dimmer);
-      }
-    </style>
+    <link rel="stylesheet" href="/styles/main.css" />
   </head>
-  <body class="flex center">
-    <div>
-      <h1>Moved to <a href="https://thoughts.reaper.im">thoughts</a></h1>
-      <p class="text-dimmer">domain space reserved for future ideas</p>
+  <body class="flex center min-h-100 w-100">
+    <div class="flex flex-wrap w-100 align-end">
+      <div class="wipe-in-right">
+        <h1 class="m-0 p-0 m-1">Reaper</h1>
+        <p class="m-0 p-0 m-1 text-dim">Developer &bull; Designer</p>
+      </div>
+      <div class="ml-auto wipe-in-right">
+        <div class="flex">
+          <a
+            class="m-1 text-dimmer flex center"
+            href="https://thoughts.reaper.im"
+          >
+            <span class="flex align-end m-0.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-cloud"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-12"
+                />
+              </svg>
+            </span>
+            thoughts</a
+          >
+
+          <a
+            class="m-1 text-dimmer flex center"
+            href="https://github.com/barelyhuman"
+          >
+            <span class="flex align-end m-0.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-git-branch"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="7" cy="18" r="2" />
+                <circle cx="7" cy="6" r="2" />
+                <circle cx="17" cy="6" r="2" />
+                <line x1="7" y1="8" x2="7" y2="16" />
+                <path d="M9 18h6a2 2 0 0 0 2 -2v-5" />
+                <polyline points="14 14 17 11 20 14" />
+              </svg>
+            </span>
+            github</a
+          >
+          <a
+            class="m-1 text-dimmer flex center"
+            href="mailto:ahoy@barelyhuman.dev"
+            flex
+            center
+          >
+            <span class="flex align-end m-0.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-at"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"
+                />
+              </svg>
+            </span>
+            contact</a
+          >
+        </div>
+      </div>
     </div>
   </body>
 </html>
