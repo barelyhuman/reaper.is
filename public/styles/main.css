@@ -141,6 +141,10 @@ ul > li {
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .align-end {
   align-items: flex-end;
 }
