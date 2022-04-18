@@ -9,21 +9,20 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content='{{print "https://reaper.im/" .Meta.slug}}'
+      content='{{print "https://reaper.im/" .Meta.Slug}}'
     />
-    <meta property="og:title" content="{{.Meta.title}}" />
-    <meta property="og:image" content="{{.Meta.image_url}}" />
+    <meta property="og:title" content="{{.Meta.Title}}" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta
       property="twitter:url"
-      content='{{print "https://reaper.im/" .Meta.slug}}'
+      content='{{print "https://reaper.im/" .Meta.Slug}}'
     />
-    <meta property="twitter:title" content="{{.Meta.title}}" />
-    <meta property="twitter:image" content="{{.Meta.image_url}}" />
-    <meta name="title" content="{{.Meta.title}}" />
-    <title>{{.Meta.title}}</title>
+    <meta property="twitter:title" content="{{.Meta.Title}}" />
+    
+    <meta name="title" content="{{.Meta.Title}}" />
+    <title>{{.Meta.Title}}</title>
     <link rel="stylesheet" href="../styles/main.css" />
     <link
       rel="stylesheet"
@@ -42,9 +41,9 @@
   <body>
     <main class="container-boundaries">
       <article>
-        <h1 class="serif">{{.Meta.title}}</h1>
+        <h1 class="serif">{{.Meta.Title}}</h1>
       </article>
-      {{.content}}
+      {{.Content}}
     </main>
     <div class="mt-2 container-boundaries">
       <hr />

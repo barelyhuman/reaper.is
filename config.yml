@@ -2,6 +2,7 @@ content_path: "./content"
 templates_path: "./templates"
 out_path: "./out"
 public_folder: "./public"
+port: 3002
 post_index_path: "./out/posts/index.html"
 generate_rss: true
 rss_out_path: "./out/blog.xml"
