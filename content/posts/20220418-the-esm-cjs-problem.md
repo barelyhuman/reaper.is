@@ -4,9 +4,6 @@ date: "18/04/2022"
 published: true
 ---
 
-I created statico to be able to create blogs in a jiffy. I haven't fixed the dyanamic meta issue and so
-this is a make shift write up (ironic...)
-
 **Disclaimer:** I understand the advantages of moving to ESM and support that people do so but, I'm not a
 fan of just moving everything to new tech while breaking tech that was already working. Users are also at blame for not checking release notes but it's on both parties but finding solutions is a part of our work so, this.
 
