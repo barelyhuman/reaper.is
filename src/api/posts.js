@@ -1,5 +1,5 @@
-import parse from "date-fns/parse";
-import parseISO from "date-fns/parseISO";
+import parse from "date-fns/parse/index.js";
+import parseISO from "date-fns/parseISO/index.js";
 
 export const getLatestPost = (posts) => {
   return posts.sort(sortPost).slice(0, 1)[0];
