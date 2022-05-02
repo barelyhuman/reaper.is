@@ -5,11 +5,9 @@ import { format } from 'date-fns';
 
 let posts = await Astro.glob("./*.md");
 posts = posts.sort(sortPost)
-
-
-
-
 ---
+
+  
 <Page>
   <ul class="mt-4 space-y-2">
     { posts.map(post=>(
