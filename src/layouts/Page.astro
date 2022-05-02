@@ -1,0 +1,16 @@
+---
+import Footer from '../components/Footer.astro';
+import Head from '../components/Head.astro';
+import NavigationHeader from '../components/NavigationHeader.astro';
+import "../styles/global.css"
+
+const { content,hideName,hideNav} = Astro.props;
+---
+
+<Head title={content?.title}/>
+<div class="container">
+    {hideNav?null:<NavigationHeader {hideName}/>}
+    {content?.title?<h2>{content.title}</h2>:null}
+    <slot/>
+</div>
+<Footer />
