@@ -1,0 +1,6 @@
+#!/usr/bin/env bash 
+
+file="$(date +'%Y%m%d')-$1"
+
+touch "src/pages/writing/$file.md"
+code "src/pages/writing/${file}.md"
