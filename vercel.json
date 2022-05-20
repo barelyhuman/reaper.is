@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    {
+      "source": "/posts/:path",
+      "desitination": "/writing/:path"
+    }
+  ]
+}
