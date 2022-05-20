@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/posts/:path",
-      "desitination": "/writing/:path"
+      "destination": "/writing/:path"
     }
   ]
 }
