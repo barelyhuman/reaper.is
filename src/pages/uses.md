@@ -19,6 +19,6 @@ I don't own much, so here's what I work with
 
 - **VSCode and Sublime**, Code editors of choice
 - **Chrome and Safari**, Browser of choice, one for development and one for browsing
-- **iTerm2**, Terminal browser, used with the [common](https://github.com/jackharrisonsherlock/common) shell theme for zsh
+- **iTerm2**, Terminal, used with the [minzsh](https://github.com/barelyhuman/minzsh) shell theme for zsh
 
 ... the remaining software are pretty much always changing based on better alternatives so really makes no sense to list them.
