@@ -19,16 +19,18 @@ for those who'd go with the 2nd one, here's how.
 Considering the below is your webpack config, add another rule to the array of rules.
 
 ```js
-module: {
-  rules: [
+const config = {
+  module: {
+    rules: [
     // ... all your loaders/rules
     // add the below rule
-    {
-      type: "javascript/auto",
-      test: /\.mjs$/,
-      use: [],
-    },
-  ];
+      {
+        type: 'javascript/auto',
+        test: /\.mjs$/,
+        use: [],
+      },
+    ]
+  }
 }
 ```
 

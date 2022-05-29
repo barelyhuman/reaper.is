@@ -55,15 +55,15 @@ You'd add these to stress test your functions for null values, invalid values, r
 You can find example for this on the [tocolor](https://github.com/barelyhuman/tocolor/blob/5c638ebf8bcefbeb6e7eb97e8886a487574d669c/tests/index.test.js) repo's tests, an example from it
 
 ```js
-test("hex to rgb", () => {
+test('hex to rgb', () => {
   Object.keys(colors).forEach((color) => {
-    const convertedColor = hexToRGB(colors[color]);
-    const ref = MATCH_MAPPERS[color].rgb;
-    assert.equal(convertedColor.r, ref.r);
-    assert.equal(convertedColor.g, ref.g);
-    assert.equal(convertedColor.b, ref.b);
-  });
-});
+    const convertedColor = hexToRGB(colors[color])
+    const ref = MATCH_MAPPERS[color].rgb
+    assert.equal(convertedColor.r, ref.r)
+    assert.equal(convertedColor.g, ref.g)
+    assert.equal(convertedColor.b, ref.b)
+  })
+})
 ```
 
 Where `test` defines or describes what's going to be tested, `assert.equal` is what checks if the generated value from the helper is equal to the expected value, this will fail if they don't match, thus letting me know that `hex to rgb` conversion is failing.

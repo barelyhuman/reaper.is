@@ -29,8 +29,8 @@ write in their code.
 Example.
 
 ```js
-const array = [1, 2, 3];
-const shallowCloned = [...array];
+const array = [1, 2, 3]
+const shallowCloned = [...array]
 
 // this might not work for you if the ES syntax your transpiler supports doesn't
 // have spread syntax support.
@@ -147,10 +147,10 @@ But, when you work with packages that might need multiple entries, you'll have t
 A good example of this is [jotai](https://github.com/pmndrs/jotai) and [zustand](https://github.com/pmndrs/zustand) which have imports like the following
 
 ```js
-import {} from "jotai";
-import {} from "jotai/utils";
-import create from "zustand";
-import {} from "zustand/middleware";
+import {} from 'jotai'
+import {} from 'jotai/utils'
+import create from 'zustand'
+import {} from 'zustand/middleware'
 ```
 
 This gives the user a clean import and makes it obvious as to what's being used and from where.
@@ -282,14 +282,14 @@ You will setup everything according to Webpack 4 support and add 1 additional fi
       "import": "./index.js",
       "module": "./index.js",
       "require": "./index.cjs",
-      "default": "./index.cjs"
+      "default": "./index.cjs",
       // you can also add types if you wish to, bundlers might not, but the ts engine does so it should work in most cases.
-      "types":"./index.d.ts"
+      "types": "./index.d.ts"
     },
     "middleware": {
       "import": "./middleware.js",
       "module": "./middleware.js",
-      "require": "./middleware.cjs"
+      "require": "./middleware.cjs",
       "default": "./middleware.cjs"
     }
   }
@@ -302,9 +302,9 @@ Metro configuration if you used `.cjs`, same goes if you used `.mjs` for esm
 // @filename: metro.config.js
 module.exports = {
   resolver: {
-    sourceExts: [".mjs", ".cjs", ".js"], // <= the user will have to add this
+    sourceExts: ['.mjs', '.cjs', '.js'], // <= the user will have to add this
   },
-};
+}
 ```
 
 That's all the information you need to support most of them since esbuild, rollup, parcel, and sandpack handle the generic exports

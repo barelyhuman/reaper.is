@@ -95,34 +95,34 @@ Most boot scripts were also defined in `package.json` because I needed to run th
 Next, there's a `boot/index.ts` file that is basically a `npm-run-all` script that runs all the npm scripts that had the prefix `boot:`
 
 ```ts
-const runner = require("npm-run-all");
+const runner = require('npm-run-all')
 
 const commands = [
   {
-    label: "Running Boot Scripts",
-    cmd: "boot:*",
+    label: 'Running Boot Scripts',
+    cmd: 'boot:*',
   },
   {
-    label: "Starting Server",
-    cmd: "start",
+    label: 'Starting Server',
+    cmd: 'start',
   },
-];
+]
 
-const info = (msg: string) => "\x1b[36m" + msg + "\x1b[0m";
-const success = (msg: string) => "\x1b[32m" + msg + "\x1b[0m";
+const info = (msg: string) => `\x1B[36m${msg}\x1B[0m`
+const success = (msg: string) => `\x1B[32m${msg}\x1B[0m`
 
 console.log(
-  success("> Running in parallel:\n    ") +
-    info(commands.map((x) => ">> " + x.label.trim()).join("\n    "))
-);
+  success('> Running in parallel:\n    ')
+    + info(commands.map(x => `>> ${x.label.trim()}`).join('\n    '))
+)
 runner(
-  commands.map((x) => x.cmd),
+  commands.map(x => x.cmd),
   {
     parallel: false,
     stdout: process.stdout,
     stderr: process.stderr,
   }
-);
+)
 ```
 
 To simplify, everytime the server starts, I have the models re-generated for prisma, generators of dynamic enums and files were executed. There's more stuff, but that's very specific to the usecase
@@ -143,14 +143,14 @@ const options = {
   TRANSACTIONSTATUS: {
     paid: {
       value: 1,
-      label: "Paid",
+      label: 'Paid',
     },
     pending: {
       value: 2,
-      label: "Pending",
+      label: 'Pending',
     },
   },
-};
+}
 ```
 
 `TRANSACTIONSTATUS` is the grouping identifier, `paid` would be the enum accessor and `value` is what will be the saved in the DB against the field, in this case `transaction_status`.
@@ -182,24 +182,24 @@ export const options = {
   TRANSACTIONSTATUS: {
     paid: {
       value: 1,
-      label: "Paid",
+      label: 'Paid',
     },
     pending: {
       value: 2,
-      label: "Pending",
+      label: 'Pending',
     },
   },
-};
+}
 
 export const optionMappings = {
-  entity: "Order",
+  entity: 'Order',
   mappings: [
     {
-      identifier: "TRANSACTIONSTATUS",
-      field: "transaction_status",
+      identifier: 'TRANSACTIONSTATUS',
+      field: 'transaction_status',
     },
   ],
-};
+}
 ```
 
 And the generator scripts goes through both the values to create the field resolvers

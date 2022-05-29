@@ -94,86 +94,86 @@ import {
   createClient,
   onInit,
   onTokenAboutToExpire,
-} from "@barelyhuman/twilio-conversations";
+} from '@barelyhuman/twilio-conversations'
 
-let client;
+let client
 
 export async function initializeTwilio() {
-  if (client) {
-    return client;
-  }
-  const token = await fetchTwilioToken();
-  client = createClient(token);
+  if (client)
+    return client
+
+  const token = await fetchTwilioToken()
+  client = createClient(token)
 
   onInit(() => {
-    console.log("Twilio client , connected");
-  });
+    console.log('Twilio client , connected')
+  })
 
   onTokenAboutToExpire((ttl) => {
     // not using the ttl, but it's there if you need it
-    fetchTwilioToken().then((token) => client.updateToken(_nextToken));
-  });
+    fetchTwilioToken().then(token => client.updateToken(_nextToken))
+  })
 }
 ```
 
 ```js
 // chat-list.js
-import { onMessageAdded, onInit } from "@barelyhuman/twilio-conversations";
-import { initializeTwilio } from "../app-init.js";
+import { onInit, onMessageAdded } from '@barelyhuman/twilio-conversations'
+import { initializeTwilio } from '../app-init.js'
 
 async function ChatList() {
-  const conversationList = fetchConversations();
+  const conversationList = fetchConversations()
 
-  //render the list on screen
+  // render the list on screen
   render(conversationList, {
-    onClick: (conversation) =>
-      navigateTo("Chat", { conversation: conversation.sid }),
-  });
+    onClick: conversation =>
+      navigateTo('Chat', { conversation: conversation.sid }),
+  })
 
-  const client = await initializeTwilio();
+  const client = await initializeTwilio()
   // if the client isn't connected wait for it to happen
-  if (client.connectionState !== "connected") {
+  if (client.connectionState !== 'connected') {
     onInit(() => {
-      rerenderChatList();
-    });
+      rerenderChatList()
+    })
   }
 
   // add the needed listeners
   onMessageAdded((message) => {
-    const conversationSId = message.conversation.sid;
+    const conversationSId = message.conversation.sid
     const _convToUpdate = conversationList.find(
-      (x) => x.sid === conversationSId
-    );
-    _convToUpdate.lastMessage = message;
+      x => x.sid === conversationSId,
+    )
+    _convToUpdate.lastMessage = message
 
     // update state with the new element for the specific item in the list
-    updateRenderForKey(_convToUpdate.sid, _convToUpdate);
-  });
+    updateRenderForKey(_convToUpdate.sid, _convToUpdate)
+  })
 }
 ```
 
 ```js
 // Chat.js
 
-import { findConversations } from "@barelyhuman/twilio-conversations";
-import { initializeTwilio } from "../app-init.js";
+import { findConversations } from '@barelyhuman/twilio-conversations'
+import { initializeTwilio } from '../app-init.js'
 
 async function Chat(conversation) {
-  const existingChatMessages = fetchMessages(conversation);
+  const existingChatMessages = fetchMessages(conversation)
 
   render(existingChatMessages, {
     onSend: (text) => {},
-  });
+  })
 
-  const client = await initializeTwilio();
+  const client = await initializeTwilio()
   // if the client isn't connected wait for it to happen
-  if (client.connectionState !== "connected") {
+  if (client.connectionState !== 'connected') {
     onInit(() => {
-      rerenderChatList();
-    });
+      rerenderChatList()
+    })
   }
 
-  const conversationResource = findConversations(conversation);
+  const conversationResource = findConversations(conversation)
 
   // this is different based as it's from the helper library
   const {
@@ -181,57 +181,57 @@ async function Chat(conversation) {
     onMessageAdded: onMessageAddedToConv,
     onTypingStarted: onTypingStartedInConv,
     onTypingEnded: onTypingEndedInConv,
-  } = conversationResource;
+  } = conversationResource
 
   // update render since we have the resource now
   render(existingChatMessages, {
     onTextChange: (text) => {
-      conversation.typing();
+      conversation.typing()
     },
     onSend: (text) => {
       const _formattedMessage = {
         id: message.sid,
         text: message.body,
-        status: "pending",
+        status: 'pending',
         user: {
           id: myUserId,
         },
-      };
-      conversation.sendMessage(text);
+      }
+      conversation.sendMessage(text)
     },
-  });
+  })
 
   // add the needed listeners
   const { unsubscribe: unsubMessageAdd } = onMessageAddedToConv((message) => {
     const _formattedMessage = {
       id: message.sid,
       text: message.body,
-      status: "sent",
+      status: 'sent',
       user: {
         id: message.author,
       },
-    };
+    }
 
     // update state with the new element for the specific item in the list , as it's status is now changed
-    updateRenderForKey(message.id, _formattedMessage);
-  });
+    updateRenderForKey(message.id, _formattedMessage)
+  })
 
   const { unsubscribe: unsubTypingStart } = onTypingStartedInConv(
     (participant) => {
-      isTyping = true;
+      isTyping = true
     }
-  );
+  )
 
   const { unsubscribe: unsubTypingEnd } = onTypingEndedInConv((participant) => {
-    isTyping = false;
-  });
+    isTyping = false
+  })
 
   // clear the listeners before your componenet unmounts to avoid overloading the event listeners
   onComponentDestroy(() => {
-    unsubMessageAdd();
-    unsubTypingStart();
-    unsubTypingEnd();
-  });
+    unsubMessageAdd()
+    unsubTypingStart()
+    unsubTypingEnd()
+  })
 }
 ```
 

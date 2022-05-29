@@ -27,28 +27,28 @@ Let's get to creating a knex instance but with a simple variable that will store
 `utils/db-injector.js`
 
 ```js
-const dbConfig = require("knexfile");
-const knex = require("knex");
+const dbConfig = require('knexfile')
+const knex = require('knex')
 
-let cachedConnection;
+let cachedConnection
 
 export const getDatabaseConnector = () => {
   if (cachedConnection) {
-    console.log("Cached Connection");
-    return cachedConnection;
+    console.log('Cached Connection')
+    return cachedConnection
   }
-  const configByEnvironment = dbConfig[process.env.NODE_ENV || "development"];
+  const configByEnvironment = dbConfig[process.env.NODE_ENV || 'development']
 
   if (!configByEnvironment) {
     throw new Error(
-      `Failed to get knex configuration for env:${process.env.NODE_ENV}`
-    );
+      `Failed to get knex configuration for env:${process.env.NODE_ENV}`,
+    )
   }
-  console.log("New Connection");
-  const connection = knex(configByEnvironment);
-  cachedConnection = connection;
-  return connection;
-};
+  console.log('New Connection')
+  const connection = knex(configByEnvironment)
+  cachedConnection = connection
+  return connection
+}
 ```
 
 We now have a variable `cachedConnection` that either has an instance, if not, a new one is created and is referred to by it. Now let's see how you would use this in the request handlers.
@@ -56,17 +56,18 @@ We now have a variable `cachedConnection` that either has an instance, if not, a
 `controllers/user.js`
 
 ```js
-const db = require("utils/db-injector");
+const db = require('utils/db-injector')
 
 controller.fetchUser = async (req, res) => {
   try {
-    const data = db()("users").where();
-    return res.status(200).send(data[0]);
-  } catch (err) {
-    console.error(err);
-    throw err;
+    const data = db()('users').where()
+    return res.status(200).send(data[0])
   }
-};
+  catch (err) {
+    console.error(err)
+    throw err
+  }
+}
 ```
 
 At this point you are almost always getting a cached connection, I say almost always because the actual `utils/db-injector.js` might get reinit by next.js and you will have a connection that still hanging out with knex for longer than intented. This isn't much of an issue but if you are like me who doesn't want this to exist either, let's get to the second solution.
@@ -87,23 +88,23 @@ we start by modifying the `db-injector` to create a new instance everytime inste
 `utils/db-injector.js`
 
 ```js
-const dbConfig = require("knexfile");
-const knex = require("knex");
+const dbConfig = require('knexfile')
+const knex = require('knex')
 
-let connection;
+let connection
 
 export const getDatabaseConnector = () => {
   return () => {
-    const configByEnvironment = dbConfig[process.env.NODE_ENV || "development"];
+    const configByEnvironment = dbConfig[process.env.NODE_ENV || 'development']
     if (!configByEnvironment) {
       throw new Error(
-        `Failed to get knex configuration for env:${process.env.NODE_ENV}`
-      );
+        `Failed to get knex configuration for env:${process.env.NODE_ENV}`,
+      )
     }
-    connection = knex(configByEnvironment);
-    return connection;
-  };
-};
+    connection = knex(configByEnvironment)
+    return connection
+  }
+}
 ```
 
 We now have a new connection on every request, let's write the higher-order function so it can destroy the connection and let the DB of the connection misery.
@@ -113,17 +114,17 @@ The higher-order function as said, is going to be very simple, it's just taking 
 `connection-handler.js`
 
 ```js
-import { getDatabaseConnector } from "utils/db-injector";
-const connector = getDatabaseConnector();
+import { getDatabaseConnector } from 'utils/db-injector'
+const connector = getDatabaseConnector()
 
 export default (...args) => {
-  return (fn) => async (req, res) => {
-    req.db = connector();
-    await fn(req, res);
-    await req.db.destroy();
-    return;
-  };
-};
+  return fn => async (req, res) => {
+    req.db = connector()
+    await fn(req, res)
+    await req.db.destroy()
+
+  }
+}
 ```
 
 Why do I pass in `req.db`?, reason being that if the handler keeps importing the db , the higher-order function has no way to destroy the exact instance, and hence we init the db instance and destroy the instance here. It's a simple form of self-cleaning.
@@ -131,32 +132,34 @@ Why do I pass in `req.db`?, reason being that if the handler keeps importing the
 `pages/api/user/index.js`
 
 ```js
-import connectionHandler from "connection-handler";
+import connectionHandler from 'connection-handler'
 
 const handler = async (req, res) => {
   try {
-    if (req.method === "GET") {
-      const { currentUser } = req;
+    if (req.method === 'GET') {
+      const { currentUser } = req
       const data = await req
-        .db("users")
-        .leftJoin("profiles as profile", "users.id", "profile.user_id")
-        .where("users.id", currentUser.id)
+        .db('users')
+        .leftJoin('profiles as profile', 'users.id', 'profile.user_id')
+        .where('users.id', currentUser.id)
         .select(
-          "profile.name as profileName",
-          "profile.id as profileId",
-          "users.id ",
-          "users.email"
-        );
-      return Response(200, data[0], res);
-    } else {
-      return res.status(404).end();
+          'profile.name as profileName',
+          'profile.id as profileId',
+          'users.id ',
+          'users.email',
+        )
+      return Response(200, data[0], res)
     }
-  } catch (err) {
-    return res.status(500).send({ error: "Oops! Something went wrong!" });
+    else {
+      return res.status(404).end()
+    }
   }
-};
+  catch (err) {
+    return res.status(500).send({ error: 'Oops! Something went wrong!' })
+  }
+}
 
-export default connectionHandler()(handler);
+export default connectionHandler()(handler)
 ```
 
 And finally, I'm showing a generic Next.js handler here instead of the full fledged controller like in the example above, since the higher-order function is going to be added in here and not in the controllers. So the only modification you'll have to do to all the route handlers is , instead of exporting the handlers directly, export a version wrapped in a higher-order function.

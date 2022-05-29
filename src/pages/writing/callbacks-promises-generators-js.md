@@ -31,21 +31,21 @@ It's a function. A function trapped inside another one to be precise but it's st
 
 ```js
 function functionOne(callbackFunction) {
-  var a = 1;
-  callbackFunction(a);
+  const a = 1
+  callbackFunction(a)
 }
 
 function functionTwo(num) {
-  console.log(num);
+  console.log(num)
 }
 
 // Variation One
-functionOne(function (value) {
-  functionTwo(value);
-});
+functionOne((value) => {
+  functionTwo(value)
+})
 
 // Variation Two
-functionOne(functionTwo);
+functionOne(functionTwo)
 ```
 
 Now, before I explain the above, I'm assuming you understand that functions in JS aren't considered different than general parameters and thus, you can pass them down to other functions.
@@ -96,40 +96,40 @@ If dealing with dependant data and working with data from the network, you'll pr
 
 ```js
 function dataFetch() {
-  const data = someNetworkRequest();
-  formatFetchedData(data, function (err, formattedData) {
+  const data = someNetworkRequest()
+  formatFetchedData(data, (err, formattedData) => {
     if (err) {
-      console.error(err);
-      return err;
+      console.error(err)
+      return err
     }
 
-    processFormattedData(formattedData, function (err, processingResult) {
+    processFormattedData(formattedData, (err, processingResult) => {
       if (err) {
-        console.error(err);
-        return err;
+        console.error(err)
+        return err
       }
 
-      sendResultBackToServer(processingResult, function (err, serverResult) {
+      sendResultBackToServer(processingResult, (err, serverResult) => {
         // let's end this with a console.log
-        console.log(serverResult);
-      });
-    });
-  });
+        console.log(serverResult)
+      })
+    })
+  })
 }
 
 function formatFetchedData(param, callback) {
-  //relevant code
+  // relevant code
 }
 
 function processFormattedData(param, callback) {
-  //relevant code
+  // relevant code
 }
 
 function sendResultBackToServer(param, callback) {
-  //relevant code
+  // relevant code
 }
 
-dataFetch();
+dataFetch()
 ```
 
 A 3 level callback dependency can be readable but obviously, a complex app won't stop at 3 and while I could write something cleaner with an async chaining utility, a very famous one is `async.js` and we could use it's `waterfall` method to keep passing down upper dependencies to the lower functions, it's a little more manageable but still messy in larger codebases.
@@ -151,34 +151,34 @@ Thenables when explained simply, is a stateful container that can be chained by 
 I'll explain with the same example
 
 ```js
-//Variation One
+// Variation One
 dataFetch()
-  .then(function (data) {
-    return formatFetchedData(data);
+  .then((data) => {
+    return formatFetchedData(data)
   })
-  .then(function (formattedData) {
-    return processFormattedData(formattedData);
+  .then((formattedData) => {
+    return processFormattedData(formattedData)
   })
-  .then(function (processingResult) {
-    return sendResultBackToServer(processingResult);
+  .then((processingResult) => {
+    return sendResultBackToServer(processingResult)
   })
-  .then(function (serverResult) {
-    return console.log(serverResult);
-  });
+  .then((serverResult) => {
+    return console.log(serverResult)
+  })
 
-//Variation two
+// Variation two
 dataFetch()
-  .then((data) => formatFetchedData(data))
-  .then((formattedData) => processFormattedData(formattedData))
-  .then((processingResult) => sendResultBackToServer(processingResult))
-  .then((serverResult) => console.log(serverResult));
+  .then(data => formatFetchedData(data))
+  .then(formattedData => processFormattedData(formattedData))
+  .then(processingResult => sendResultBackToServer(processingResult))
+  .then(serverResult => console.log(serverResult))
 
-//Variation Three
+// Variation Three
 dataFetch()
   .then(formatFetchedData)
   .then(processFormattedData)
   .then(processingResult)
-  .then(console.log);
+  .then(console.log)
 ```
 
 If you understand the verbose example, you can understand how the other 2 variations work and this is obviously much neater than plain callbacks but as I said, we are still going to continue using callbacks because the language depends on it. The solution/promises are just a better way to handle it.
@@ -189,19 +189,19 @@ I'll try to simplify how Promises work internally.
 The Promise constructor maintains a state for itself. `pending | fulfilled | rejected` these 3 per promise decide if the call was successful, or failed and based on it, they call a `.then` or a `.catch`.
 
 ```js
-new Promise(function (resolve, reject) {
-  if (1 > 0) {
-    return resolve(true);
-  } else {
-    return reject(false);
-  }
+new Promise((resolve, reject) => {
+  if (1 > 0)
+    return resolve(true)
+  else
+    return reject(false)
+
 })
   .then((value) => {
-    console.log(value);
+    console.log(value)
   })
   .catch((err) => {
-    console.error(err);
-  });
+    console.error(err)
+  })
 ```
 
 To explain this we'll consider the above example. I create a new Promise using the words `new Promise` and this constructor takes in a callback that is passed 2 params, `resolve`, and `reject`.
@@ -239,18 +239,18 @@ Generators allow you to iterate over itself and used a keyword called `yield` wh
 
 ```js
 function* infinite() {
-  let index = 0;
+  let index = 0
 
-  while (true) {
-    yield index++;
-  }
+  while (true)
+    yield index++
+
 }
 
-const generator = infinite(); // "Generator { }"
+const generator = infinite() // "Generator { }"
 
-console.log(generator.next().value); // 0
-console.log(generator.next().value); // 1
-console.log(generator.next().value); // 2
+console.log(generator.next().value) // 0
+console.log(generator.next().value) // 1
+console.log(generator.next().value) // 2
 ```
 
 With this in place, I can have one generator run, get an async value and yield it out of it, then pass it back to the generator and it can run the next `yield` scope and so on till it decides to stop. You need to understand that while yielding we are still resolving promises and `async/await` is nothing more than syntactic sugar for creating and resolving promises and as always, it's also based on the concept of callbacks and hence each of them creates a slight delay if compared to async functions written with just callbacks. But, developer experience and sanity need to be kept in check, else we'll have all JS developers in some Asylum yapping about callbacks all day long.

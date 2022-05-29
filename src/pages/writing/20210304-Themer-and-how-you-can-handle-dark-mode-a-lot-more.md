@@ -45,16 +45,16 @@ function Themer() {}
 
 ```js
 function Themer(config) {
-  let element = config.trigger;
+  let element = config.trigger
   if (element) {
     // Check if the trigger was passed a class string or an id string and convert it to a proper html node ref
-    if (typeof config.trigger === "string") {
-      element = document.querySelector(config.trigger);
-    }
+    if (typeof config.trigger === 'string')
+      element = document.querySelector(config.trigger)
+
   }
 
   // existing state for the theme , fallback to system if nothing is found
-  let defaultState = localStorage.getItem("theme") || "system";
+  const defaultState = localStorage.getItem('theme') || 'system'
 }
 ```
 

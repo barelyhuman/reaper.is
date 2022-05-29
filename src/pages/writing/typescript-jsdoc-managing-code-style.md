@@ -23,13 +23,13 @@ The problem we have with JS is that it can be variable typed and that causes iss
 eg:
 
 ```js
-let a = 1;
+let a = 1
 
 // in code somewhere
-a = "string value";
+a = 'string value'
 
 // in some other function
-a += 2;
+a += 2
 ```
 
 You can see the issue here because I've segregated it to 3 specific lines where the mutation is causing the unexpected behaviour but this won't be easy to do when working with code that's larger and this is where you have 2 options.
@@ -48,11 +48,11 @@ This is the easy way out and you can leave it on the TS-server to decide how it 
 eg:
 
 ```js
-const a = 1; // cannot be changed.
+const a = 1 // cannot be changed.
 
-a = "string value"; // will throw an error
+a = 'string value' // will throw an error
 
-const b = a + 2; // expected behavior b = 3
+const b = a + 2 // expected behavior b = 3
 ```
 
 Now, the issue with this is the amount of memory you use but since most JS runtimes have a GC(Garbage Collector) that can keep the memory in control it is still worth it to know that doing this extensively on a global scope is not a good idea. Keep the memory allocations inside smaller scopes and moving to the next point, smaller broken down logic blocks.
@@ -64,17 +64,17 @@ eg:
 ```js
 // file: a.js
 async function fetchUser() {
-  const userId = 2; // would mostly come from the calling function as a param
-  const resp = await serverReq(userId);
-  return resp;
+  const userId = 2 // would mostly come from the calling function as a param
+  const resp = await serverReq(userId)
+  return resp
 }
 
 // file: b.js
 async function fetchUserWithImage() {
-  const userId = 2; // would mostly come from the calling function as a param
-  const resp = await serverReq(userId);
-  const imageURL = await imageReq(resp.profile_pic_id);
-  return { user: resp, imageURL: imageURL };
+  const userId = 2 // would mostly come from the calling function as a param
+  const resp = await serverReq(userId)
+  const imageURL = await imageReq(resp.profile_pic_id)
+  return { user: resp, imageURL }
 }
 ```
 
@@ -87,21 +87,21 @@ So, in a way a little more control over the memory usage (not as granular as som
 - Post breaking down, there's another issue, a lot of developers don't understand the concept of references in JS and so it's something that I will cover now. There's obviously better posts out there that go in detail for this topic but let's take a brief overlook.
 
 ```js
-const a = [1, 2, 3];
-const b = a;
-b[0] = 1;
+const a = [1, 2, 3]
+const b = a
+b[0] = 1
 
-console.log(a, b);
+console.log(a, b)
 
 // next snippet
 const x = {
   y: 1,
-};
+}
 
-const z = x;
-z.y = 3;
+const z = x
+z.y = 3
 
-console.log(x, z);
+console.log(x, z)
 ```
 
 People who understand the issue here already understand references, and people who think that changing `b` has no effect on `a` and changing `z.y` has no effect on the value of `x.y` , here's what's going on.
@@ -151,7 +151,7 @@ export type PartialState<
   K4 extends keyof T = K3
 > =
   | (Pick<T, K1> | Pick<T, K2> | Pick<T, K3> | Pick<T, K4> | T)
-  | ((state: T) => Pick<T, K1> | Pick<T, K2> | Pick<T, K3> | Pick<T, K4> | T);
+  | ((state: T) => Pick<T, K1> | Pick<T, K2> | Pick<T, K3> | Pick<T, K4> | T)
 ```
 
 The above is an implementation of a `PartialState` type which will allow the keys to be any of the following from the `State` type and also extend the type `T` if the key is from the type `T` , and then I allow picking them , so your auto completion would work as expected.
@@ -178,14 +178,14 @@ so , this is how I have it setup as a small example
 /** @returns {import("./types").SomeTypeDef} */
 function printSomeTypeDef() {
   return {
-    name: "hello", // will show the autocomplete if I type `n` as the return type is defined already
-  };
+    name: 'hello', // will show the autocomplete if I type `n` as the return type is defined already
+  }
 }
 
-//types.d.ts
+// types.d.ts
 declare interface SomeTypeDef {
-  name: string;
-  age: number;
+  name: string
+  age: number
 }
 ```
 

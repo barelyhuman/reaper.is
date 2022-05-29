@@ -60,7 +60,7 @@ For eg.
 
 ```js
 function one(obj) {
-  return obj.one;
+  return obj.one
 }
 ```
 
@@ -86,7 +86,7 @@ The fixed version of the above is a simple check on the existence of obj, both a
 
 ```js
 function one(obj) {
-  return (obj && obj.one) || false;
+  return (obj && obj.one) || false
 }
 ```
 

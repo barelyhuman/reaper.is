@@ -161,9 +161,9 @@ function ReactExampleComponent() {
 Thus, reducing my overall redundant code and I write the actuall fetchers just once when I'm writing the gql query, which is also something you can automate if you which to, though I'm fine writing a single line of
 
 ```js
-//client is the urql client in this case
+// client is the urql client in this case
 async function fetchUser(payload) {
-  return client.query(FETCH_USER_QUERY, { payload }).toPromise();
+  return client.query(FETCH_USER_QUERY, { payload }).toPromise()
 }
 ```
 

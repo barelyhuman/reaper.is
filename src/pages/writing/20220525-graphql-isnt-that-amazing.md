@@ -166,17 +166,17 @@ If it's just about how much time it'd take to start a http server that can respo
 I'm sure you can imagine that a simple http REST server would take me 30 seconds and graphql would need a little more than 2-3 mins when typed out.
 
 ```js
-const express = require("express");
+const express = require('express')
 
-const app = express();
+const app = express()
 
-app.get("/ping", (req, res) => {
-  res.send("pong");
-});
+app.get('/ping', (req, res) => {
+  res.send('pong')
+})
 
 app.listen(3000, () => {
-  console.log("listening");
-});
+  console.log('listening')
+})
 ```
 
 Okay, took 43 seconds...
