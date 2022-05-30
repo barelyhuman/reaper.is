@@ -109,7 +109,7 @@ function dataFetch() {
         return err
       }
 
-      sendResultBackToServer(processingResult, (err, serverResult) => {
+      sendResultBackToServer(processingResult, (_err_, serverResult) => {
         // let's end this with a console.log
         console.log(serverResult)
       })
@@ -132,7 +132,7 @@ function sendResultBackToServer(param, callback) {
 dataFetch()
 ```
 
-A 3 level callback dependency can be readable but obviously, a complex app won't stop at 3 and while I could write something cleaner with an async chaining utility, a very famous one is `async.js` and we could use it's `waterfall` method to keep passing down upper dependencies to the lower functions, it's a little more manageable but still messy in larger codebases.
+A 3 level callback dependency can be readable but obviously, a complex app won't stop at 3 and while I could write something cleaner with an async chaining utility, a very famous one is `async.js` and we could use it's `waterfall` method to keep passing down upper dependencies to the lower functions, it's a little more manageable but still messy in larger codebase.
 
 ### The Solution to the Living Hell
 
