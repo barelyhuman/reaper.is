@@ -1,7 +1,8 @@
 ---
-layout: ../layouts/Page.astro
-title: Contextual Helpers are easier to write but...
+layout: ../../layouts/Page.astro
+title: Contextual Helpers are easier to write but ...
 date: 30/05/2022
+published: true
 ---
 
 Clickbait title for the win.

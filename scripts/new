@@ -7,7 +7,7 @@ file_path="src/pages/writing/$file.md"
 touch $file_path
 cat > $file_path <<EOF
 ---
-layout: ../layouts/Page.astro
+layout: ../../layouts/Page.astro
 ---
 EOF
 code $file_path

@@ -10,7 +10,7 @@ posts = posts.sort(sortPost)
   
 <Page>
   <ul class="mt-4 space-y-2">
-    { posts.map(post=>(
+    {posts.map(post=>(
     <li>
       <p class="post-link">
         <span class="date">{format(dateParser(post.frontmatter.date),"dd-MM-yyyy")} - </span>
