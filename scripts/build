@@ -1,0 +1,7 @@
+#!/usr/bin/env bash 
+
+set -euxo pipefail
+
+yarn 
+yarn build 
+yarn generate:rss
