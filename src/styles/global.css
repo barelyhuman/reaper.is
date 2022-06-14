@@ -86,17 +86,17 @@ blockquote {
   color: var(--subtle);
 }
 
-pre > code {
+pre>code {
   background: transparent;
 }
 
-nav > ul {
+nav>ul {
   display: flex;
   padding: 0px;
   align-items: center;
 }
 
-nav > ul > li {
+nav>ul>li {
   display: inline-flex;
   padding: 0;
   margin: 0;
@@ -120,4 +120,29 @@ footer {
   padding: 2em;
   margin: 0 auto;
   border-top: 1px solid var(--surface);
+}
+
+input[type="text"],
+input[type="email"] {
+  border: 0px;
+  padding: 8px;
+  border-radius: 2px;
+  color: var(--text);
+  background: var(--surface);
+}
+
+
+button,
+input[type="submit"] {
+  background: var(--subtle);
+  border: 0;
+  padding: 4px 12px;
+  border-radius: 2px;
+  font-size: var(--fontSize);
+  color: var(--overlay);
+}
+
+button:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
 }
