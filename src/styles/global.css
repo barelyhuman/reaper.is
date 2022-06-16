@@ -118,8 +118,22 @@ nav>ul>li {
   padding: 0px;
 }
 
+.post-link {
+  list-style-type: none;
+  max-width: 80ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .post-link .date {
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
+  width: 90px;
+  text-align: right;
   color: var(--muted);
+  margin-right: 12px;
 }
 
 footer {

@@ -8,13 +8,13 @@ posts = posts.sort(sortPost).filter(x => !x.frontmatter.rss_only)
 ---
 
 <Page>
-  <ul class="mt-4 space-y-2">
+  <ul class="space-y-2 m-0 p-0 mt-4">
     {posts.map(post=>(
-    <li>
-      <p class="post-link">
-        <span class="date">{format(dateParser(post.frontmatter.date),"dd-MM-yyyy")} - </span>
-        <a href={post.url}>{post.frontmatter.title}</a>
+    <li class="post-link">
+      <p class="date">
+        {format(dateParser(post.frontmatter.date),"dd-MM-yyyy")}
       </p>
+      <a href={post.url}>{post.frontmatter.title}</a>
     </li>
     )) }
   </ul>
