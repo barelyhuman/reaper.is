@@ -17,6 +17,8 @@
   --lineHeight: calc(var(--fontSize) * 1.75);
 }
 
+
+
 :root {
   --base: var(--zinc-50);
   --surface: var(--zinc-100);
@@ -41,6 +43,11 @@
     --text: var(--zinc-200);
     --on-accent: black;
   }
+}
+
+html {
+  background: var(--background-color);
+  color: var(--foreground-color);
 }
 
 a {

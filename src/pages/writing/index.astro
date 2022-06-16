@@ -4,10 +4,9 @@ import Page from "../../layouts/Page.astro";
 import { format } from 'date-fns';
 
 let posts = await Astro.glob("./*.md");
-posts = posts.sort(sortPost)
+posts = posts.sort(sortPost).filter(x => !x.frontmatter.rss_only)
 ---
 
-  
 <Page>
   <ul class="mt-4 space-y-2">
     {posts.map(post=>(
