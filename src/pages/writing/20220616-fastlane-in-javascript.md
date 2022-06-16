@@ -177,6 +177,7 @@ import { Fastlane } from "fastlanejs";
 const fastlane = new Fastlane();
 (async () => {
   await fastlane.getVersion();
+  await fastlane.close();
 })();
 ```
 
@@ -209,7 +210,6 @@ const certType = "development";
 await run();
 
 async function run() {
-  // change codesigning to be false for the current project
   await flane.updateCodeSigningSettings({
     useAutomaticSigning: false,
     path: project,
@@ -218,8 +218,6 @@ async function run() {
   await setup();
   await sign();
   await build();
-
-  // reading the laneContext, which will give back a serialized JSON
   const lcRes = await flane.laneContext();
   const lc = JSON.parse(lcRes);
 
@@ -230,6 +228,7 @@ async function run() {
   }
 
   await notifySlack(uploadResponse.link);
+  await flane.close();
   return;
 }
 
@@ -237,6 +236,7 @@ async function setup() {
   await flane.createKeychain({
     name: process.env.KEYCHAIN_NAME,
     password: process.env.MATCH_PASSWORD,
+    unlock: true,
   });
 
   await flane.match({
@@ -251,35 +251,23 @@ async function setup() {
 }
 
 async function notifySlack(link) {
+  const gitBranch = await flane.gitBranch();
   await flane.slack({
-    message: "Automation Engine: iOS =>" + link,
+    message: "Automation Engine: iOS \n" + link,
     success: true,
-    defaultPayloads: [flane.gitBranch],
+    payload: { Git: gitBranch },
     useWebhookConfiguredUsernameAndIcon: true,
     slackUrl: process.env.SLACK_HOOK,
   });
 }
 
 async function uploadToDiawi(filePath) {
-  // Plugins from ruby can be replaced with
-  // libraries and packages from nodejs,
-  // which we all know is huge!
-  const result = await upload(
-    {
-      file: filePath,
-      token: process.env.DIAWI_TOKEN,
-      wall_of_apps: false,
-    },
-    {
-      maxApiStatusCalls: 99,
-      onUploadProgress: (progress) => {
-        console.log(`Uploading => ${progress}`);
-      },
-      onStatusProgress: (status) => {
-        console.log(`status: ${status}`);
-      },
-    },
-  );
+  console.log("Uploading to diawi, please wait...");
+  const result = await upload({
+    file: filePath,
+    token: process.env.DIAWI_TOKEN,
+    wall_of_apps: "false",
+  });
 
   return result;
 }
@@ -307,6 +295,7 @@ async function build() {
   });
 
   await flane.gym({
+    configuration: "Debug",
     workspace: workspace,
     scheme: scheme,
     clean: true,
