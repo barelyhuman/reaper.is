@@ -1,6 +1,11 @@
 import { Feed } from 'feed'
 import { globby } from 'globby'
 import fs from 'node:fs/promises'
+import rehypeStringify from 'rehype-stringify'
+import remarkGfm from 'remark-gfm'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import { unified } from 'unified'
 import { parse } from 'yaml'
 
 import dateParser from './src/api/posts.js'
@@ -22,6 +27,17 @@ const readMarkdownFile = async path => {
   }
 }
 
+const processMarkdownContent = async content => {
+  const processed = await unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeStringify)
+    .process(content)
+
+  return String(processed)
+}
+
 const feed = new Feed({
   title: "reaper's rants,notes and stuff",
   description: '',
@@ -39,7 +55,7 @@ const feed = new Feed({
 
 const postAdditionPromises = posts.map(async file => {
   const { frontmatter, content } = await readMarkdownFile(file)
-  const description = `${content.split(' ').slice(0, 100).join(' ')}...`
+  const description = await processMarkdownContent(content)
 
   // FIXME: replace with proper directory finding and
   // and then getting the base url from the astro config
