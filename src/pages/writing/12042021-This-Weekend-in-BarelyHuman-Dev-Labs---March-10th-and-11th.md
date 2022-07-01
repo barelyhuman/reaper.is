@@ -9,7 +9,7 @@ date: 12/04/2021
 
 ### statico
 
-Mentioned that we had a static generator written specifically for [reaper.im](https://reaper.im) and all I did was pull it out into a separate repository and is now under the name [statico](https://github.com/barelyhuman/statico) and while it can be used for basic markdown to html page generation while maintaining folder structure[^1] it's still a very simple generator and not as generic as it should be, it will be as the project progresses.
+Mentioned that we had a static generator written specifically for [reaper.im](https://reaper.is) and all I did was pull it out into a separate repository and is now under the name [statico](https://github.com/barelyhuman/statico) and while it can be used for basic markdown to html page generation while maintaining folder structure[^1] it's still a very simple generator and not as generic as it should be, it will be as the project progresses.
 
 [^1]: You can go through the reaper.im codebase to see what I mean by a simple structure
 

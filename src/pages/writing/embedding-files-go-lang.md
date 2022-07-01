@@ -7,7 +7,7 @@ published: true
 
 We talked about how I built [https://status.barelyhuman.dev](https://status.barelyhuman.dev) and what I was doing to handle adding the html data into the final binary so that the hosting provider could render the html from a single binary.
 
-You can read that post [here](https://reaper.im/posts/status-vercel-and-how-did-it.html)
+You can read that post [here](https://reaper.is/posts/status-vercel-and-how-did-it.html)
 
 The previous solution works and was quite easy to do but then it obviously took away my speed since there's no syntax highlighting for css or html as they are all just go strings now. Plus, to format the html or css I have to move them to a separate file format it there and paste it back here which is really not something I wish to do if I have to maintain the repo for a long time.
 

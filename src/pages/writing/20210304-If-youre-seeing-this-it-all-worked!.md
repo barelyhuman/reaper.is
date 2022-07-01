@@ -5,7 +5,7 @@ published: true
 date: 2021-03-04
 ---
 
-[https://reaper.im](https://reaper.im) now has it's own inline editor for me to write blog posts with.
+[https://reaper.is](https://reaper.is) now has it's own inline editor for me to write blog posts with.
 
 ### Supports markdown
 

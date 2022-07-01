@@ -26,7 +26,7 @@ considerably, it's the simplest app I've built and it's not that hard to build b
 
 ## Why return to it?
 
-Recently, my primary domain [reaper.im](https://reaper.im) has lost it's original nameservers and the owner of the tld has probably changed thus making it hard to get back. (obviously, since you are probably reading this on another domain).
+Recently, my primary domain [reaper.im](https://reaper.is) has lost it's original nameservers and the owner of the tld has probably changed thus making it hard to get back. (obviously, since you are probably reading this on another domain).
 
 This issue lead to breaking [mailer.reaper.im](https://mailer.reaper.im) and that was the service I used for sending mails, it's just nodemailer as an API and was being used to send mails for the magic links that tillwhen uses to login.
 

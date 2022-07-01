@@ -9,7 +9,7 @@ I've got a very small list of hobbies, namely reading, writing, coding, gaming a
 
 There's been numerous posts about this already and probably better ones but let's give it a try, shall we?
 
-_The post uses https://reaper.im and https://tillwhen.barelyhuman.dev as references for a lot of things and that's because the points I mention are implemented on both. Even though TillWhen still has some UI inconsistencies, considering it has other UI Kit's involved and I can't just throw them out without actually getting the functionalities done first._
+_The post uses https://reaper.is and https://tillwhen.barelyhuman.dev as references for a lot of things and that's because the points I mention are implemented on both. Even though TillWhen still has some UI inconsistencies, considering it has other UI Kit's involved and I can't just throw them out without actually getting the functionalities done first._
 
 There's basically 3 concepts I want to cover here
 
@@ -19,7 +19,7 @@ There's basically 3 concepts I want to cover here
 
 ## Spacing
 
-If we go through https://reaper.im for a brief second you can see everything follows a consistent spacing standard and this is what I call _spacing harmony_ , it's not a new concept but something very simple that people forget.
+If we go through https://reaper.is for a brief second you can see everything follows a consistent spacing standard and this is what I call _spacing harmony_ , it's not a new concept but something very simple that people forget.
 
 ![](/assets/buttons.png)
 

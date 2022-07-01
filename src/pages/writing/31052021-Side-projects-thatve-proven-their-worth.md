@@ -63,7 +63,7 @@ I was called stupid for building this from scratch but then I've been called stu
 
 Anyway, the concept.
 
-Build a small and quick handler that could convert a folder full of markdown files into html files that you could simply serve, this started as the base for [reaper.im](https://reaper.im) which was powered by [Next.js](https://nextjs.org/) before and my hub for experimenting with things and features but then I realised that the site was unnecessarily heavy in terms of what it actually accomplished and with the other generators I'd have to use themes provided by others or sit and write the theme in the standards they've set which is pretty easy considering my design preferences but I though how hard could it be to write a simple tool that would do this.
+Build a small and quick handler that could convert a folder full of markdown files into html files that you could simply serve, this started as the base for [reaper.im](https://reaper.is) which was powered by [Next.js](https://nextjs.org/) before and my hub for experimenting with things and features but then I realised that the site was unnecessarily heavy in terms of what it actually accomplished and with the other generators I'd have to use themes provided by others or sit and write the theme in the standards they've set which is pretty easy considering my design preferences but I though how hard could it be to write a simple tool that would do this.
 
 That brought the base idea to life with reaper.im being the sole focus of support for the tool, literally just to support the reaper.im , I had written a SSG(Static Site Generator) and now there's 2 sites that I know off that use it.
 

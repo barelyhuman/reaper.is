@@ -7,7 +7,7 @@ published: true
 
 There was a hint in the previous [post](/posts/off-grid-digitally.html) where I mentioned I'd be building a lot of the tools that I use from the ground up and since I normally build stuff with my requirements in mind they turn out to be very minimal.
 
-A lot of stuff that I've built is either tied to this website or you can find it on the [work](https://reaper.im/work) page and I was told that in my idea of reinventing the wheel for almost all tools was stupid but also interesting but mostly stupid .
+A lot of stuff that I've built is either tied to this website or you can find it on the [work](https://reaper.is/work) page and I was told that in my idea of reinventing the wheel for almost all tools was stupid but also interesting but mostly stupid .
 
 While I agree to that, and you shouldn't be reinventing the wheel when working on production apps for clients , it's okay if you are doing it to learn. I consider myself really lucky that I've got all these resources out there that I can learn from and it actually makes it easier to find better explanation to stuff if the man page or documentation of a certain library or tool isn't well documented.
 

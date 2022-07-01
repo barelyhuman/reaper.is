@@ -136,7 +136,7 @@ So Now I have elements that cover 80% of the app UX and the 20% include cards, t
 
 Though I mentioned implementing the components before I decided the stack the reason is because the stack is actually decided after a prototype phase which I've explained about quite a bit in previous posts[^1].
 
-[^1]: https://reaper.im/posts/20042021-Why-I-use-Next.js-for-everything-and-why-you-shouldnt-.html
+[^1]: https://reaper.is/posts/20042021-Why-I-use-Next.js-for-everything-and-why-you-shouldnt-.html
 
 The prototype gives you an idea of what needs to exist and what doesn't and where it would create an issue, in my case I've built enough todo apps to know what's going to break where and TillWhen gave me the remaining needed knowledge for the scaling issues.
 
