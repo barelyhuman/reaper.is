@@ -1,5 +1,6 @@
 @import url("./variables.css");
 @import url("https://rsms.me/raster/raster2.css?v=20");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
 html {
   background: var(--background-color);
