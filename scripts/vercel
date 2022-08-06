@@ -1,5 +1,5 @@
 #!/usr/bin/env bash 
 
-curl -sf https://goblin.barelyhuman.xyz/codeberg.org/reaper/alvu@ba672d83f6b26342e7222742e238e73e2b7b23a7 | sh
+curl -sf https://goblin.barelyhuman.xyz/codeberg.org/reaper/alvu@5de2f1d5ae36eeb9ff3600dbb7ad25bca61cc797 | sh
 
 alvu
