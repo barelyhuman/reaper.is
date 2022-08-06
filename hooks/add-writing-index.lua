@@ -28,12 +28,12 @@ function Writer(filedata)
                 name = string.gsub(name, ".html", "")
 
                 ---@diagnostic disable-next-line: undefined-global
-                local filecontent = lib.getFirst100Lines(basePath .. "/" .. files[file])
+                local filecontent = lib.getfiledata(basePath .. "/" .. files[file])
                 local match = strings.split(filecontent, "---")
 
                 if (match[2]) then
                     local frontmatterParsed = yaml.decode(match[2])
-                    local date = lib.parseDates(frontmatterParsed.date)
+                    local date = lib.parse_dates(frontmatterParsed.date)
                     if not frontmatterParsed.rss_only
                     then
                         table.insert(meta, {
