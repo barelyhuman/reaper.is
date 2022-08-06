@@ -2,12 +2,7 @@
 
 file="$(date +'%Y%m%d')-$1"
 
-file_path="src/pages/writing/$file.md"
+file_path="pages/writing/$file.md"
 
 touch $file_path
-cat > $file_path <<EOF
----
-layout: ../../layouts/Page.astro
----
-EOF
-code $file_path
+nvim $file_path

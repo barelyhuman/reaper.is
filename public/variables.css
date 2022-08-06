@@ -1,0 +1,44 @@
+@import url("https://rsms.me/raster/raster2.css?v=20");
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-400: #a1a1aa;
+  --zinc-500: #71717a;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+
+  --fontSize: 14px;
+  --lineHeight: calc(var(--fontSize) * 1.75);
+}
+
+:root {
+    --base: var(--zinc-50);
+    --surface: var(--zinc-100);
+    --overlay: var(--zinc-200);
+    --muted: var(--zinc-500);
+    --subtle: var(--zinc-700);
+    --text: var(--zinc-900);
+    --accent: #1e90ff;
+    --on-accent: white;
+  
+    --foreground-color: var(--text);
+    --background-color: var(--base);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --base: var(--zinc-900);
+      --surface: var(--zinc-800);
+      --overlay: var(--zinc-700);
+      --muted: var(--zinc-500);
+      --subtle: var(--zinc-400);
+      --text: var(--zinc-200);
+      --on-accent: black;
+    }
+  }
