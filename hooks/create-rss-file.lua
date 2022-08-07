@@ -37,8 +37,10 @@ local function item_template(data)
     ]=], data)
 end
 
--- will run but after the initial processing is done with
--- still not implemented in alvu, so this still needs work
+function OnStart()
+    os.remove("dist/rss_tmpl.xml")
+end
+
 function Writer(filedata)
     local source_data = json.decode(filedata);
     local rssfile = io.open("dist/rss_tmpl.xml", "a")
