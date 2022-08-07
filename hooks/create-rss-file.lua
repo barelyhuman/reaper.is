@@ -97,5 +97,6 @@ function OnFinish()
         })
 
         rss_fd:write(rss_data)
+        os.remove("dist/rss_tmpl.xml")
     end
 end
