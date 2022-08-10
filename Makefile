@@ -1,6 +1,6 @@
 
 watch: 
-	ls *.md pages/**/*.md | entr -cr make build 
+	ls *.md pages/**/*.md hooks/* public/* | entr -cr make build 
 
 w: watch 
 

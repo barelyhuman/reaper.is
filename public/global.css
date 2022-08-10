@@ -1,119 +1,297 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
-
-html {
-  background: var(--background-color);
-  color: var(--foreground-color);
-}
-
-a {
-  text-decoration: underline;
-  text-decoration-color: var(--muted);
-}
-
-a:hover {
-  color: var(--accent);
+/* from https://bearblog.dev/ */
+:root {
+  --width: 85ch;
+  --font-main: sans-serif;
+  --font-secondary: sans-serif;
+  --font-scale: 1em;
+  --background-color: #fff;
+  --heading-color: #222;
+  --text-color: #444;
+  --link-color: #666;
+  --visited-color: #8b6fcb;
+  --code-background-color: #f2f2f2;
+  --code-color: #222;
+  --blockquote-color: #222;
 }
 
 body {
-  max-width: 80ch;
-  padding: 2em;
-  margin: 0 auto;
+  font-family: var(--font-secondary);
+  font-size: var(--font-scale);
+  margin: auto;
+  padding: 20px;
+  max-width: var(--width);
+  text-align: left;
+  background-color: var(--background-color);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-main);
+  color: var(--heading-color);
+}
+
+a {
+  color: var(--link-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav a {
+  margin-right: 8px;
+}
+
+strong,
+b {
+  color: var(--heading-color);
+}
+
+button {
+  margin: 0;
+  cursor: pointer;
+}
+
+content {
+  line-height: 1.6;
+}
+
+table {
+  width: 100%;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dashed;
 }
 
 img {
   max-width: 100%;
-  height: 100%;
-}
-
-pre.hljs {
-  padding: 1em;
-  border-radius: 6px;
-  white-space: pre-wrap;
 }
 
 code {
-  background-color: var(--overlay);
-  padding: 0.25em;
-  border-radius: 6px;
+  font-family: monospace;
+  padding: 2px;
+  background-color: var(--code-background-color);
+  color: var(--code-color);
+  border-radius: 3px;
 }
 
 blockquote {
-  padding-left: 10px;
-  padding-right: 10px;
-  border-left: 3px solid var(--overlay);
-  color: var(--subtle);
-}
-
-pre > code {
-  background: transparent;
-}
-
-nav > ul {
-  display: flex;
-  padding: 0px;
-  align-items: center;
-}
-
-nav > ul > li {
-  display: inline-flex;
-  padding: 0;
-  margin: 0;
-  margin-right: 1em;
-}
-
-.m-0 {
-  margin: 0px;
-}
-
-.p-0 {
-  padding: 0px;
-}
-
-.post-link {
-  list-style-type: none;
-  max-width: 80ch;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.post-link .date {
-  padding: 0px;
-  margin: 0px;
-  display: inline-block;
-  width: 90px;
-  text-align: right;
-  color: var(--muted);
-  margin-right: 12px;
+  border-left: 1px solid #999;
+  color: var(--code-color);
+  padding-left: 20px;
+  font-style: italic;
 }
 
 footer {
-  max-width: 80ch;
-  padding: 2em;
-  margin: 0 auto;
-  border-top: 1px solid var(--surface);
+  padding: 25px 0;
+  text-align: center;
 }
 
-input[type="text"],
-input[type="email"] {
-  border: 0px;
-  padding: 8px;
-  border-radius: 2px;
-  color: var(--text);
-  background: var(--surface);
+.title:hover {
+  text-decoration: none;
 }
 
-button,
-input[type="submit"] {
-  background: var(--subtle);
-  border: 0;
-  padding: 4px 12px;
-  border-radius: 2px;
-  font-size: var(--fontSize);
-  color: var(--overlay);
+.title h1 {
+  font-size: 1.5em;
 }
 
-button:hover,
-input[type="submit"]:hover {
-  cursor: pointer;
+.inline {
+  width: auto !important;
+}
+
+.highlight,
+.code {
+  padding: 1px 15px;
+  background-color: var(--code-background-color);
+  color: var(--code-color);
+  border-radius: 3px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  overflow-x: scroll;
+}
+
+/* blog post list */
+ul.blog-posts {
+  list-style-type: none;
+  padding: unset;
+}
+
+ul.blog-posts li {
+  display: flex;
+}
+
+ul.blog-posts li span {
+  flex: 0 0 130px;
+}
+
+ul.blog-posts li a:visited {
+  color: var(--visited-color);
+}
+.title-bear {
+  font-weight: 400;
+}
+
+.bear::before {
+  content: "ᕦʕ •ᴥ•ʔᕤ";
+  font-weight: 400;
+}
+.bear:hover::before {
+  content: "ᕙʕ ಠᴥಠʔᕗ";
+  font-weight: 400;
+}
+
+textarea,
+input:not([type="submit"]) {
+  background-color: inherit;
+  color: inherit;
+  border: 1px dashed;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.full-width textarea,
+.full-width input:not([type="submit"], [type="checkbox"], [type="radio"]) {
+  width: calc(100% - 15px);
+}
+
+textarea:required,
+input:required:not([type="submit"]) {
+  border: 1px solid;
+}
+
+textarea.full-screen {
+  position: fixed;
+  background-color: white;
+  top: -2px;
+  bottom: -2px;
+  left: 0;
+  width: calc(100vw - 30px);
+  max-width: 720px;
+  border: 10px solid;
+  border-width: 10px calc(50vw - 370px);
+}
+
+@media only screen and (max-width: 750px) {
+  textarea.full-screen {
+    border-width: 10px;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  height: 15px;
+  margin-right: 10px;
+}
+
+button {
+  margin: 0;
+}
+
+button.floating {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+}
+
+button#toggle-full-screen {
+  float: right;
+}
+
+.helptext {
+  color: #777;
+  font-size: small;
+}
+
+.errorlist {
+  color: #eba613;
+  font-size: small;
+}
+
+#date-range {
+  display: none;
+}
+
+#date-range:target {
+  display: block;
+}
+
+/* dashboard post list and analytics */
+ul.post-list {
+  list-style-type: none;
+  padding: unset;
+}
+
+ul.post-list li {
+  display: flex;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px dashed;
+}
+
+ul.post-list li span {
+  flex: 0 0 130px;
+}
+
+ul.post-list li span.number {
+  flex: 0 0 50px;
+}
+
+ul.post-list li a {
+  flex: max-content;
+}
+
+ul.post-list li small {
+  text-align: right;
+  flex: 0 0 115px;
+}
+
+/* discovery feed */
+ul.discover-posts {
+  list-style-type: none;
+  padding: unset;
+}
+
+ul.discover-posts li {
+  display: flex;
+  line-height: 1.2;
+}
+
+ul.discover-posts li span {
+  flex: 0 0 40px;
+}
+
+ul.discover-posts li a:visited {
+  color: #8b6fcb;
+}
+
+ul.discover-posts li div {
+  padding-bottom: 8px;
+}
+
+ul.discover-posts li small span,
+ul.discover-posts li small span a {
+  color: #777 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .helptext {
+    color: #aaa;
+  }
+}
+
+body:hover {
+  border-image: none;
+  border-width: 0;
 }
