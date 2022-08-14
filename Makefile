@@ -7,4 +7,4 @@ w: watch
 b: build
 
 build:
-	alvu
+	alvu --highlight

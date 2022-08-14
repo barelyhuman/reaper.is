@@ -1,5 +1,9 @@
 #!/usr/bin/env bash 
 
-curl -sf https://goblin.barelyhuman.xyz/codeberg.org/reaper/alvu@d45df91bf9b056306e0855f51078b06959a1c433 | sh
+set -euxo pipefail
 
-alvu
+curl -o alvu.tgz -L https://codeberg.org/attachments/f12ad9f6-f1a5-4a79-bcff-578dc7947651
+tar -xvzf alvu.tgz
+install linux-amd64/alvu /usr/local/bin
+
+alvu 
