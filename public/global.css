@@ -9,6 +9,7 @@
   --gray-2: #343a40;
   --gray-1: #212529;
   --gray-0: #000000;
+  --font-mono: "Hermit", "Courier New", Courier, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -146,4 +147,32 @@ nav a:hover {
 
 footer {
   color: var(--gray-3);
+}
+
+code,
+kbd {
+  font-family: var(--font-mono);
+}
+
+code {
+  background: var(--gray-8);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+pre {
+  background: transparent !important;
+  font-family: var(--font-mono);
+}
+
+pre > code {
+  overflow-y: auto;
+  line-height: 1.75;
+  background: var(--gray-8);
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  height: 100%;
+  display: block;
+  white-space: pre-wrap;
 }
