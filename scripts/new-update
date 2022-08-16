@@ -1,0 +1,8 @@
+#!/usr/bin/env bash 
+
+file="$(date +'%Y%m%d')"
+
+file_path="pages/updates/$file.md"
+
+touch $file_path
+nvim $file_path
