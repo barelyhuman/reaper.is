@@ -1,4 +1,4 @@
-# Hello, I'm Reaper.
+Hey, I'm <h1>Reaper</h1>
 
 I work as a **Principal Developer** at [Fountane](https://fountane.com).
 
@@ -10,7 +10,7 @@ specialization and don't mind getting into new domains.
 
 &rarr; [Github](https://github.com/barelyhuman)
 
-Here's a few ways you to get in touch
+Here's a few ways you to get in touch, feel free to reach out for help.
 
 - **Twitter**: [barelyreaper](https://twitter.com/barelyreaper)
 - **Mail**: [ahoy@barelyhuman.dev](mailto:ahoy@barelyhuman.dev)
