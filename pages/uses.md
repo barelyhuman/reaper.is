@@ -16,7 +16,7 @@ Don't own much, so here's what I work with
 - **iPhone XR**, for online payments, maps etc, left in the bag / home
   otherwise. more like a house iPod at this point
 
-### Apps
+### Software
 
 - **Neovim and Sublime**, Code editors of choice (earlier: VSCode)
 - **Chrome and Safari**, Browser of choice, one for development and one for
