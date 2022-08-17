@@ -4,7 +4,7 @@ published: true
 date: 17/08/2022
 ---
 
-Clickbaity title, I know but it's kinda true.
+Clickbait title, I know but it's kinda true.
 
 Every 2 days, there's a new thing about react and how to use it
 that the whole "it's just javascript" statement makes no sense to me anymore.
@@ -96,9 +96,9 @@ The library isn't 500 lines for something that simple.
 2. You should be able to manage dependencies of each useSWR hook separately
 3. The passed in fetcher needs to be cached so it's passed to a `useRef`
 4. the key needs to be passed to useRef and monitored
-5. You need to see if it's the component first mount and if the above 2 have changed since the first mount since react can have upto 4 renders on the "initial" component render.
+5. You need to see if it's the component first mount and if the above 2 have changed since the first mount since react can have up to 4 renders on the "initial" component render.
 6. The error, data isn't a state inside the custom hook but maintained in cache and fetched from it to be sent to you, because if it was just a simple state swr would be causing a lot more renders on every `mutate()` call you make.
-7. There's cases where you have to handle cancellation of the fetch calls since if the calls complete it would mean updating for an unmounted component which is a data leak
+7. There's cases where you have to handle cancellation of the fetch calls since if the calls complete for an unmounted component then that's considered a data leak
 8. and so on so forth.
 
 So, can a frontend developer who's work was just to write a simple UI render after getting data from an API function or SDK do all this in every project?
@@ -109,7 +109,7 @@ Yeah and then copy the fixes back to the older projects, right?
 Don't claim it to be beginner friendly when it's not, and it's definitely no more javascript.
 
 **All that bashing to promote your library?**
-Nah, my library doesn't solve all the above either, and it probably has more issues that I can even imagine right now and I'll only find out about them as it starts getting used by more and more people so no, my libraries promotion has nothing to do with this. Also, I haven't even mentioned it on the post yet.
+Nah, my library doesn't solve all the above either, and it probably has more issues that I can even imagine right now and I'll only find out about them as it starts getting used by more and more people so no, my libraries have nothing to do with this. Also, I haven't even mentioned any of them in the post yet.
 
 **But it works!**
 It does, and it works beautifully. I've mentioned it before, I don't hate the library, but that doesn't mean I'm not irritated by the decisions.
