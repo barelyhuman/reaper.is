@@ -1,12 +1,15 @@
 Hey, I'm <h1>Reaper</h1>
 
-I work as a **Principal Developer** at [Fountane](https://fountane.com).
+**Principal Developer** at [Fountane](https://fountane.com)
 
-I enjoy the chaos and mostly found tinkering with different programming languages
-and standards. I don't have a primary programming language, neither do I have a primary
-specialization and don't mind getting into new domains.
+Mostly seen building tools and libraries to complicate my own life while trying
+to ease it for my future self.
 
-**I'd wish for my work to speak for itself** (though it doesn't speak much...)
+Dealing with chaos and tinkering with different programming languages and
+standards are my favorite hobbies. I don't have a preferred programming language
+and most of my work revolves around web and cli tools.
+
+**My work could speak for itself** (though it doesn't speak much...)
 
 &rarr; [Github](https://github.com/barelyhuman)
 

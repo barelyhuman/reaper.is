@@ -1,10 +1,6 @@
----
-
----
-
 ## Uses
 
-I don't own much, so here's what I work with
+Don't own much, so here's what I work with
 
 ### Hardware
 
@@ -12,7 +8,7 @@ I don't own much, so here's what I work with
   like TWS that much and these are pretty easy to replace and carry around,
   plus, amazing battery life for someone who listens to music continuously.
 
-- **Macbook Air M1 2020 (8GB, 500Gig)**, I work on this primarily, I also use my
+- **Macbook Air M1 2020 (8GB, 500Gig)**, Primary "workstation", There's also an
   older Lenovo Ideapad 520 slim to game on weekends and it's also the linux
   machine of choice when absolutely necessary.
 
