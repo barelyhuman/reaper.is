@@ -130,6 +130,10 @@ nav a:hover {
   border-bottom: 1px solid var(--gray-8);
 }
 
+.flex-2{
+  flex: 2;
+}
+
 .post-link a {
   flex: 2;
   color: var(--gray-3);
