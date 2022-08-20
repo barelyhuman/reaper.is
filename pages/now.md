@@ -45,6 +45,19 @@ might scale to other use cases.
 
 It's going to be easier to write this in C, Go, due to existing interfaces
 
+#### `codename`: musync
+
+[musync](https://github.com/barelyhuman/musync) already exists as a simple spotify playlist's sync and
+this can be better done with [ifttt.com](https://ifttt.com) now since they have a ton of integrations though
+I still think I'm missing one very needed feature that I wanted to build into the app.
+
+I use SongShift on iOS to synchronize my Spotify and Apple playlists, primarily because the speaker systems at home
+have better and clearer audio when playing tracks from the Apple Music app but then Spotify has better recommendations for Indie tracks.
+
+You can either pick musync to add this integration or you can create a whole another CLI for the same.
+
+Preferred languages would be: Nim / Rust / Go so I can read and help you fix tiny issues if possible but if you think there's a better language for the job, go bonkers with it.
+
 ### Libraries
 
 #### `codename`: typeless-gql
@@ -73,6 +86,82 @@ const response = someExecutionLibrary(TypedOperationNode);
 response.data.pong;
 // should autocomplete at `data` and `pong`
 ```
+
+### Desktop
+
+#### `codename` : pui
+
+A postgres gui tool, hopefully cross-platform
+
+[pui](http://github.com/barelyhuman/pui) already exists as an electron prototype and was never taken up
+as a serious project since I was sure people would've built better native apps and I could find one.
+
+Unlike SequelPro (MySQL) there's hardly any OSS and well polished app for postgres, there's partially free
+alternatives like
+
+- Postico
+- TablePlus
+- Beekeeper
+
+but they are either too heavy for normal work or irritate the crap out of you by adding limitation to most
+basic tasks we expect from an app today.
+
+I'd like to build something like SequelPro, with a similar UI as well, that app is gold but for postgres
+and if possible use shared connector code so the UI can be built for other platforms later on.
+
+### Web Apps
+
+#### `codename` : feedbag
+
+OSS feedback site,
+this is an experimental project I wish to build while learning more about
+web crypto libs.
+
+The idea was to build a self-hosted / easily-injected feedback system for apps
+that would'nt involve getting the users to create a new account or an account at all
+it'd use the device key to create an identity (web cryptographic login) and allow
+anonymous feedback.
+
+Due to it being anonymous a moderator side is required which in this case would be the
+app creator.
+
+The feedback could be of various types,
+
+- feature requests
+- bug reports etc etc
+
+They can also sponsor/pay to boost up a request up in priority (additional requirement by [kdy1dev](https://twitter.com/kdy1dev))
+
+### Multi-Platform Apps
+
+#### `codename` : hello
+
+A very very very minimal text app, just texts and that's about it.
+
+No unique selling point here, it's supposed to a single focused app to be able to just quickly text.
+
+- Kik used to be this but now it's a mess
+- Apple iMessage is close to what I'm talking about but cannot use it with everyone.
+
+**Preferences**
+
+- Monochromatic / BW UI
+- Just texts, nothing else (e2e encrypted)
+- Probably built of the matrix protocol and servers
+- Doesn't need a server, uses SSB(https://scuttlebutt.nz) like setup where the devices act as storage
+- need to send through generated device ID's to add/name people
+
+**Platforms**
+Preferably all platforms (iOS,Android,Mac, Windows, Linux) , no I'm not going to compete with telegram / signal.
+
+Not a platform for everyone but well, I'd use it.
+
+**Architecture**
+Since implementing the logic for every platform would be a bad idea, the concept is to implement the whole thing in
+a low level language like C / Nim (C) or use something like Go to create shared object code and use the platform specific UI's to use the provided methods from the shared object code.
+
+Could do an embedded JSON RPC but that'd become complicated since you are talking inside the app and then
+iOS background workers rarely work well with network requests. Though, an internal one shouldn't really have much issues. (need to POC before moving forward)
 
 ### Docker Images
 
