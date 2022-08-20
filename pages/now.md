@@ -20,7 +20,15 @@ now
 Things I wish to build, these are open ideas that you can build as well, the
 only request I have is, do keep them **open source**.
 
-### CLI tools
+**Index**
+- [CLI](#cli)
+- [Libraries](#libraries)
+- [Desktop](#desktop)
+- [Web](#web)
+- [Multi Platform](#multi-platform)
+- [Docker](#docker)
+
+### CLI
 
 #### `codename`: stirup
 
@@ -109,7 +117,7 @@ basic tasks we expect from an app today.
 I'd like to build something like SequelPro, with a similar UI as well, that app is gold but for postgres
 and if possible use shared connector code so the UI can be built for other platforms later on.
 
-### Web Apps
+### Web
 
 #### `codename` : feedbag
 
@@ -132,7 +140,7 @@ The feedback could be of various types,
 
 They can also sponsor/pay to boost up a request up in priority (additional requirement by [kdy1dev](https://twitter.com/kdy1dev))
 
-### Multi-Platform Apps
+### Multi-Platform
 
 #### `codename` : hello
 
@@ -163,7 +171,7 @@ a low level language like C / Nim (C) or use something like Go to create shared 
 Could do an embedded JSON RPC but that'd become complicated since you are talking inside the app and then
 iOS background workers rarely work well with network requests. Though, an internal one shouldn't really have much issues. (need to POC before moving forward)
 
-### Docker Images
+### Docker
 
 #### `codename`: postgres-git-backup
 
