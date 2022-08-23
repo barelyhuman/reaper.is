@@ -108,6 +108,28 @@ response.data.pong;
 // should autocomplete at `data` and `pong`
 ```
 
+#### `codename` : codegtabs
+
+These are code group tabs that only a few markdown transformers support and most 
+don't have a plugin for it. 
+
+These can be seen in [japa.dev](https://japa.dev/test-context) website and in a few other websites that 
+do multi language documentation. 
+
+^ _the section which allows you to switch between cjs and esm_
+
+The plan is to make a library that would only parse the code group in the passed file and 
+then convert that to html so that the next markdown parser doesn't do it. 
+
+Now this could be a plugin for each markdown parser that we wish to use but that's well too much work. 
+
+The unix philosophy makes it better and more reusable, so let's do that. 
+
+This can be written in C with bindings for other languages or in Nim with shared code and then bindings 
+in other languages. 
+
+Either way, maybe research a bit more on it and if there's an easier way, go bonkers.
+
 ### Desktop
 
 #### `codename` : pui
