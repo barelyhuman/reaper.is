@@ -85,7 +85,7 @@ There's no other skill that I'm even half decent at so coding it is.
 I can't really say much since I hardly have any experience with sponsors or
 donations
 
-But, I recently read landed on [How to Support NetNewsWire](https://github.com/Ranchero-Software/NetNewsWire/blob/main/Technotes/HowToSupportNetNewsWire.markdown). It's what made me draft this post.
+But, I recently landed on [How to Support NetNewsWire](https://github.com/Ranchero-Software/NetNewsWire/blob/main/Technotes/HowToSupportNetNewsWire.markdown). It's what made me draft this post.
 
 It also made me want to delete my sponsors and all the donation links that I've
 had on my repos. I didn't delete them because, adding sponsors was a decision
