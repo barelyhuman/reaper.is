@@ -111,57 +111,70 @@ response.data.pong;
 
 #### `codename` : codegtabs
 
-These are code group tabs that only a few markdown transformers support and most 
-don't have a plugin for it. 
+These are code group tabs that only a few markdown transformers support and most
+don't have a plugin for it.
 
-These can be seen in [japa.dev](https://japa.dev/test-context) website and in a few other websites that 
-do multi language documentation. 
+These can be seen in [japa.dev](https://japa.dev/test-context) website and in a
+few other websites that do multi language documentation.
 
 ^ _the section which allows you to switch between cjs and esm_
 
-The plan is to make a library that would only parse the code group in the passed file and 
-then convert that to html so that the next markdown parser doesn't do it. 
+The plan is to make a library that would only parse the code group in the passed
+file and then convert that to html so that the next markdown parser doesn't do
+it.
 
-Now this could be a plugin for each markdown parser that we wish to use but that's well too much work. 
+Now this could be a plugin for each markdown parser that we wish to use but
+that's well too much work.
 
-The unix philosophy makes it better and more reusable, so let's do that. 
+The unix philosophy makes it better and more reusable, so let's do that.
 
-This can be written in C with bindings for other languages or in Nim with shared code and then bindings 
-in other languages. 
+This can be written in C with bindings for other languages or in Nim with shared
+code and then bindings in other languages.
 
-Either way, maybe research a bit more on it and if there's an easier way, go bonkers.
+Either way, maybe research a bit more on it and if there's an easier way, go
+bonkers.
 
 ### Languages
 
 #### `codename` : mole
 
-Probably will change the name to molecule but whatever, it's a codename. 
+Probably will change the name to molecule but whatever, it's a codename.
 
-The idea is to build not a full fledged language but a meta programming language somewhat similar to nimrod or better known as nim lang.
+The idea is to build not a full fledged language but a meta programming language
+somewhat similar to nimrod or better known as nim lang.
 
 We don't wanna compete with Nimlang or Vlang. (me noob, please have mercy.)
 
 The conceptual spec right now is to have the following
 
-- **not** Turing complete 
+- **not** Turing complete
 - basic arithmetic, maybe a little more advanced in case I decide it.
 - single if and else statements, like expressions
-- only one way to declare variables 
-- dynamically typed but doesn't allow changing type over the course. (don't want another JS, do we)
-- functions are anonymous by default and can be assigned to variables if a name is to be used, again like expressions. 
-- there's no while loops 
+- only one way to declare variables
+- dynamically typed but doesn't allow changing type over the course. (don't want
+  another JS, do we)
+- functions are anonymous by default and can be assigned to variables if a name
+  is to be used, again like expressions.
+- there's no while loops
 - no for loops, iterators, will add more on this later on.
-- each file is a module and module resolution is based on local files and there's no such thing as a global module system. You add files in let's say a `lib` folder and it's all packed together when compiling / transpiling / interpreting / or whatever-ing. (that sounds like lua...)
-- The standard library is going to be very very very tiny, we aren't going to go for building anything that depends on the platform at least to 
-start with. 
+- each file is a module and module resolution is based on local files and
+  there's no such thing as a global module system. You add files in let's say a
+  `lib` folder and it's all packed together when compiling / transpiling /
+  interpreting / or whatever-ing. (that sounds like lua...)
+- The standard library is going to be very very very tiny, we aren't going to go
+  for building anything that depends on the platform at least to start with.
 
 **Why build something like this?**
-1. To learn 
-2. A very simple language that can be compiled into others gives me a good way to finally stop running around multiple languages. (nim does that but half the time I have to re-learn how pragmas and macros work.)
-3. This is for creating tiny little modules of logic and pure logic, so separation of concern for let's say, I want to just keep computations to one side and then UI to another, I should be able to do that. (eg: computation in this lang and then UI in SwiftUI,etc)
-4. It's my language! 
 
-
+1. To learn
+2. A very simple language that can be compiled into others gives me a good way
+   to finally stop running around multiple languages. (nim does that but half
+   the time I have to re-learn how pragmas and macros work.)
+3. This is for creating tiny little modules of logic and pure logic, so
+   separation of concern for let's say, I want to just keep computations to one
+   side and then UI to another, I should be able to do that. (eg: computation in
+   this lang and then UI in SwiftUI,etc)
+4. It's my language!
 
 ### Desktop
 
@@ -186,6 +199,24 @@ adding limitation to most basic tasks we expect from an app today.
 I'd like to build something like SequelPro, with a similar UI as well, that app
 is gold but for postgres and if possible use shared connector code so the UI can
 be built for other platforms later on.
+
+#### `codename` : retempo
+
+A beautiful and really well designed email client that focuses on async
+workflows. The original idea is based off of [Tempo](https://www.yourtempo.co) ,
+the email client I currently use and probably the only Electron app I really
+like simply because of the beautiful UI/UX and minimalism of the client.
+
+Plus, the client is barely ever open so it's all good.
+
+You can write a similar one in native if you wish to, I wouldn't really
+complain.
+
+Other things to consider 
+- offline device storage instead of google drive / cloud storage.
+- Similar todo functionality for mails 
+- Doesn't need the switchable buttons (that's too much for native UI, go ahead if you're doing web)
+
 
 ### Web
 
