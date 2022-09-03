@@ -16,13 +16,15 @@ Don't own much, so here's what I work with
 - **iPhone XR**, for online payments, maps etc, left in the bag / home
   otherwise. more like a house iPod at this point
 
-### Software
+### Software / Tools
 
 - **Neovim and Sublime**, Code editors of choice (earlier: VSCode)
 - **Chrome and Safari**, Browser of choice, one for development and one for
   browsing
 - **iTerm2**, Terminal, used with the
   [minzsh](https://github.com/barelyhuman/minzsh) shell theme for zsh
+- [**logbook**](https://github.com/rsms/rsms-utils/blob/master/bin/logbook) - a tiny bash binary for managing daily journals from [@rsms](https://github.com/rsms)
+- [**typer**](https://typer.barelyhuman.dev) - a simple website to warmup typing with 
 
 ... the remaining software are pretty much always changing based on better
 alternatives so really makes no sense to list them.
