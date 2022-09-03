@@ -9,7 +9,7 @@ kinda boring but for me at least, it's not.
 
 I've been with programming for quite a long time now.
 
-I started when I was in 10th (about 11 years old) with tiny programs in C to
+I started when I was in 10th (about 15 years old) with tiny programs in C to
 teach my younger sister for her computer classes.
 
 Then I got into custom roms for android and built a few roms (pretty lame ones).
