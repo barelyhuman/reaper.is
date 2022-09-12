@@ -8,7 +8,7 @@ now
 - done with the base API and Flags for
   [commitlog](https://github.com/barelyhuman/commitlog), now need to add a
   parser for a global and local config for it
-- working on a more functional way to deal with react and hooks
+- A lua like simplistic language that transpiles to a few other languages
 
 > **NOTE**: (for future self) Do not! and I say DO FUCKING NOT do more than 3
 > projects at a time, you just can't handle it.
