@@ -4,12 +4,9 @@ local json = require("json")
 local lib = require("lib.utils")
 local strings = require("strings");
 
-local function interp(s, tab)
-    return (s:gsub('($%b{})', function(w) return tab[w:sub(3, -2)] or w end))
-end
 
 local function rss_template(data)
-    return interp([=[
+    return lib.interp([=[
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
@@ -24,7 +21,7 @@ local function rss_template(data)
 end
 
 local function item_template(data)
-    return interp([=[
+    return lib.interp([=[
     <item>
         <guid>${slug}</guid>
         <title>${title}</title>
@@ -56,7 +53,7 @@ function Writer(filedata)
                 local date = lib.parse_dates(source_data.meta.date)
                 local offset = lib.get_tzoffset(lib.get_timezone())
                 local weekday = lib.totitlecase(os.date("%a", date))
-                local pubDate = interp("${weekday}, " .. os.date("%d %b %Y %X", date) .. " ${offset}", {
+                local pubDate = lib.interp("${weekday}, " .. os.date("%d %b %Y %X", date) .. " ${offset}", {
                     weekday = weekday,
                     offset = offset
                 })

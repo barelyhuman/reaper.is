@@ -12,12 +12,8 @@ local sitemap_file_name = "dist/sitemap.xml"
 -- if you wish to add more functionatliy
 -- you'll have to modify this to do that
 
-local function interp(s, tab)
-    return (s:gsub('($%b{})', function(w) return tab[w:sub(3, -2)] or w end))
-end
-
 local function sitemap_template(data)
-    return interp([=[
+    return lib.interp([=[
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http:www.w3.org/1999/xhtml">
   ${itembody}
@@ -25,7 +21,7 @@ local function sitemap_template(data)
 end
 
 local function sitemap_item_template(data)
-    return interp([=[<url>
+    return lib.interp([=[<url>
         <loc>${url}</loc>
         <lastmod>${date}</lastmod>
         <priority>1.00</priority>
@@ -54,7 +50,7 @@ function Writer(filedata)
                 local offset = lib.get_tzoffset(lib.get_timezone())
                 local weekday = lib.totitlecase(os.date("%a", date))
                 -- 2022-08-21T11:44:02+00:00
-                local pubDate = interp(os.date("!%Y-%m-%dT%X", date) .. "${offset}", {
+                local pubDate = lib.interp(os.date("!%Y-%m-%dT%X", date) .. "${offset}", {
                     offset = offset
                 })
 
