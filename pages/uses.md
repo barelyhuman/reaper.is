@@ -15,7 +15,7 @@ Don't own much, so here's what I work with
 - **Nokia 5310**, calls and texting, in my pocket normally
 - ~~**iPhone XR**, for online payments, maps etc, left in the bag / home
   otherwise. more like a house iPod at this point~~
-- **iPhone 12 Mini**, the only pocketable phone around right now, replaces the iPhone XR till I can find a better and cheaper alternative to having to the current phones
+- **iPhone 12 Mini**, the only pocketable phone around right now, replaces the iPhone XR till I can find a better and cheaper alternative to the current phones in the market. 
 
 ### Software / Tools
 
