@@ -241,6 +241,25 @@ The feedback could be of various types,
 They can also sponsor/pay to boost up a request up in priority (additional
 requirement by [kdy1dev](https://twitter.com/kdy1dev))
 
+#### `codename` : denopkg-search
+
+While everything else is deno is going great, the package searching on one of the most used 
+platform [crux.land](https://crux.land) is non-existent and can be easily solved with a simple caching 
+strat of maintaing any requested module in cache to make a searchable index. 
+
+This is going to be very community dependent but it's not that hard if someone known in the 
+community picks this up. 
+
+The database/cache would be some form of NOSQL db instead of SQL DB since the cache can be duplicated 
+at points of conflicts and might need total overwrites which will become tedious to maintain in an SQL 
+database. 
+
+I'd go with 
+- deno + alephjs 
+- couchdb / mongo (Idk what driver has better support in deno right now)
+
+If someone else is picking this up, you can use whatever stack works well for you
+
 ### Multi-Platform
 
 #### `codename` : hello
