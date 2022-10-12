@@ -32,6 +32,7 @@ only request I have is, do keep them **open source**.
 - [Web](#web)
 - [Multi Platform](#multi-platform)
 - [Docker](#docker)
+- [Uncategorized](#uncategorized)
 
 ### CLI
 
@@ -212,11 +213,12 @@ Plus, the client is barely ever open so it's all good.
 You can write a similar one in native if you wish to, I wouldn't really
 complain.
 
-Other things to consider 
-- offline device storage instead of google drive / cloud storage.
-- Similar todo functionality for mails 
-- Doesn't need the switchable buttons (that's too much for native UI, go ahead if you're doing web)
+Other things to consider
 
+- offline device storage instead of google drive / cloud storage.
+- Similar todo functionality for mails
+- Doesn't need the switchable buttons (that's too much for native UI, go ahead
+  if you're doing web)
 
 ### Web
 
@@ -243,22 +245,25 @@ requirement by [kdy1dev](https://twitter.com/kdy1dev))
 
 #### `codename` : denopkg-search
 
-While everything else is deno is going great, the package searching on one of the most used 
-platform [crux.land](https://crux.land) is non-existent and can be easily solved with a simple caching 
-strat of maintaing any requested module in cache to make a searchable index. 
+While everything else is deno is going great, the package searching on one of
+the most used platform [crux.land](https://crux.land) is non-existent and can be
+easily solved with a simple caching strat of maintaing any requested module in
+cache to make a searchable index.
 
-This is going to be very community dependent but it's not that hard if someone known in the 
-community picks this up. 
+This is going to be very community dependent but it's not that hard if someone
+known in the community picks this up.
 
-The database/cache would be some form of NOSQL db instead of SQL DB since the cache can be duplicated 
-at points of conflicts and might need total overwrites which will become tedious to maintain in an SQL 
-database. 
+The database/cache would be some form of NOSQL db instead of SQL DB since the
+cache can be duplicated at points of conflicts and might need total overwrites
+which will become tedious to maintain in an SQL database.
 
-I'd go with 
-- deno + alephjs 
+I'd go with
+
+- deno + alephjs
 - couchdb / mongo (Idk what driver has better support in deno right now)
 
-If someone else is picking this up, you can use whatever stack works well for you
+If someone else is picking this up, you can use whatever stack works well for
+you
 
 ### Multi-Platform
 
@@ -305,3 +310,30 @@ A simple docker image that takes in postgres configuration and schedule a backup
 task for the provided configuration but instead of saving to s3 / local, have
 the ability to push to a git repo or a git lfs based repo (both should be
 supported)
+
+### Uncategorized
+
+Things that belong in multiple categories or none at all
+
+#### `codename`: flatmod
+
+Probably already exists, I couldn't find one so adding it here.
+
+The idea is to be able to modify source code to get rid of circular deps by
+analysing the dependency of each file and each file's internal behavioural
+dependency.
+
+This can be done manually but also something simple could be handled by a tool.
+
+> Note: I understand what webpack and bundle splitters do, this is more on the
+> lines of generative codemod instead of a distributed artifact
+
+If it sounds like something to be built, unless it exists, the idea is to take
+the source file, go through the deps, find a circular dep, split out the
+circular dep's function or exports into a new shared file, this is to be
+recursive to re-analyse the codemod with a max depth of 20 (customizable), if it
+crosses the max depth, stop the splitting.
+
+Most of the splitting is to happen on temporary files but since it is all
+string, can be done with rope algorithms since the size of these files might
+vary from project to project
