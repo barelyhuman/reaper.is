@@ -1,11 +1,11 @@
 ---
-
 title: COLUMN “” CONTAINS NULL VALUES | Postgres
 date: 2020-02-18 19:24:41
 published: true
 ---
 
-I don't maintain migrations so I end having this error almost everytime I add a new column that's not nullable.
+I don't maintain migrations so I end having this error almost everytime I add a
+new column that's not nullable.
 
 Here's a few queries you can execute for this.
 

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash 
+
+npx prettier --prose-wrap="always" --print-width=80 --write pages/writing/*.md

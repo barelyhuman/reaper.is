@@ -1,5 +1,4 @@
 ---
-
 title: The everchanging setup
 date: 25/06/2022
 rss_only: true

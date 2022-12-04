@@ -1,8 +1,7 @@
 ---
-
 title: Creating a blog
 date: 08-07-2022
-published: true 
+published: true
 ---
 
 If you've been around, you know this very blog has been re-done about 4 times

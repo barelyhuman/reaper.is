@@ -1,5 +1,4 @@
 ---
-
 title: Iterative GraphQL
 date: 01/07/2022
 ---
@@ -115,7 +114,7 @@ const server = createServer({
   schema: {
     typeDefs: `
       type Query {
--        ping: String 
+-        ping: String
 +        ping: String @skipAuth
 +        privatePing: String @auth
       }

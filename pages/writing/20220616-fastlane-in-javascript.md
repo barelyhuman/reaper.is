@@ -1,6 +1,5 @@
 ---
-
-title: Writing fastlane scripts in Javascript 
+title: Writing fastlane scripts in Javascript
 date: 16/06/2022
 ---
 
@@ -45,15 +44,15 @@ definition
 
 ```ruby
 # ios
-deploy_ios 
-sign_ios 
+deploy_ios
+sign_ios
 build_iod
 dev
 prod
 
-# android 
-deploy_android 
-sign_android 
+# android
+deploy_android
+sign_android
 build_android
 dev
 prod
@@ -64,7 +63,7 @@ the structure is actually very simple, `deploy_` functions call the
 params passed.
 
 ```sh
-fastlane ios dev # would create a dev build 
+fastlane ios dev # would create a dev build
 fastlane ios prod # would create an appstore build
 ```
 
@@ -98,7 +97,7 @@ out if the given param was for dev or not
 def is_ios_dev(scheme)
     if scheme.end_with("Dev")
         true
-    else 
+    else
         false
     end
 end
@@ -106,7 +105,7 @@ end
 def is_android_dev(bundle)
     if bundle.end_with(".dev")
         true
-    else 
+    else
         false
     end
 end
@@ -165,7 +164,7 @@ Let's get to how to use the library.
 
 ```
 npm i fastlanejs
-# or 
+# or
 yarn add fastlanejs
 ```
 

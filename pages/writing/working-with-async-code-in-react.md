@@ -1,33 +1,65 @@
 ---
-
 title: Working with Async Code in React
 published: true
 date: 23/11/2021
 ---
 
-Due to the nature of my work I end up having to work with a lot of libraries and there's a lot of POC and experimenting that goes on to help junior devs not cry their eyes out when working with code.
+Due to the nature of my work I end up having to work with a lot of libraries and
+there's a lot of POC and experimenting that goes on to help junior devs not cry
+their eyes out when working with code.
 
-This part of setting up good DX for everyone on the team requires failing miserably while doing the same for yourself first.
+This part of setting up good DX for everyone on the team requires failing
+miserably while doing the same for yourself first.
 
-And the most irritating part about hooks have been the amount of work you have to do to handle async functions which is very common when working with frontend apps and also the reason a lot of companies worked on creating good async hooks, though each of then thought of their usecase of hooks and now that's the standard.
+And the most irritating part about hooks have been the amount of work you have
+to do to handle async functions which is very common when working with frontend
+apps and also the reason a lot of companies worked on creating good async hooks,
+though each of then thought of their usecase of hooks and now that's the
+standard.
 
 **Full disclosure: this post kinda tries to market a tiny npm package I made**
 
-Let's take `swr` for example, it handles a global state for caching which is stored by hashing the params given to the `useSWR` function and then the same is implemented in the react-native version [nandorojo/swr-react-native](https://github.com/nandorojo/swr-react-native) by [Fernando Rojo](https://twitter.com/fernandotherojo) which makes modifications for react-navigation. You **can** use the original [vercel/swr](https://github.com/vercel/swr) in react-native though the focus revalidation won't work since the focus logic is different when working with react-native-navigation.
+Let's take `swr` for example, it handles a global state for caching which is
+stored by hashing the params given to the `useSWR` function and then the same is
+implemented in the react-native version
+[nandorojo/swr-react-native](https://github.com/nandorojo/swr-react-native) by
+[Fernando Rojo](https://twitter.com/fernandotherojo) which makes modifications
+for react-navigation. You **can** use the original
+[vercel/swr](https://github.com/vercel/swr) in react-native though the focus
+revalidation won't work since the focus logic is different when working with
+react-native-navigation.
 
 Back to the point, if I use `swr`
 
 - it's going to handle caching for me
 - handle retries if configured to do so
-- handle revalidation (refetching data from network and checking if it's different from the cache and re-rendering if it is) at a polling interval and also on focus of the view/page
+- handle revalidation (refetching data from network and checking if it's
+  different from the cache and re-rendering if it is) at a polling interval and
+  also on focus of the view/page
 
-All amazing features that you'd like to have and has a really simple API, **but** the only case where the above makes no sense is when you are already working with a library that does most of this.
+All amazing features that you'd like to have and has a really simple API,
+**but** the only case where the above makes no sense is when you are already
+working with a library that does most of this.
 
-I work with [`urql`](https://formidable.com/open-source/urql/) and [`apollo` ](https://www.apollographql.com/docs/react/get-started/) in almost every GraphQL backed app that we have and they already provide with hooks and a connection client that handles caching + network, polling (if needed), doesn't have revalidation but it's not that hard to set that up.
+I work with [`urql`](https://formidable.com/open-source/urql/) and
+[`apollo` ](https://www.apollographql.com/docs/react/get-started/) in almost
+every GraphQL backed app that we have and they already provide with hooks and a
+connection client that handles caching + network, polling (if needed), doesn't
+have revalidation but it's not that hard to set that up.
 
-Now this is where the existence of [react-async](https://github.com/barelyhuman/react-async) comes into picture, since having 2 network clients maintain cache based on hashing libraries does hinder performance when working with larger apps and to be fair `swr` or `react-query` do not advice you to use them with other clients, they document to use it with the vanilla graphql client and i'm not really blaming the libraries, they just don't suffice the usecase.
+Now this is where the existence of
+[react-async](https://github.com/barelyhuman/react-async) comes into picture,
+since having 2 network clients maintain cache based on hashing libraries does
+hinder performance when working with larger apps and to be fair `swr` or
+`react-query` do not advice you to use them with other clients, they document to
+use it with the vanilla graphql client and i'm not really blaming the libraries,
+they just don't suffice the usecase.
 
-Now, for the reasons for as to why this wrapper has to exist is, the hooks provided by the libs (url and apollo) are rather messy to work with and get limited to a single query and will need a custom hook implementation when working with multiple data queries or you end up writing a new query that uses fragments from both which ends up with a lot of redundant code
+Now, for the reasons for as to why this wrapper has to exist is, the hooks
+provided by the libs (url and apollo) are rather messy to work with and get
+limited to a single query and will need a custom hook implementation when
+working with multiple data queries or you end up writing a new query that uses
+fragments from both which ends up with a lot of redundant code
 
 Example:
 
@@ -79,7 +111,11 @@ function ReactExampleComponent() {
 }
 ```
 
-This is a very naive example but if you work with something like hasura then this can get quite common since you end up joining un-related dependent data quite often for rendering, ending up in writing a lot of `useFetch<QueryName>` and handlers for each, or you can write a custom hook to isolate this logic to be able to reuse it later, something like below
+This is a very naive example but if you work with something like hasura then
+this can get quite common since you end up joining un-related dependent data
+quite often for rendering, ending up in writing a lot of `useFetch<QueryName>`
+and handlers for each, or you can write a custom hook to isolate this logic to
+be able to reuse it later, something like below
 
 ```jsx
 function useUserDataAndAddress() {
@@ -132,7 +168,12 @@ function ReactExampleComponent() {
 }
 ```
 
-This is what I normally do and it can get really redundant really quickly since you are basically doing nothing else but organizing the hook data, so I instead decided to go the other route with these libraries (urql and apollo) where they provide a core client that you can use to write fetchers and these are simply functions, so now I can write SDK type functions that I can chain for data so the above code with react-async would look like
+This is what I normally do and it can get really redundant really quickly since
+you are basically doing nothing else but organizing the hook data, so I instead
+decided to go the other route with these libraries (urql and apollo) where they
+provide a core client that you can use to write fetchers and these are simply
+functions, so now I can write SDK type functions that I can chain for data so
+the above code with react-async would look like
 
 ```jsx
 async function fetchUserAndAddress() {
@@ -158,23 +199,35 @@ function ReactExampleComponent() {
 }
 ```
 
-Thus, reducing my overall redundant code and I write the actuall fetchers just once when I'm writing the gql query, which is also something you can automate if you which to, though I'm fine writing a single line of
+Thus, reducing my overall redundant code and I write the actuall fetchers just
+once when I'm writing the gql query, which is also something you can automate if
+you which to, though I'm fine writing a single line of
 
 ```js
 // client is the urql client in this case
 async function fetchUser(payload) {
-  return client.query(FETCH_USER_QUERY, { payload }).toPromise()
+  return client.query(FETCH_USER_QUERY, { payload }).toPromise();
 }
 ```
 
-Obviously, the other side is if you work with the traditional graphql server where the queries are limited then yes you can go with the above custom hook approach and you might end up with a few extra custom hooks but that's about it and that's still a clean way to handle async data in your apps.
+Obviously, the other side is if you work with the traditional graphql server
+where the queries are limited then yes you can go with the above custom hook
+approach and you might end up with a few extra custom hooks but that's about it
+and that's still a clean way to handle async data in your apps.
 
 This just makes it easier since I now have
 
 - a reusable fetcher
-- a reusable and copyable function that doesn't depend on the react context for data
-- an API I don't need to remember cause it literally takes in 2 params `useAsync(fetcher, options)`
+- a reusable and copyable function that doesn't depend on the react context for
+  data
+- an API I don't need to remember cause it literally takes in 2 params
+  `useAsync(fetcher, options)`
 
-The library is still getting used and tested internally at work and so the `options` part isn't available in the released version you can use `@barelyhuman/react-async@beta` to get that and it's typed so you'll get the options accordingly, but it's still not documented so I'd wait till I release the next patch version.
+The library is still getting used and tested internally at work and so the
+`options` part isn't available in the released version you can use
+`@barelyhuman/react-async@beta` to get that and it's typed so you'll get the
+options accordingly, but it's still not documented so I'd wait till I release
+the next patch version.
 
-To stay updated you can signup on the newsletter or follow on twitter or add this blog's rss , idk your call
+To stay updated you can signup on the newsletter or follow on twitter or add
+this blog's rss , idk your call

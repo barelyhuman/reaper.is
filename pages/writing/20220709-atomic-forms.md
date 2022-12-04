@@ -1,5 +1,4 @@
 ---
-
 title: Atomic Forms in React
 date: 09/07/2022
 ---
@@ -56,40 +55,40 @@ Sure, since the docs aren't added yet, you can use this example as a quick start
 or use the repository's `examples` folder instead.
 
 ```js
-import { atomWithValidate } from 'jotai-form'
-import { useAtom } from 'jotai'
-import * as Yup from 'Yup'
+import { atomWithValidate } from "jotai-form";
+import { useAtom } from "jotai";
+import * as Yup from "Yup";
 
 // define an atom that needs to be validated
-const nameAtom = atomWithValidate('', {
-  validate: name => {
-    if (name === 'Reaper') {
+const nameAtom = atomWithValidate("", {
+  validate: (name) => {
+    if (name === "Reaper") {
       // throw an error to say that the value is invalid
-      throw new Error("Nah, invalid name, you can't be Reaper")
+      throw new Error("Nah, invalid name, you can't be Reaper");
     }
-    return name
+    return name;
   },
-})
+});
 
 // you can also use form validation libraries if you wish to
 // yes it supports async validations
 // you can use a backend API for the validation for stuff
-const nameYupAtom = atomWithValidate('', {
-  validate: async name => {
-    return await Yup.string().required().validate(name)
+const nameYupAtom = atomWithValidate("", {
+  validate: async (name) => {
+    return await Yup.string().required().validate(name);
   },
-})
+});
 
 const Form = () => {
-  const [name, setName] = useAtom(nameAtom)
+  const [name, setName] = useAtom(nameAtom);
   return (
     <>
-      <input value={name.value} onChange={e => setName(e.target.value)} />
+      <input value={name.value} onChange={(e) => setName(e.target.value)} />
       <span>{!name.isValid && `${name.error}`}</span>
       <button disabled={!name.isValid}> Save Name </button>
     </>
-  )
-}
+  );
+};
 ```
 
 - The state is still just simple singular state.
