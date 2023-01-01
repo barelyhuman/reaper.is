@@ -27,13 +27,13 @@ getting the functionality to work.
 
 So, here's the decisions and updates for the past month.
 
-## @barelyhuman/tocolor
+### @barelyhuman/tocolor
 
 Worked on updates for the L\*a\*b\* color variants and XYZ color variants. The
 base implementations are done but the documentation is still something I need to
 update for it, so it's on the `next` tag on `npm` right now.
 
-## typeapi
+### typeapi
 
 A simple typescript based website, that can simply list the exported types and
 functions from a node package.
