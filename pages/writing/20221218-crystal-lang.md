@@ -6,7 +6,11 @@ date: 18/12/2022
 I'm no professional "Programming Language Reviewer" but I think readers at this
 point understand that I jump around multiple languages just cause it's fun.
 
-There's no meaning or purpose behind this, it has given me the advantage of being able to pick a language based on specific usecase but then that's basically it, for most consumers and most cases today people don't care. I do, so I pick what I like and works for the situation to the point where I would write something in Assembly if required.
+There's no meaning or purpose behind this, it has given me the advantage of
+being able to pick a language based on specific usecase but then that's
+basically it, for most consumers and most cases today people don't care. I do,
+so I pick what I like and works for the situation to the point where I would
+write something in Assembly if required.
 
 ## Reasoning
 
