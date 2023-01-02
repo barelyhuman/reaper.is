@@ -35,7 +35,7 @@ time now.
 
 ---
 
-[I've talked about me owing](writing/i-owe-the-oss-community) to the open source
+[I've talked about me owing](/writing/i-owe-the-oss-community) to the open source
 community and why I try to make almost everything I do open source.
 
 But, what is **open source**?

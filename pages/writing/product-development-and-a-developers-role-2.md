@@ -163,4 +163,4 @@ API's if you have the luxury of an open deadline. If on a hard deadline, you can
 spend that time on actually writing that feature to be as robust as possible.
 
 You can read about how I handle testing here -
-[Tests vs No Tests](posts/31052021-Tests-vs-No-Tests.html)
+[Tests vs No Tests](/writing/31052021-Tests-vs-No-Tests)
