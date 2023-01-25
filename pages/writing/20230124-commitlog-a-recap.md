@@ -33,7 +33,7 @@ This moved up to being able to handle git revisions, handling reference names si
 The next addition was release management since that was also something that differed between languages and I'd like something simple that handled it
 all.
 
-This is where `.commitlog.release` entered the picture and at this point most of projects use this for maintaining versions
+This is where `.commitlog.release` entered the picture and at this point most of my projects use this for maintaining versions
 
 ### v2
 
