@@ -79,9 +79,9 @@ Slowly switched the editor to be Sublime Text again because RAM issues. (No i'm 
 And VIM, cause while I have a neovim installed and all configured, I deal with remote systems a lot and it's easier to copy my one file config and let it auto setup everything as compared to waiting for neovim to load everything, though I can probably create a single file configuration for neovim as well... will do that someday for now it's just 2 commands 
 
 ```sh
-sudo apt install vim 
+sudo apt install vim ripgrep
 # or 
-brew vim 
+brew vim ripgrep
 
 curl -sf https://gist.githubusercontent.com/barelyhuman/16285b2195cfd25d8c84356676cc807d/raw/3770a3f039aca45a4ad91102eafc03dcfc8606cb/.vimrc > .vimrc
 
