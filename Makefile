@@ -1,6 +1,6 @@
 
 watch: 
-	ls *.md pages/**/*.md hooks/* public/* | entr -cr make build 
+	ls *.md pages/**/*.md hooks/* public/* | entr -cr alvu --highlight --serve
 
 w: watch 
 
