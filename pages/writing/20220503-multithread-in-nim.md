@@ -4,22 +4,18 @@ date: 03/05/2022
 published: true
 ---
 
-Well, this topic has made a few people leave Nim and a few people just couldn't
-find enough examples to help them with it so they gave up.
+Well, this topic has made a few people leave Nim and a few people just couldn't find enough examples to help them with it so they gave up.
 
-Either way, nim developers who stuck around have found out different ways to get
-it done a few of them include changing the memory model of the compiler and if
-you wish to, you can even change the garbage collector separately to make
-multithreading a little more easy.
+Either way, nim developers who stuck around have found out different ways to get it done a few of them include changing the memory model of the
+compiler and if you wish to, you can even change the garbage collector separately to make multithreading a little more easy.
 
-Now, I'm not going deep into any of the topics since this is just a collection
-of notes and snippets that I can refer back to instead of searching the
+Now, I'm not going deep into any of the topics since this is just a collection of notes and snippets that I can refer back to instead of searching the
 documentation again for something similar.
 
 ### High Level Threading
 
-High level threading can be done by importing `threadpool` and then using
-`spawn` to create threads and the running of these are handled by the threadpool
+High level threading can be done by importing `threadpool` and then using `spawn` to create threads and the running of these are handled by the
+threadpool
 
 A simple example would look like this
 
@@ -36,33 +32,23 @@ echo fromFlow
 
 To explain.
 
-1. "std/threadpool" adds in macros and types required for handling `FlowVar` and
-   `^` syntaxes.
-2. the procedure worker is what's going to be run in a thread, for now we are
-   just going to run 1 thread which will return the value passed to it, pretty
-   useless but get's the point across.
-3. result, as mentioned above gives us a `FlowVar` generic which has been casted
-   to the type `int` since we are expecting a number from the thread.
-4. `spawn` is used to create a thread and the worker runs with the passed value
-   `1`
-5. We wait for the thread to complete it's work by using `^` and this is a
-   blocking operation so if you have a sequence of such `FlowVar`s you'll avoid
-   blocking it till all workers are spawned and then block when you have all the
-   FlowVars types returned from the spawned threads.
+1. "std/threadpool" adds in macros and types required for handling `FlowVar` and `^` syntaxes.
+2. the procedure worker is what's going to be run in a thread, for now we are just going to run 1 thread which will return the value passed to it,
+   pretty useless but get's the point across.
+3. result, as mentioned above gives us a `FlowVar` generic which has been casted to the type `int` since we are expecting a number from the thread.
+4. `spawn` is used to create a thread and the worker runs with the passed value `1`
+5. We wait for the thread to complete it's work by using `^` and this is a blocking operation so if you have a sequence of such `FlowVar`s you'll
+   avoid blocking it till all workers are spawned and then block when you have all the FlowVars types returned from the spawned threads.
 
 ### Low Level threading
 
-This is the approach I chose to go ahead with for
-[mudkip](https://github.com/barelyhuman/mudkip) , for those who don't know,
-mudkip is a simple doc generator I'm writing to keep consistency and speed for
-me when I'm writing documentation.
+This is the approach I chose to go ahead with for [mudkip](https://github.com/barelyhuman/mudkip) , for those who don't know, mudkip is a simple doc
+generator I'm writing to keep consistency and speed for me when I'm writing documentation.
 
-The approach is similar to the above one but we're going to dig deeper since
-instead of the macros handling the pointer passing for us, we'll be doing it
-manually.
+The approach is similar to the above one but we're going to dig deeper since instead of the macros handling the pointer passing for us, we'll be doing
+it manually.
 
-The below snippet is from mudkip at this point and might change in the future
-but for now let's look at the code.
+The below snippet is from mudkip at this point and might change in the future but for now let's look at the code.
 
 ```nim
 ## Import the needed standard lib helpers
@@ -178,13 +164,9 @@ proc ctrlCHandler()=
 setControlCHook(ctrlCHandler)
 ```
 
-That's definitely a lot to read but that's still a simple implementation. I
-could've made it more functional will a threadpool but in my case the threadpool
-would still be blocking the main thread with `^` and I didn't want to do it with
-it. I wanted to have the main thread also listening for stuff since it's what
-actually handles processing the file, the threads are just there to listen for
-changes and not to actually process the files since that would need a lot more
-communication between the threads to work properly.
+That's definitely a lot to read but that's still a simple implementation. I could've made it more functional will a threadpool but in my case the
+threadpool would still be blocking the main thread with `^` and I didn't want to do it with it. I wanted to have the main thread also listening for
+stuff since it's what actually handles processing the file, the threads are just there to listen for changes and not to actually process the files
+since that would need a lot more communication between the threads to work properly.
 
-Also, since the main thread only processes one file per thread request, it's
-still fast enough to handle this on most systems.
+Also, since the main thread only processes one file per thread request, it's still fast enough to handle this on most systems.
