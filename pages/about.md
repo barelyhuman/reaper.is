@@ -19,15 +19,3 @@ Here's a few ways you to get in touch, feel free to reach out for help.
 - **Mail**: [ahoy@barelyhuman.dev](mailto:ahoy@barelyhuman.dev)
 
 What am I doing [now](/now)?
-
-### Newsletter
-
-<section>
-<p>
-If you like the posts on here and wish to get notified via email for every new post, please
-subscribe to
-the newsletter. Though, I'd recommend getting an <strong>RSS reader</strong> since it's a lot less
-distractive.
-</p>
-<a href="https://buttondown.email/barelyhuman/"> Subscribe </a>
-</section>

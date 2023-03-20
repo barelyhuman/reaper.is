@@ -191,3 +191,9 @@ pre > code {
   display: block;
   white-space: pre-wrap;
 }
+
+hr {
+  width: 75%;
+  margin:1em auto;
+  color: var(--gray-8);
+}
