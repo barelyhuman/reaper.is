@@ -26,13 +26,20 @@ function Writer(filedata)
 
 			if filecontent then
 				local match = strings.split(filecontent, "---")
+				
+				local contentT = {}
+				for k,v in pairs(match) do 
+					if k > 2 then
+						table.insert(contentT,v)
+					end
+				end 
 
 				if match[2] then
 					local frontmatterParsed = yaml.decode(match[2])
 					local date = lib.parse_dates(frontmatterParsed.date)
 					if not frontmatterParsed.rss_only then
 						table.insert(meta, {
-							content = match[3],
+							content = table.concat(contentT,"---"),
 							slug = name,
 							title = frontmatterParsed.title,
 							date = date,
@@ -48,8 +55,6 @@ function Writer(filedata)
 
 	local source_data = json.decode(filedata)
 	local lastPost = meta[1]
-
-  
 
 	source_data = {
 		content = "# " .. lastPost.title .. "\n" .. lastPost.content .. source_data.content,
