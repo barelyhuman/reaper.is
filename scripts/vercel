@@ -2,8 +2,8 @@
 
 set -euxo pipefail
 
-curl -o alvu.tgz -L https://codeberg.org/attachments/f12ad9f6-f1a5-4a79-bcff-578dc7947651
+curl -o alvu.tgz -L https://codeberg.org/attachments/4f777ba1-a1cf-46cd-8a4e-c38115c66dd5
 tar -xvzf alvu.tgz
 install linux-amd64/alvu /usr/local/bin
 
-alvu 
+alvu --hard-wrap=false
