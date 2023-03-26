@@ -194,6 +194,11 @@ pre > code {
 
 hr {
   width: 75%;
-  margin:1em auto;
+  margin: 1em auto;
   color: var(--gray-8);
+}
+
+.nullify-p p {
+  margin: 0;
+  padding: 0;
 }

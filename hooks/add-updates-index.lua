@@ -8,11 +8,23 @@ local strings = require("strings")
 local json = require("json")
 local alvu = require("alvu")
 
+local function item_template(data)
+  return lib.interp([=[
+  <li class="post-link">
+      <span class="date">${formatteddate}</span>
+      <span class="flex-2 nullify-p">${content}</span>
+  </li>
+  ]=], data)
+end
+
 local function sortbydate(postone, posttwo)
 	return postone.date > posttwo.date
 end
 
 function Writer(filedata)
+
+  local source_data = json.decode(filedata)
+
 	local basePath = "pages/updates"
 	local files = alvu.files(basePath)
 	local meta = {}
@@ -43,11 +55,17 @@ function Writer(filedata)
 
 	table.sort(meta, sortbydate)
 
-	return json.encode({
-		data = {
-			updates = {
-				pages = meta,
-			},
-		},
-	})
+  local content = source_data.content
+
+  content = content .. '<ul class="post-list">'
+
+  for k,v in pairs(meta) do 
+    content = content .. item_template(v)
+  end
+
+  content = content .. '</ul>'
+
+  source_data.content = content
+
+	return json.encode(source_data)
 end
