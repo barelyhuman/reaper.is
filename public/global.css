@@ -206,6 +206,11 @@ hr {
   padding: 0;
 }
 
+#header-nav {
+  transform-origin: top center;
+  transition: min-height, height 250ms linear;
+}
+
 .hoverable {
   margin-left: auto;
   background: var(--gray-2);
@@ -238,6 +243,10 @@ hr {
 }
 
 @media only screen and (max-width: 600px) {
+  #header-nav {
+    height: auto;
+  }
+
   header {
     position: relative;
   }

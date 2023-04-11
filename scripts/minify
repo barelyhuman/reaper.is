@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+EXEC=npx
+
+if [ -z $CI ]; then
+  EXEC="npx -y"
+fi 
+
+$EXEC -- esbuild ./js/layout.js --format=esm --minify --bundle --outfile="dist/layout.js"

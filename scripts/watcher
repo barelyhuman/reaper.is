@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+PROJECT_DIR="${SCRIPT_DIR}/.."
+
+cd $PROJECT_DIR
+
+FILE="$1"
+CMD="$2"
+
+"$CMD"
+CURRENT=""
+
+function hash {
+  CURRENT=`find $1/ -type f -exec md5 {} \; | awk '{ print $4 }'`
+}
+
+hash $FILE 
+LAST=$CURRENT
+
+while true; do
+  sleep 2
+  hash $FILE
+  NEW=$CURRENT
+  if [ "$NEW" != "$LAST" ]; then
+    echo "Changed"
+    "$CMD" "$FILE"
+    LAST="$NEW"
+  fi
+done
