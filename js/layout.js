@@ -71,7 +71,7 @@ function hide(el, quick) {
     el.style.height === 'auto' ||
     isNaN(el.style.height)
   ) {
-    el.style.height = '100px'
+    el.style.height = '50px'
   }
 
   function onAnim() {
