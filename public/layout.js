@@ -17,7 +17,7 @@ toggle.addEventListener('mouseover', () => {
 })
 
 parent.addEventListener('mouseleave', () => {
-  toggle.style.animation = ''
+  stopAfterCompletion(toggle)
   hide(header)
 })
 
@@ -44,4 +44,15 @@ function hide(el) {
 function show(el) {
   el.style.visibility = 'visible'
   el.style.height = 'auto'
+}
+
+function stopAfterCompletion(el) {
+  const animations = el.getAnimations()
+  animations.forEach(async anim => {
+    anim.effect.updateTiming({
+      iterations: anim.effect.getComputedTiming().currentIteration + 1,
+    })
+    await anim.finished
+    el.style.animation = ''
+  })
 }
