@@ -22,8 +22,8 @@ Don't own much, so here's what I work with
 ### Software / Tools
 
 - **Neovim and Sublime**, Code editors of choice (earlier: VSCode)
-- **~~Chrome~~, Firefox and **Safari\*\*, Browsers of choice, one for
-  development and one for browsing
+- **~~Chrome~~, Firefox and Safari**, Browsers of choice, one for development
+  and one for browsing
 - **iTerm2**, Terminal, used with the
   [minzsh](https://github.com/barelyhuman/minzsh) shell theme for zsh
 - [**logbook**](https://github.com/rsms/rsms-utils/blob/master/bin/logbook) - a
