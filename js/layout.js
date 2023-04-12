@@ -37,8 +37,11 @@ function addMenuHoverListeners(header, toggle) {
     hide(header)
   })
 
-  toggle.addEventListener('touchend', () => {
-    toggleVisible(header)
+  toggle.addEventListener('touchstart', ev => {
+    for (let i = 0; i < ev.targetTouches.length; i++) {
+      toggleVisible(header)
+      stopAnimationsAfterCompletion(toggle)
+    }
   })
 
   parent.style.position = 'relative'
@@ -46,7 +49,7 @@ function addMenuHoverListeners(header, toggle) {
 }
 
 function toggleVisible(el) {
-  if (el.style.visibility === 'visible') {
+  if (el.style.overflow !== 'hidden') {
     return hide(el)
   }
 
