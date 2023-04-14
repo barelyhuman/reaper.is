@@ -45,12 +45,10 @@ function Writer(filedata)
     then
         if strings.contains(source_data.source_path, "pages/writing")
         then
-
             local post_info = {}
-
-            if source_data.meta
-            then
-                local date = lib.parse_dates(source_data.meta.date)
+            if source_data.meta then
+                if source_data.meta.published then 
+                  local date = lib.parse_dates(source_data.meta.date)
                 local offset = lib.get_tzoffset(lib.get_timezone())
                 local weekday = lib.totitlecase(os.date("%a", date))
                 local pubDate = lib.interp("${weekday}, " .. os.date("%d %b %Y %X", date) .. " ${offset}", {
@@ -67,6 +65,7 @@ function Writer(filedata)
                 post_info.description = source_data.html
                 post_info.date = pubDate
                 rssfile:write(item_template(post_info))
+                end 
             end
         end
 

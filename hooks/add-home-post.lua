@@ -37,15 +37,18 @@ function Writer(filedata)
 				if match[2] then
 					local frontmatterParsed = yaml.decode(match[2])
 					local date = lib.parse_dates(frontmatterParsed.date)
-					if not frontmatterParsed.rss_only then
-						table.insert(meta, {
-							content = table.concat(contentT,"---"),
-							slug = name,
-							title = frontmatterParsed.title,
-							date = date,
-							formatteddate = os.date("%d-%m-%Y", date),
-						})
-					end
+          
+          if frontmatterParsed.published then 
+            if not frontmatterParsed.rss_only then
+              table.insert(meta, {
+                content = table.concat(contentT,"---"),
+                slug = name,
+                title = frontmatterParsed.title,
+                date = date,
+                formatteddate = os.date("%d-%m-%Y", date),
+              })
+            end
+          end
 				end
 			end
 		end
