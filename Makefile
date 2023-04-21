@@ -3,7 +3,7 @@
 ALVU_EXEC=alvu
 
 watch: 
-	ls *.md pages/**/*.md hooks/* public/* | entr -cr $(ALVU_EXEC) --hard-wrap=false --highlight --serve
+	ls *.md pages/**/*.md hooks/* public/* | entr -cr $(ALVU_EXEC) --hard-wrap=false --highlight --highlight-theme="algol_nu" --serve
 
 watch_js:
 	./scripts/watcher ./js ./scripts/minify
@@ -16,4 +16,4 @@ wjs: watch_js
 b: build
 
 build:
-	alvu --highlight
+	alvu --highlight --highlight-theme="algol_nu"
