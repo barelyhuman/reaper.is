@@ -65,7 +65,7 @@ aligned with their idea of how CI processes should be both local and remote and
 this was still under development and was only available for Go lang when I was
 introduced to it.
 
-It's not available for quite a few of the mainstream languages if you wish to
+It's now available for quite a few of the mainstream languages if you wish to
 try but this is one of the solutions for the problems mentioned above.
 
 Your CI is now a piece of code that can now produce Hermetic Builds(_buzzword_
