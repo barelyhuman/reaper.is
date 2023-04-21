@@ -181,13 +181,14 @@ code {
 pre {
   background: transparent !important;
   font-family: var(--font-mono);
+  border:1px solid var(--gray-8);
 }
 
 pre > code {
   overflow-y: auto;
   line-height: 1.75;
-  background: var(--gray-8);
-  width: 100%;
+  background: var(--gray-9);
+  /* width: 100%; */
   padding: 12px;
   font-size: 14px;
   height: 100%;
