@@ -8,4 +8,4 @@ install linux-amd64/alvu /usr/local/bin
 
 ./scripts/minify
 
-alvu --hard-wrap=false
+make build
