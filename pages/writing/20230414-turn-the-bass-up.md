@@ -118,31 +118,31 @@ with LISP/Scheme based languages.
 So, it was a little tricky for me to pick up the semantics of Bass but, somehow
 I was able to learn enough of it to write a few tiny scripts.
 
-```closure
+```clojure
 #!/bin/bash env bass
 
-// define that this run should memoize the thunks
+;define that this run should memoize the thunks
 (def memos *dir*/bass.lock)
 
-// define that the function receives an argument `src`
+;define that the function receives an argument `src`
 (defn test [src]
-    // use the `node:16` image 
+    ; use the `node:16` image 
     (from (linux/node :16)
-      // cd into the src argument
+      ; cd into the src argument
       (cd src
-        // run the sequence of commands 
+        ; run the sequence of commands 
         ($ npm i -g pnpm)
         ($ pnpm i)
         ($ pnpm test))))
 
-// Main is the entry function 
-// so here we define the args we might get 
-// from stdin
+; Main is the entry function 
+; so here we define the args we might get 
+; from stdin
 
 (defn main _
   (for [{:src src} *stdin*]
-    // we then go through the args of stdin, take the value for `--src` and pass it 
-    // to the function test
+    ; we then go through the args of stdin, take the value for `--src` and pass it 
+    ; to the function test
     (run (test src))))
 ```
 
