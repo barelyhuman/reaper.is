@@ -1,7 +1,7 @@
 ---
 title: Turn the Bass up
 date: 14/04/2023
-published: false
+published: true
 ---
 
 This post has nothing to do with music, I'm sorry.
@@ -86,6 +86,27 @@ image and running it every single time, thus reducing the overall time when
 compared to the original approach I mentioned which would need you to build and
 run which would create quite a few dangling images.
 
+**Example**
+```js
+import {connect} from "@dagger.io/dagger"
+
+// Connect dagger's buildkit instance
+connect(async (client) => {
+
+  const containerDef = client
+    // name the pipeline
+    .pipeline("test")
+    // create a container
+    .container()
+    // from the following image
+    .from("node:16-alpine")
+    // then execute the following command with the next set of args
+    .withExec(["npm", "-v"])
+
+  const result = await containerDef.stdout()
+}, { LogOutput: process.stdout })
+```
+
 ## Now, to add the Bass
 
 Finally, the other solution and the one I've just started using is called
@@ -97,10 +118,38 @@ with LISP/Scheme based languages.
 So, it was a little tricky for me to pick up the semantics of Bass but, somehow
 I was able to learn enough of it to write a few tiny scripts.
 
+```closure
+#!/bin/bash env bass
+
+// define that this run should memoize the thunks
+(def memos *dir*/bass.lock)
+
+// define that the function receives an argument `src`
+(defn test [src]
+    // use the `node:16` image 
+    (from (linux/node :16)
+      // cd into the src argument
+      (cd src
+        // run the sequence of commands 
+        ($ npm i -g pnpm)
+        ($ pnpm i)
+        ($ pnpm test))))
+
+// Main is the entry function 
+// so here we define the args we might get 
+// from stdin
+
+(defn main _
+  (for [{:src src} *stdin*]
+    // we then go through the args of stdin, take the value for `--src` and pass it 
+    // to the function test
+    (run (test src))))
+```
+
 ## Strings that broke
 
 The counterproductive part here is still that I need to set up a docker/BuildKit
-environment in CI machine(Circle, Github actions, Gitlab Runners,etc) but most
+environment in CI machine(Circle, Github actions, Gitlab Runners, etc) but most
 of them provide a way to connect to a docker setup. Post that, all you need to
 do is either install the dagger SDK when working with dagger or install the Bass
 lang binary to run the bass script which is a process your language's package
@@ -117,3 +166,15 @@ Another one here is Nix, it's a language and a package directory that can cache
 and create the same environment everywhere for you. Though based on experience
 and review from a lot of people who worked with Nix, the language can get a
 little confusing to learn as compared to something like Bass.
+
+I'll add an example from someone's gist here because my nix config files are rather 
+unimpressive
+
+This will setup react native and android SDK for you as soon as you activate your shell 
+in the project folder
+
+<script src="https://gist.github.com/kamilchm/15916525bf1a1171e5e0942686844298.js"></script>
+
+
+That's basically about it for now. 
+Adios! 
