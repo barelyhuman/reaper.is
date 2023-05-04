@@ -9,29 +9,28 @@
   </head>
 
   <body>
-    <header>
-      <nav id="header-nav">
-        <a href="/">..</a>
+    <header class="header flex justify-between">
+      <div class="flex">
+        <a href="/">reaper</a>
+      </div>
+      <div class="flex gap-2">
+        <a href="/about">about</a>
 
-        <a href="/about">About</a>
-
-        <a href="/writing">Writing</a>
-
-        <a href="/uses">Uses</a>
-
-        <a href="/work">Work</a>
-
-        <a href="/updates">Updates</a>
-
-        <a href="/rss.xml">RSS</a>
+        <a href="/writing">archive</a>
 
         <a href="https://github.com/barelyhuman">Github &nearr;</a>
-      </nav>
+      </div>
     </header>
   </body>
   {{.Content}}
   <footer>
+    <hr />
+    <div class="flex gap-2 center">
+      <a href="/updates">updates</a>
+      <a href="/uses">uses</a>
+      <a href="/work">work</a>
+      <a href="/rss.xml">rss</a>
+    </div>
     <p>built with <a href="https://codeberg.org/reaper/alvu">alvu</a></p>
   </footer>
-  <script src="{{.Meta.BaseURL}}layout.js"></script>
 </html>

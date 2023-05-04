@@ -6,6 +6,4 @@ curl -o alvu.tgz -L https://github.com/barelyhuman/alvu/releases/download/v0.2.8
 tar -xvzf alvu.tgz
 install linux-amd64/alvu /usr/local/bin
 
-./scripts/minify
-
 make build
