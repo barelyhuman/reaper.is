@@ -5,6 +5,7 @@
 
 Basically collection of links I'd like to share with people
 
+- [Framer Motion Visualizer - Morse](https://framer-motion-visualizer.vercel.app)
 - [System Font Stack](https://systemfontstack.com/)
 - [Functional Talks](http://functionaltalks.org/tags/)
 - [Easy OS Background Tasks in React Native](https://medium.com/hackernoon/easy-os-background-tasks-in-react-native-bc4476c48b8a)
