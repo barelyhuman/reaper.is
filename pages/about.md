@@ -1,4 +1,4 @@
-Hey, I'm <h1>Reaper</h1>
+Hey, I'm **Reaper**
 
 **Principal Developer** at [Fountane](https://fountane.com)
 
