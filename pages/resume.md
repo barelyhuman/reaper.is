@@ -1,3 +1,13 @@
+
+<script src="https://unpkg.com/alpinejs" defer></script>
+<template x-data="{}" x-if="true">
+    <div class="flex justify-end">
+        <a href="#" class="noprint" @click="window.print()">Print</a>
+    </div>
+</template>
+
+
+
 # Reaper
 
 Minimalist • Developer
@@ -42,4 +52,5 @@ _Sep 2016 - May 2017_
 ## Education
 
 &rarr; **CSE** &bull; Swami Vivekananda Institute of Technology &bull; 2013-2017
+
 

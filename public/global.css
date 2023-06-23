@@ -209,6 +209,10 @@ hr {
   justify-content: space-between;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .center {
   align-items: center;
   justify-content: center;
@@ -225,5 +229,25 @@ hr {
 
   .gap-2 {
     gap: 1em;
+  }
+}
+
+@media print {
+  .noprint {
+    display: none;
+    height: 0px;
+  }
+
+  .gap-2 {
+    gap: 8px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  strong {
+    font-weight: 600;
   }
 }
