@@ -25,9 +25,9 @@ https://reaper.is
 
 ## Public
 
-**E-Mail**: me@barelyhuman.dev\
-**Twitter**: @barelyreaper\
-**GitHub**: @barelyhuman
+**E-Mail**: <me@barelyhuman.dev>\
+**Twitter**: [@barelyreaper](https://twitter.com/barelyreaper)\
+**GitHub**: [@barelyhuman](https://github.com/barelyhuman) 
 
 ## Work
 
