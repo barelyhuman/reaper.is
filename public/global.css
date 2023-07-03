@@ -48,6 +48,11 @@ html {
   font-size: 0.98rem;
 }
 
+html,
+body {
+  background: var(--gray-9);
+}
+
 body {
   position: relative;
   font-weight: 400;
@@ -56,7 +61,6 @@ body {
   max-width: 80ch;
   margin: 0 auto;
   padding: 20px 100px;
-  background: var(--gray-9);
   color: var(--gray-2);
   display: flex;
   flex-direction: column;
