@@ -9,28 +9,32 @@
   </head>
 
   <body>
-    <header class="header noprint flex justify-between">
-      <div class="flex">
-        <a href="/">reaper</a>
+    {{.Content}}
+    <a href="/links" class="floating-menu">
+      <div class="flex inherit center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 3h8l-1 9h-6z" />
+          <path d="M7 18h2v3h-2z" />
+          <path d="M20 3v12h-5c-.023 -3.681 .184 -7.406 5 -12z" />
+          <path d="M20 15v6h-1v-3" />
+          <path d="M8 12l0 6" />
+        </svg>
       </div>
-      <div class="flex gap-2">
-        <a href="/about">about</a>
-
-        <a href="/writing">archive</a>
-
-        <a href="https://github.com/barelyhuman">Github &nearr;</a>
-      </div>
-    </header>
+    </a>
+    <footer class="noprint">
+      <hr />
+      <p>built with <a href="https://github.com/barelyhuman/alvu">alvu</a></p>
+    </footer>
   </body>
-  {{.Content}}
-  <footer class="noprint">
-    <hr />
-    <div class="flex gap-2 center">
-      <a href="/updates">updates</a>
-      <a href="/uses">uses</a>
-      <a href="/work">work</a>
-      <a href="/rss.xml">rss</a>
-    </div>
-    <p>built with <a href="https://github.com/barelyhuman/alvu">alvu</a></p>
-  </footer>
 </html>

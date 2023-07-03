@@ -1,3 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=manrope:400,600);
+
 :root {
   --zinc-50: #fafafa;
   --zinc-100: #f4f4f5;
@@ -21,9 +23,7 @@
   --gray-1: var(--zinc-800);
   --gray-0: var(--zinc-900);
   --font-mono: 'Hermit', 'Courier New', Courier, monospace;
-  --font-sans: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
-    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
-    sans-serif;
+  --font-sans: 'Manrope', sans-serif;
   --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
     Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol;
@@ -49,10 +49,11 @@ html {
 }
 
 body {
+  position: relative;
   font-weight: 400;
   line-height: 1.625;
   font-family: var(--font-sans);
-  max-width: 900px;
+  max-width: 80ch;
   margin: 0 auto;
   padding: 20px 100px;
   background: var(--gray-9);
@@ -73,8 +74,8 @@ h4,
 h5,
 strong {
   font-size: 0.95rem;
-  font-family: var(--font-serif);
-  font-weight: 400;
+  font-family: var(--font-sans);
+  font-weight: 600;
   letter-spacing: 0.05em;
   color: var(--gray-0);
   line-height: 1.3;
@@ -138,6 +139,10 @@ nav a:hover {
   flex: 2;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .post-link a {
   flex: 2;
   color: var(--gray-3);
@@ -187,9 +192,9 @@ pre > code {
 }
 
 hr {
-  width: 75%;
-  margin: 1em auto;
-  color: var(--gray-8);
+  width: 85%;
+  margin: 2em 0;
+  border: 1px solid var(--gray-8);
 }
 
 .nullify-p p {
@@ -222,9 +227,35 @@ hr {
   min-height: 100px;
 }
 
+.floating-menu {
+  position: fixed;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: var(--gray-2);
+  color: var(--gray-9);
+  bottom: 50px;
+  right: 50px;
+  border: 2px solid var(--gray-2);
+  transition: background-color 250ms linear;
+}
+
+.floating-menu:hover {
+  background-color: var(--gray-9);
+  color: var(--gray-2);
+}
+
+.inherit {
+  color: inherit;
+}
+
 @media screen and (max-width: 600px) {
   body {
     padding: 1rem;
+  }
+
+  .floating-menu {
+    bottom: 20px;
+    right: 20px;
   }
 
   .gap-2 {
@@ -250,4 +281,9 @@ hr {
   strong {
     font-weight: 600;
   }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 5s;
 }
