@@ -49,10 +49,8 @@ function Writer(filedata)
                 local date = lib.parse_dates(source_data.meta.date)
                 local offset = lib.get_tzoffset(lib.get_timezone())
                 local weekday = lib.totitlecase(os.date("%a", date))
-                -- 2022-08-21T11:44:02+00:00
-                local pubDate = lib.interp(os.date("!%Y-%m-%dT%X", date) .. "${offset}", {
-                    offset = offset
-                })
+                -- 2022-08-21
+                local pubDate = os.date("!%Y-%m-%d", date)
 
                 local nameWithoutExt = strings.trim(source_data.name, ".html")
                 nameWithoutExt = strings.trim(source_data.name, ".md")
