@@ -40,7 +40,7 @@ Yeah, Astro exists, NextJS exists, this, that, whatever!
 I enjoy all that and I've build at least one thing with each of these frameworks. They are greate projects and provide great developer experience but
 most of it is really dependent on either one person's decision or a community's judgment of what is supposed to be "standard" and so it get's hard
 when that changes over time and we've had one such incident with react already like I mentioned in
-[Modern React, is a mess.](/writing/20220817-modern-react-a-mess.md)
+[Modern React, is a mess.](/writing/20220817-modern-react-a-mess)
 
 Either way, you end up having to either lock you codebase to a certain version to stick to your expectation of the framework or fight the update's
 breaking changes till everything "just works".
