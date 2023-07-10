@@ -32,7 +32,7 @@ software design. Skilled in various programming languages and standards, I
 thrive in the realm of chaos, constantly tinkering and pushing the boundaries of
 what is possible.
 
-## Open Source Contributions / Learnings
+## OSS Learnings
 
 - **Author** -
   [preact-island-plugins](https://github.com/barelyhuman/preact-island-plugins) -
