@@ -267,6 +267,10 @@ hr {
   }
 }
 
+@page {
+  size: A4;
+}
+
 @media print {
   .noprint {
     display: none;
@@ -283,7 +287,8 @@ hr {
   h4,
   h5,
   strong {
-    font-weight: 600;
+    margin-top: 10px;
+    font-weight: 600
   }
 }
 

@@ -4,25 +4,41 @@
         <a href="#" class="noprint" @click="window.print()">Print</a>
     </div>
 </template>
+<style>
+  body{
+    font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  }
+</style>
 
 # Reaper
 
-Minimalist • Developer
+Minimalist • Open Source Enthusiast • Software Engineer
 
-Mostly seen building tools and libraries to complicate my own life while trying
-to ease it for my future self.
+## Online Presence
 
-Dealing with chaos and tinkering with different programming languages and
-standards are my favorite hobbies. I don't have a preferred programming language
-and most of my work revolves around web and cli tools.
+**Website**: [reaper.is](https://reaper.is)\
+**Twitter**: [@barelyreaper](https://twitter.com/barelyreaper)\
+**GitHub**: [@barelyhuman](https://github.com/barelyhuman)
 
-## OSS Learnings
+## Contact Information
+
+**E-Mail**: <me@barelyhuman.dev>
+
+## About
+
+Passionate about building innovative tools and libraries that simplify complex
+problems. As a minimalist, I believe in the power of simplicity and elegance in
+software design. Skilled in various programming languages and standards, I
+thrive in the realm of chaos, constantly tinkering and pushing the boundaries of
+what is possible.
+
+## Open Source Contributions / Learnings
 
 - **Author** -
   [preact-island-plugins](https://github.com/barelyhuman/preact-island-plugins) -
   [Source](https://github.com/barelyhuman/preact-island-plugins)
-  > **Skillset**: Low level JS, dealing with code generation and AST
-  > manipulations
+  > **Skillset**: Demonstrated expertise in low-level JavaScript, code
+  > generation, and AST manipulations
 - **Author** -
   [preact-native (archived)](https://github.com/barelyhuman/preact-native) -
   [Source](https://github.com/barelyhuman/preact-native)
@@ -54,26 +70,26 @@ and most of my work revolves around web and cli tools.
   [Source](https://github.com/barelyhuman/commitlog)
   > **Skillset**: Working with low level Git and Git references
 
-## Online
 
-https://reaper.is
-
-## Public
-
-**E-Mail**: <me@barelyhuman.dev>\
-**Twitter**: [@barelyreaper](https://twitter.com/barelyreaper)\
-**GitHub**: [@barelyhuman](https://github.com/barelyhuman)
-
-## Work
+## Professional Experience
 
 &rarr; **Principal Developer** &bull; [Fountane](https://fountane.com/) &bull;
 _Nov 2019 - Present_
 
+> Leading development efforts, leveraging my expertise in building scalable and
+> efficient software solutions.
+
 &rarr; **Full Stack Developer** &bull; [Valuefy](https://valuefy.com/) &bull;
 _Sep 2018 - Sep 2019_
 
+> Developed and maintained full-stack applications, contributing to the
+> company's success in the financial industry.
+
 &rarr; **Full Stack Developer** &bull; [Cartisan](https://wearexenon.com/)
 &bull; _Apr 2018 - Sep 2018_
+
+> Collaborated with cross-functional teams to develop cutting-edge solutions for
+> the automotive industry.
 
 &rarr; **Full Stack Developer** &bull;
 [Scale Swift](https://www.scaleswift.com/) &bull; _Jan 2018 - Feb 2018_
@@ -84,6 +100,17 @@ _Aug 2017 - Dec 2017_
 &rarr; **Angular Developer** &bull; [HoppApp](https://www.hoppapp.com/) &bull;
 _Sep 2016 - May 2017_
 
+> Played a crucial role in setting up the admin side for a ride-sharing app,
+> contributing to the smooth operation and management of the platform.
+
 ## Education
 
 &rarr; **CSE** &bull; Swami Vivekananda Institute of Technology &bull; 2013-2017
+
+
+## Ending Note
+
+I am passionate about collaborating with open source companies and contributing
+to the development of impactful projects. As a minimalist, I believe in creating
+simple and efficient solutions that solve complex problems. Feel free to reach
+out to discuss potential opportunities or collaborations.
