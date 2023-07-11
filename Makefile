@@ -1,3 +1,4 @@
+# export DEBUG_ALVU=true
 
 # ALVU_EXEC=$(HOME)/code/alvu/alvu
 ALVU_EXEC=alvu

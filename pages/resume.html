@@ -1,0 +1,116 @@
+<main>
+  <style>
+    hr {
+      border-color: var(--gray-5);
+      width: 100%;
+    }
+    .card-wrapper {
+      margin-top: 50px;
+    }
+    .card {
+      break-inside: avoid;
+      margin: 10px 0px;
+      padding: 10px 8px;
+      border-radius: 10px;
+      margin-bottom: 22px;
+    }
+    .card .about {
+      color: var(--gray-4);
+    }
+    .card .footer {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--gray-8);
+    }
+    .card .footer :nth-child(1):not(:last-child)::after {
+      content: '•';
+      text-decoration: none;
+      height: 100%;
+      margin-left: 10px;
+      color: var(--gray-5);
+      font-size: 15px;
+    }
+    .card .links-group {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .card .role {
+      color: var(--gray-5);
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    .card .links-group .link-item {
+      color: var(--gray-5);
+      text-decoration: none;
+      transition: color 250ms ease-out;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+    .card .links-group .link-item:hover {
+      color: var(--gray-1);
+      cursor: pointer;
+    }
+  </style>
+  <section>
+    <h1>Reaper</h1>
+    <p>Minimalist • Open Source Enthusiast • Programmer</p>
+  </section>
+
+  <section>
+    <h3>About</h3>
+    <p>
+      Passionate about building innovative tools and libraries that simplify
+      complex problems. As a minimalist, I believe in the power of simplicity
+      and elegance in software design. Skilled in various programming languages
+      and standards, I thrive in the realm of chaos, constantly tinkering and
+      pushing the boundaries of what is possible.
+    </p>
+  </section>
+  <section>
+    <h2>Online Presence / Contact</h2>
+    <p>
+      <strong>Website</strong>:
+      <a href="https://reaper.is">https://reaper.is</a>
+    </p>
+    <p>
+      <strong>Twitter</strong>:
+      <a href="https://twitter.com/barelyreaper">@barelyreaper</a>
+    </p>
+    <p>
+      <strong>GitHub</strong>:
+      <a href="https://github.com/barelyhuman"> @barelyhuman </a>
+    </p>
+    <p>
+      <strong>E-Mail</strong>:
+      <a href="mailto:me@barelyhuman.dev"> me@barelyhuman.dev </a>
+    </p>
+  </section>
+  <hr />
+  <section class="card-wrapper oss">
+    <h2 id="oss-learnings">Open Source Contributions</h2>
+    <div>${oss_cards}</div>
+  </section>
+  <hr />
+  <section class="card-wrapper work">
+    <h2 id="professional-exp">Professional Experience</h2>
+    <div>${work_cards}</div>
+  </section>
+  <hr />
+  <section>
+    <h2>Ending Note</h2>
+    <p>
+      I am passionate about collaborating with open source companies and
+      contributing to the development of impactful projects. As a minimalist, I
+      believe in creating simple and efficient solutions that solve complex
+      problems. Feel free to reach out to discuss potential opportunities or
+      collaborations.
+    </p>
+  </section>
+</main>
