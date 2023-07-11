@@ -213,7 +213,7 @@ local work = {
         ]],
         role = "Full Stack Developer (Sep 2018 - Sep 2019)",
         links = external_link_template({
-            link = "https://fountane.com"
+            link = "https://valuefy.com/"
         })
     },
     {
@@ -224,7 +224,7 @@ local work = {
         ]],
         role = "Full Stack Developer (Apr 2018 - Sep 2018)",
         links = external_link_template({
-            link = "https://fountane.com"
+            link = "https://wearexenon.com/"
         })
     },
     {
@@ -237,7 +237,7 @@ Made components and a tiny UI library for the above 2 products internally
 ]],
         role = "Frontend Developer (Apr 2018 - Sep 2018)",
         links = external_link_template({
-            link = "https://fountane.com"
+            link = "https://retailio.in/"
         })
     },
     {
@@ -250,7 +250,7 @@ a Senior Developer at Oracle and experience that got me addicted to working with
 ]],
         role = "Angular Developer (Sep 2016 - May 2017)",
         links = external_link_template({
-            link = "https://fountane.com"
+            link = "https://www.hoppapp.com/"
         })
     }
 }
