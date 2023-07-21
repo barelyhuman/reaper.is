@@ -1,4 +1,9 @@
-<hr/>
+**Online**
+
+[Website](https://reaper.is)\
+[Twitter](https://twitter.com/barelyreaper)\
+[Github](https://github.com/barelyhuman)\
+<ahoy@barelyhuman.dev>
 
 **Newsletter**
 
@@ -10,4 +15,5 @@ the newsletter. Though, I'd recommend getting an <strong>RSS reader</strong> sin
 distractive.
 </p>
 <a href="https://buttondown.email/barelyhuman/"> Subscribe </a>
+
 </section>

@@ -59,13 +59,13 @@ function Writer(filedata)
 	local source_data = json.decode(filedata)
 	local lastPost = meta[1]
 
-	source_data = {
-		content = "# " .. lastPost.title .. "\n" .. lastPost.content .. source_data.content,
-		meta = {
-			title = lastPost.title,
-			date = lastPost.date,
-		},
-	}
+	-- source_data = {
+	-- 	content = "# " .. lastPost.title .. "\n" .. lastPost.content .. source_data.content,
+	-- 	meta = {
+	-- 		title = lastPost.title,
+	-- 		date = lastPost.date,
+	-- 	},
+	-- }
 
 	return json.encode(source_data)
 end

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>reaper</title>
+    <title>reaper | Minimalist • Open Source Enthusiast • Programmer</title>
     <meta charset="UTF-8" />
     <meta name="title" content="reaper" />
     <meta
@@ -10,36 +10,14 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
 
-  <body>
-    {{.Content}}
-    <a href="/links" class="floating-menu noprint">
-      <div class="flex inherit center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M4 3h8l-1 9h-6z" />
-          <path d="M7 18h2v3h-2z" />
-          <path d="M20 3v12h-5c-.023 -3.681 .184 -7.406 5 -12z" />
-          <path d="M20 15v6h-1v-3" />
-          <path d="M8 12l0 6" />
-        </svg>
-      </div>
-    </a>
-    <footer class="noprint">
-      <hr />
-      <p>built with <a href="https://github.com/barelyhuman/alvu">alvu</a></p>
-    </footer>
+  <body class="max-w-3xl text-dark">
+    <div
+      class="max-w-3xl px-24 my-80 min-h-fit mx-auto flex flex-col justify-around gap-4"
+    >
+      {{.Content}}
+    </div>
   </body>
 </html>

@@ -1,20 +1,33 @@
-# export DEBUG_ALVU=true
-
-# ALVU_EXEC=$(HOME)/code/alvu/alvu
-ALVU_EXEC=alvu
-
-watch: 
-	$(ALVU_EXEC) --hard-wrap=false --highlight --highlight-theme="algol_nu" --serve
-
-watch_js:
-	./scripts/watcher ./js ./scripts/minify
-
-
-w: watch 
-
-wjs: watch_js
+.PHONY: build install clean watchStyles watchPages watch
 
 b: build
 
+w: watch 
+
 build:
-	alvu --highlight --highlight-theme="algol_nu" --hard-wrap=false
+	./bin/alvu --highlight --highlight-theme="algol_nu" --hard-wrap=false
+	./bin/tailwindcss -i ./public/global.css -o ./dist/style.css --minify
+
+install:
+	mkdir -p ./bin
+	# Downloading alvu
+	# https://github.com/barelyhuman/alvu
+	curl -sf https://goblin.run/github.com/barelyhuman/alvu | PREFIX=./bin sh
+	chmod +x ./bin/alvu
+	# Downloading Tailwind CSS CLI for macOS arm64
+	# https://github.com/tailwindlabs/tailwindcss/releases/latest
+	curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64
+	chmod +x ./tailwindcss-macos-arm64
+	mv tailwindcss-macos-arm64 ./bin/tailwindcss
+
+clean:
+	rm ./bin/alvu ./bin/tailwindcss
+
+watchStyles:
+	./bin/tailwindcss -i ./public/global.css -o ./dist/styles.css --watch
+
+watchPages:
+	./bin/alvu -highlight-theme="algol_nu" -hard-wrap=false -serve 
+
+watch:
+	${MAKE} -j4 watchPages watchStyles 
