@@ -1,4 +1,4 @@
-<main>
+<main class="flex flex-col gap-4 leading-relaxed">
   <style>
     hr {
       border-color: var(--gray-5);
@@ -23,14 +23,14 @@
       align-items: center;
       margin-top: 10px;
       padding-top: 10px;
-      border-top: 1px solid var(--gray-8);
+      border-top: 1px solid var(--light);
     }
     .card .footer :nth-child(1):not(:last-child)::after {
       content: '•';
       text-decoration: none;
       height: 100%;
       margin-left: 10px;
-      color: var(--gray-5);
+      color: var(--light);
       font-size: 15px;
     }
     .card .links-group {
@@ -46,15 +46,12 @@
       height: 100%;
     }
     .card .links-group .link-item {
-      color: var(--gray-5);
-      text-decoration: none;
       transition: color 250ms ease-out;
       display: flex;
       align-items: center;
       gap: 2px;
     }
     .card .links-group .link-item:hover {
-      color: var(--gray-1);
       cursor: pointer;
     }
   </style>
