@@ -6,14 +6,20 @@ w: watch
 
 build:
 	./bin/alvu --highlight --highlight-theme="algol_nu" --hard-wrap=false
-	./bin/tailwindcss -i ./public/global.css -o ./dist/style.css --minify
+	./bin/tailwindcss -i ./public/global.css -o ./dist/styles.css --minify
 
-install:
+prepareBin:
 	mkdir -p ./bin
+
+install: prepareBin installAlvu installTWMac	
+
+installAlvu:
 	# Downloading alvu
 	# https://github.com/barelyhuman/alvu
 	curl -sf https://goblin.run/github.com/barelyhuman/alvu | PREFIX=./bin sh
 	chmod +x ./bin/alvu
+
+installTWMac:
 	# Downloading Tailwind CSS CLI for macOS arm64
 	# https://github.com/tailwindlabs/tailwindcss/releases/latest
 	curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64
