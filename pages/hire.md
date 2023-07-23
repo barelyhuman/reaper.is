@@ -12,8 +12,7 @@ they align with your requirements.
 
 I adhere to certain non-negotiable core values. While I understand the
 importance of protecting business implementations and USPs, I hope these values
-do not pose any issues for you. If they do, I encourage you to find someone who
-better aligns with your values and goals.
+do not pose any issues for you.
 
 - **Restrictions on contributing/maintaining Open Source Projects**
 - **No remote work** - I find that I am more productive when working remotely,

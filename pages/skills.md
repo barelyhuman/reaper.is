@@ -53,8 +53,8 @@ just for transparency
 
 > **Note**: Common procedures like Scaling, Clusters, Master-Slave Database /
 > Read Replicas, Sharding,etc have been not added to the list since I can't put
-> a number on them, each of these depend on the overall system and use case and
-> cannot be generalised in my opinion
+> a number on them, each of these depend on the overall system and use case, and
+> cannot be generalised; in my opinion
 
 ## Databases
 
@@ -70,13 +70,15 @@ just for transparency
 &rarr; Terraform - **5/10**\
 &rarr; Pulumi - **4/10**\
 &rarr; Jenkins - **8/10**\
-&rarr; Gitlab Runners / Github Actions / Earthly - **6/10**
+&rarr; Gitlab Runners / Github Actions / Earthly - **6/10**\
+&rarr; AWS - **7/10**\
+&rarr; Docker - **8/10**
 
 > **Note**: Haven't specifically specialized in **AWS** with a certification but
 > have worked with it enough to know my way around.
 
 > **Note**: I've also worked with Railway, Digital Ocean and GCP but not as
-> frequently, hence haven't been mentioned.
+> frequently, hence they haven't been mentioned in the list about
 
 ## Design Theory
 
