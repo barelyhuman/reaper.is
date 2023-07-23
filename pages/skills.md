@@ -36,6 +36,12 @@ just for transparency
 > them that exist but I've spent a lot more time working with (p)react and
 > Angular than the others.
 
+## Mobile Tech
+
+&rarr; Flutter - **4/10**\
+&rarr; React Native - **8/10**\
+&rarr; SwiftUI iOS - **6/10**
+
 ## Backend
 
 &rarr; Express - **9/10**\
