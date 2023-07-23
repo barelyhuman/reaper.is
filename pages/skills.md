@@ -12,11 +12,16 @@ just for transparency
 &rarr; Python - **6/10**\
 &rarr; Swift - **4/10**
 
-## Theory
+## Core Theory
 
-&rarr; Hexagonal Arch / Onion Arch - **7/10**\
+&rarr; Clean Arch / Hexagonal Arch / Onion Arch - **7/10**\
 &rarr; Functional Programming - **7/10**\
-&rarr; Greenfield and Brownfield Migration - **6/10**
+&rarr; Greenfield and Brownfield Migration - **6/10**\
+&rarr; Version Management - **7/10**\
+&rarr; Internet Security and Basics - **5/10**\
+&rarr; Horizontal / Vertical Scaling - **6/10**
+
+> **Note**: I might have completed the progit book a few times
 
 ## Frontend
 
@@ -24,7 +29,12 @@ just for transparency
 &rarr; CSS3 - **7/10**\
 &rarr; TailwindCSS - **8/10**\
 &rarr; (p)React - **8/10**\
+&rarr; Angular (v8-v11) - **9/10**\
 &rarr; Vue - **5/10**
+
+> **Note**: I don't have a preferred frontend library, I've worked with most of
+> them that exist but I've spent a lot more time working with (p)react and
+> Angular than the others.
 
 ## Backend
 
@@ -34,6 +44,11 @@ just for transparency
 &rarr; Go Lang + HTTPRouter / Chi-router - **5/10**\
 &rarr; Django - **5/10**\
 &rarr; Flask - **7/10**
+
+> **Note**: Common procedures like Scaling, Clusters, Master-Slave Database /
+> Read Replicas, Sharding,etc have been not added to the list since I can't put
+> a number on them, each of these depend on the overall system and use case and
+> cannot be generalised in my opinion
 
 ## Databases
 
@@ -52,7 +67,10 @@ just for transparency
 &rarr; Gitlab Runners / Github Actions / Earthly - **6/10**
 
 > **Note**: Haven't specifically specialized in **AWS** with a certification but
-> have worked with AWS enough to know my way around.
+> have worked with it enough to know my way around.
+
+> **Note**: I've also worked with Railway, Digital Ocean and GCP but not as
+> frequently, hence haven't been mentioned.
 
 ## Design Theory
 
