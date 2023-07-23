@@ -11,6 +11,8 @@ and most of my work revolves around web and cli tools.
 
 **My work could speak for itself** (though it doesn't speak much...)
 
+You can also get an overview of [skills](/skills) if you wish to.
+
 &rarr; [Github](https://github.com/barelyhuman)
 
 Here's a few ways you to get in touch, feel free to reach out for help.
