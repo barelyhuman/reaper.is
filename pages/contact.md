@@ -1,6 +1,5 @@
 **Online**
 
-[Website](https://reaper.is)\
 [Twitter](https://twitter.com/barelyreaper)\
 [Github](https://github.com/barelyhuman)\
 <ahoy@barelyhuman.dev>
