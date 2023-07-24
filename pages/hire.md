@@ -5,7 +5,7 @@ I am available for:
 - Full Time Hire
 - Contract Work
 
-Before considering my hire, please review my list of [skills](/skills) to ensure
+Before considering my hire, please review my list of [skills](/skills) and/or [resume](/resume) to ensure
 they align with your requirements.
 
 ## Core Values
