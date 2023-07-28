@@ -222,6 +222,56 @@ Other things to consider
 
 ### Web
 
+#### `codename`: voyage
+
+Self Hosted alternative to Vercel / Netlify / etc
+
+This is not a new idea, a larger version of this is
+[Laravel Forge](https://forge.laravel.com)
+
+Probably too big of a project to do alone but then, still doable.
+
+Think of it as a traditional app management platform.
+
+Here's the list of MVP
+
+- Container Creation from a Dockerfile
+- Dockerfiles can be uploaded or come from Git repositories.
+
+Good to have
+
+- connect to Github or Gitlab
+
+**Details**
+
+I need an application/web UI that can handle getting my repos and building their
+dockerfiles and just run them on the same system that the above project is
+hosted on. You could technically build this with dokku and add a repo hook
+mechanism over it.
+
+To generalise this to work with any git provider, I'd recommend setting it up
+with a Git Remote hook trigger which would listen for events from let's say
+Github / Gitlab/ Bitbucket etc and trigger a build.
+
+This saves you the time to setup a full fledged **Git Replicating Engine** and
+since it's for devs, it's still going to be easy to work with.
+
+Next up, we need to be able to build these docker images so you can use the
+Docker Go SDK to do this and also run the images if needed.
+
+If no `Dockerfile` is found, just do nothing, if you find a `compose.yml` or
+`docker-compose.yml` then ask the user if the services from the compose also
+need to be started
+
+**Disclaimer** This is not trying to replicate fly.io or Railway or any backend
+deployment services and trying to open source them. This is an extention of
+dokku that I've had in my head much before ledokku was created and since ledokku
+is very tied to github, I wanted one that could be similarly easy to self host
+and work with. The dokku dependency could be removed but you would then need to
+write the whole implementation with GoLang again and dokku does a great job of
+it already, you just need to build an interface around it (still hard, but it's
+still easier than building the entire builder engine again)
+
 #### `codename` : feedbag
 
 OSS feedback site, this is an experimental project I wish to build while
