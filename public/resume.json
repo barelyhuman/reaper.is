@@ -1,0 +1,183 @@
+{
+    "basics": {
+      "name": "Siddharth Gelera (reaper)",
+      "label": "A Full Stack Developer that's better at talking to computers than humans.",
+      "picture": "",
+      "email": "ahoy@barelyhuman.dev",
+      "website": "https://reaper.is",
+      "summary": "Minimalist • Open Source Enthusiast • Developer",
+      "location": {
+        "countryCode": "IN",
+        "address": ""
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "reaperim",
+          "url": "https://www.linkedin.com/in/reaperim/"
+        },
+        {
+          "network": "Github",
+          "username": "barleyhuman",
+          "url": "https://www.github.com/barelyhuman/"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Fountane, LLC ",
+        "company": "Fountane, LLC ",
+        "highlights": [
+          "Built the core Parkpoolr App with 3 other devs",
+          "Maintained the Parkpoolr Backend for 2 years",
+          "Built the core of the Trunkdrop Mobile App(react native) and onboarded a team of 2 on it later",
+          "Automated the deploy and delivery process of the organization with a combination of Jenkins and Gitlab Runners",
+          "Maintained various docker images for the organization's internal tooling and dev processes",
+          "Trained over 14 people in the past 4 years for web development and best practices in DevOps",
+          "Lead 3 projects in the past 1.5 years to production"
+        ],
+        "position": "Principal Developer",
+        "startDate": "2019-11-30",
+        "summary": "Standardised Development Processes, trained developers, setup automations and maintained numerous projects",
+        "website": "https://www.linkedin.com/company/fountane/"
+      },
+      {
+        "name": "Valuefy Solutions Private Limited",
+        "company": "Valuefy Solutions Private Limited",
+        "endDate": "2019-10-31",
+        "highlights": [
+          "Built the core transaction flow of a wealth management platform, both the UI and the backend/backoffice",
+          "Optimized the ETL and Analytics aggregation process for 1000+ users",
+          "Helped standardize creation of variants for the web app"
+        ],
+        "position": "Full-stack Developer",
+        "startDate": "2018-09-30",
+  
+        "summary": "Core Contributor during the initial stages of the product",
+        "website": "https://www.linkedin.com/company/valuefy/"
+      },
+      {
+        "name": "Cartisan",
+        "company": "Cartisan",
+        "endDate": "2018-09-30",
+        "highlights": [
+          "Trained and Helped interns to build a Damage Detection ML Model, for better invocing",
+          "Helped maintain the core product Cartisan; both as Frontend Developer (AngularJS) and Backend Developer ( MongoDB, Express)"
+        ],
+        "position": "Software Designer and Developer",
+        "startDate": "2018-04-30",
+        "summary": "",
+        "website": "https://www.linkedin.com/company/cartisan/"
+      },
+      {
+        "name": "Retailio",
+        "company": "Retailio",
+        "endDate": "2017-12-31",
+        "highlights": [
+          "Built the Web UI for SuperTax, a tax management service with GST support which was written in React",
+          "Upgraded the Web UI for RetailIO's Medical Supply B2B product, which was done in Angular"
+        ],
+        "position": "Front end Developer",
+        "startDate": "2017-08-31",
+        "summary": "A junior dev who supported the senior developers in maitaining and launching 2 Products",
+        "website": "https://www.linkedin.com/company/retailio/"
+      },
+      {
+        "name": "HoppApp",
+        "company": "HoppApp",
+        "endDate": "2017-05-31",
+        "highlights": [
+          "Built driver tracking Web UI for the HoppApp service"
+        ],
+        "position": "Angular JS Dev",
+        "startDate": "2016-09-30",
+        "summary": "Core developer responsible for the Admin side of things for the Product",
+        "website": ""
+      }
+    ],
+    "volunteer": [],
+    "education": [
+      {
+        "institution": "Swami Vivekananda Institute of Technology",
+        "area": "Computer Software Engineering",
+        "studyType": "Bachelor of Technology",
+        "startDate": "2013-12-31",
+        "endDate": "2017-12-31",
+        "gpa": "",
+        "courses": ["CSE - Computer Science and Engineering"]
+      }
+    ],
+    "awards": [],
+    "publications": [],
+    "skills": [
+      {
+        "name": "Web Development",
+        "level": "Master",
+        "keywords": ["JavaScript", "HTML", "CSS", "React", "Angular", "Vue"]
+      },
+      {
+        "name": "Software Development",
+        "level": "Advanced",
+        "keywords": [
+          "Clean Arch / Hexagonal Arch / Onion Arch",
+          "Greenfield and Brownfield Migration",
+          "Version Management",
+          "Internet Security",
+          "Horizontal / Vertical Scaling"
+        ]
+      },
+      {
+        "name": "Software Architecture",
+        "level": "Intermediate",
+        "keywords": ["AWS", "GCP", "Docker", "K8S"]
+      },
+      {
+        "name": "Dev Ops",
+        "level": "Advanced",
+        "keywords": [
+          "Jenkins",
+          "Github Actions",
+          "Pulumi",
+          "Terraform",
+          "Docker",
+          "Ansible"
+        ]
+      },
+      {
+        "name": "Mobile Development",
+        "level": "Intermediate",
+        "keywords": ["Swift", "React Native"]
+      },
+      {
+        "name": "Backend Development",
+        "level": "Advanced",
+        "keywords": ["Express", "Hapi", "Loopback", "Go HTTP", "Go Gin"]
+      },
+      {
+        "name": "Databases",
+        "level": "Intermediate",
+        "keywords": ["Postgres", "MySQL", "MongoDB", "Redis", "ElasticSearch v6"]
+      }
+    ],
+    "languages": [
+      {
+        "language": "English",
+        "fluency": "Conversational"
+      },
+      {
+        "language": "Hindi",
+        "fluency": "Native"
+      },
+      {
+        "language": "Telugu",
+        "fluency": "Conversational"
+      },
+      {
+        "language": "Marwari",
+        "fluency": "Native"
+      }
+    ],
+    "interests": [],
+    "references": []
+  }
+  
