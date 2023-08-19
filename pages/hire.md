@@ -11,15 +11,14 @@ Before considering my hire, please review my list of [skills](/skills) and/or
 Here's a few ways I could be of service to you
 
 - **Mentoring**: If you are stuck at a problem with regards to next.js,golang,
-  reactive programming, islands, you can contact me though
+  reactive programming, islands, you can contact me through
   [Slack](https://join.slack.com/t/barelyhuman/shared_invite/zt-1r4tm5xtw-oRCGmCQJpAmvPnVAOW90oA)
   and this will usually cost you a
   [cup of coffee](https://github.com/sponsors/barelyhuman/)
 
-- **Contract Work**: If your project needs a Senior Developer with exprience in
+- **Contract Work**: If your project needs a Senior Developer with experience in
   (P)React, Node, Golang, Nim, or overall software architecture and solution
-  building, I could help you by promising a few weeks/months in solving that for
-  you. You can get in touch via an email on <ahoy@barelyhuman.dev>
+  building, I could help you by promising a few weeks/months in solving that. You can get in touch via an email on <ahoy@barelyhuman.dev>
 
 For anything else, you can use either
 [Slack](https://join.slack.com/t/barelyhuman/shared_invite/zt-1r4tm5xtw-oRCGmCQJpAmvPnVAOW90oA)
