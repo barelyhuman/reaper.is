@@ -4,9 +4,8 @@
 
 ## Blog Links
 
-- [Skills](/skills.html)
-- [Newsletter](/newsletter.html)
-- [RSS](/blog.xml)
+- [Skills](/skills)
+- [RSS](/rss.xml)
 
 ## Alternate Identities
 
@@ -19,12 +18,12 @@
 
 ## Code and Automation Snippets
 
-- [Snips](https://snips.reaper.im/)
+- [Snips](https://snips.barelyhuman.dev/)
 
 ## Cool People
 
 - [Gautam](https://backendengineer.net/)
-- [Paco](https://paco.sh/)
+- [Paco](https://paco.me/)
 - [Andrew Prifer](https://github.com/AndrewPrifer)
 - [Daishi Kato](https://blog.axlight.com/)
 - [Frank Chimero](https://frankchimero.com/)

@@ -17,7 +17,7 @@ I'll talk more about it.
 
 ## Music
 
-Fixed a small hiccup in [music](https://music.reaper.im) that was causing the track to break and stop playing during playback and that's unacceptable
+Fixed a small hiccup in [music](https://music.barelyhuman.xyz) that was causing the track to break and stop playing during playback and that's unacceptable
 for a music player.
 
 I think I should add a proper backend to this app and allow people to create accounts but I'm not sure whether anyone else even uses this so I'm going

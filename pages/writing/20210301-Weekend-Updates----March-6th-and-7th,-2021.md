@@ -11,7 +11,7 @@ the authentication check during first render of the app.
 
 ## New Additions
 
-The past week was mostly me working on [themer](http://themer.reaper.im/) and making fixes and making the code more cleaner and readable in case
+The past week was mostly me working on [themer](https://themer.barelyhuman.dev/) and making fixes and making the code more cleaner and readable in case
 someone else wants to fix something that isn't working as they expected it to.
 
 Another project that was created yesterday was [conch](https://github.com/barelyhuman/conch), a micro library to handle sequential batch processing of

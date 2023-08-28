@@ -39,7 +39,7 @@ will have to go through that soon.
 
 ### Pending
 
-I doubt that anyone knows about the existence of [Pending](https://pending.reaper.im) mainly because I never really talked about it but it's a simple
+I doubt that anyone knows about the existence of [Pending(Now shut down)](https://pending.reaper.im) mainly because I never really talked about it but it's a simple
 Kanban board at this point. The reason it's in this update is that Pending will be getting a overhaul soon.
 
 It was meant to be a browser based storage but getting the peer to peer data sharing was something that would create friction for normal users and
@@ -60,7 +60,7 @@ Also, planning to move towards building system level tooling and get into kernel
 the skillset and not the whole skillset. Kinda tired of frontend development for a now, really into CLI tools and that's probably because I use the
 terminal more than I use the GUI apps.
 
-Experimenting with moving the [Music](music.reaper.im) to be have a cli version so I don't have to open the browser , because the browsers take a lot
+Experimenting with moving the [Music](http://music.barelyhuman.xyz) to be have a cli version so I don't have to open the browser , because the browsers take a lot
 more RAM than needed.
 
 A few apps that I switched to, to save some RAM.

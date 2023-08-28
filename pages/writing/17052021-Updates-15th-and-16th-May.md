@@ -68,7 +68,7 @@ The menu on the bottom allows you to go to the project details to check on membe
 
 #### Tasks and Status
 
-Already implemented this quite a few times now with [todo](https://todo.reaper.im) and TillWhen also has a beta task list so I don't think I need to
+Already implemented this quite a few times now with [todo(not shut down)](https://todo.reaper.im) and TillWhen also has a beta task list so I don't think I need to
 explain what and how this is but it's not Kanban, I really don't see the need for someone working to have to go through moving items here and there in
 a board instead of just marking it as done or any other status, but that's just my thinking and Asana does it well but get's very bloaty in terms of
 things you can do and you accidentally end up clicking on something you didn't want too. Not what I want from a project manager.

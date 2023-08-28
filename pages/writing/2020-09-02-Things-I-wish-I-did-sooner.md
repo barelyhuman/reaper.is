@@ -76,7 +76,7 @@ The point of having a resource collection is avoid fumbling around the web when 
 multiple times now, while not proud of it I still end up writing most of my logic again and again when I could've just picked it up from a previous
 codebase but then looking through 100 repositories for it is a bad idea and I could write the formatter again till then.
 
-If you've not seen it yet, [reaper.im](https://reaper.is) has a collections section where I now store snippets I use a lot or type again and again.
+If you've not seen it yet, [reaper.is](https://reaper.is) has a collections section where I now store snippets I use a lot or type again and again.
 
 You don't have to do this to your website but use something like Github Gist to store these snippets and something like Pocket to store blog and
 website links.

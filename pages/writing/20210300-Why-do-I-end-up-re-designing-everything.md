@@ -10,7 +10,7 @@ functionality but then I redesigned the whole thing.
 
 And technically, the idea for the colors was taken from the UI i was writing for the [markdown editor](https://mark.reaper.im) which then ended up
 being the inspiration for me to modify the UI of [commitlog-web](https://commitlog-web.herokuapp.com) through which I created a small library called
-[themer](https://themer.reaper.im) and now I'm sitting here writing this post indirectly back linking to everything I've created in the past 1.5 days
+[themer](https://themer.barelyhuman.dev/) and now I'm sitting here writing this post indirectly back linking to everything I've created in the past 1.5 days
 just because I liked the input style I made for a markdown editor.
 
 And this has happened before, I got inspired by [lancerlist.co](https://lancerlist.co/) and ended up cloning that color scheme to all the apps I built

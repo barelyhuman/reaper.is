@@ -20,7 +20,7 @@ It's like 200 lines and you can probably understand by reading the source code ,
 
 [Source Code](https://github.com/barelyhuman/themer/blob/dev/src/index.js)
 
-Also, you can just install [themer](https://themer.reaper.im) and use it if you'd find that easier but here goes.
+Also, you can just install [themer](https://themer.barelyhuman.dev/) and use it if you'd find that easier but here goes.
 
 **Requirements**
 
