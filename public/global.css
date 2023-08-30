@@ -35,7 +35,7 @@ body[data-theme='dark'] {
   --dark: #efefef;
 }
 
-body[data-theme='hack'] {
+body[data-theme='hacker'] {
   --bg: #181819;
   --light: #27391a;
   --gray: #bfdaab;
