@@ -42,6 +42,20 @@ body[data-theme='hacker'] {
   --dark: #98c379;
 }
 
+body[data-theme="rose-pine"]{
+  --bg: #191724;
+  --light: #393552;
+  --gray: #908caa;
+  --dark: #e0def4;
+}
+
+body[data-theme="rose-pine-dawn"]{
+  --bg: #faf4ed;
+  --light: #f2e9e1;
+  --gray: #797593;
+  --dark: #575279;
+}
+
 body {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   font-size: 81.3%; /*13px*/
