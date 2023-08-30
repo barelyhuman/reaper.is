@@ -9,11 +9,43 @@
   --dark: #2e3440;
   --gray: #8c97ac;
   --light: #e9ecf8;
+  --bg: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #181819;
+    --light: #333;
+    --gray: #898989;
+    --dark: #efefef;
+  }
+}
+
+body[data-theme='light'] {
+  --dark: #2e3440;
+  --gray: #8c97ac;
+  --light: #e9ecf8;
+  --bg: #fff;
+}
+
+body[data-theme='dark'] {
+  --bg: #181819;
+  --light: #333;
+  --gray: #898989;
+  --dark: #efefef;
+}
+
+body[data-theme='hack'] {
+  --bg: #181819;
+  --light: #27391a;
+  --gray: #bfdaab;
+  --dark: #98c379;
 }
 
 body {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   font-size: 81.3%; /*13px*/
+  background: var(--bg);
 }
 
 h1,
@@ -56,5 +88,3 @@ ul > li {
 .home-nav-button {
   @apply transition-colors duration-150 ease-in-out border flex-1 min-w-fit border-r-0 last:border-r first:rounded-l-md last:rounded-r-md first:after:rounded-l-md last:after:rounded-r-md hover:no-underline rounded-r-none px-4 py-2 border-light text-gray hover:text-dark hover:cursor-pointer relative after:content-[''] after:opacity-0 after:border after:absolute after:-top-[1px] after:-left-[1px] after:-right-[1px] after:z-10 after:-bottom-[1px] after:border-dark hover:after:opacity-100;
 }
-
-

@@ -11,10 +11,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/styles.css" />
-    <link rel="alternate" type="application/rss+xml" title="reaper" href="https://reaper.is/rss.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="reaper"
+      href="https://reaper.is/rss.xml"
+    />
   </head>
 
-  <body class="max-w-3xl text-dark flex flex-col justify-between md:justify-center md:min-h-screen">
+  <body
+    class="max-w-3xl text-dark flex flex-col justify-between md:justify-center md:min-h-screen"
+  >
     <div class="h-56 block"></div>
     <div
       class="max-w-3xl p-4 text-xs xl:text-base max-h-fit leading-relaxed md:px-24 min-h-fit flex flex-col justify-around gap-4"
@@ -47,5 +54,91 @@
       </div>
       {{.Content}}
     </div>
+    <div
+      id="themer"
+      class="flex flex-col fixed md:top-10 md:right-10 top-5 right-5"
+    >
+      <div
+        class="hover:bg-light h-10 w-10 p-2 items-center justify-center flex rounded-md hover:cursor-pointer"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95"></path>
+          <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44"></path>
+          <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92"></path>
+          <path d="M8.56 20.31a9 9 0 0 0 3.44 .69"></path>
+          <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95"></path>
+          <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44"></path>
+          <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92"></path>
+          <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
+        </svg>
+      </div>
+      <div
+        id="theme-list"
+        class="flex absolute left-0 right-0 top-10 flex-col hidden"
+      ></div>
+    </div>
   </body>
+  <script type="module">
+    import {
+      init,
+      getCurrentTheme,
+      setTheme,
+    } from 'https://esm.sh/@barelyreaper/themer@2.0.1/'
+
+    const themes = ['light', 'dark', 'hacker']
+
+    // sub to the browser changes
+    init()
+
+    const themerToggle = document.getElementById('themer')
+    const themerList = document.getElementById('theme-list')
+
+    themerToggle.addEventListener('touchend', () => {
+      themerList.classList.toggle('hidden')
+    })
+
+    themerToggle.addEventListener('mouseenter', () => {
+      themerList.classList.remove('hidden')
+    })
+
+    themerToggle.addEventListener('mouseleave', () => {
+      themerList.classList.add('hidden')
+    })
+
+    themes.forEach(theme => {
+      const d = document.createElement('button')
+      d.innerHTML = `${theme}`
+
+      d.addEventListener('touchend', () => {
+        setTheme(theme)
+      })
+
+      d.addEventListener('click', () => {
+        setTheme(theme)
+      })
+      ;[
+        'inline-flex',
+        'justify-content',
+        'items-center',
+        'w-full',
+        'px-2',
+        'py-2',
+        'hover:bg-light',
+        'rounded-md',
+      ].map(x => d.classList.add(x))
+
+      themerList.appendChild(d)
+    })
+  </script>
 </html>
