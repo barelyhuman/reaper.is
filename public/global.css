@@ -85,6 +85,12 @@ ul > li {
   @apply list-disc leading-normal pb-4;
 }
 
+th {
+  @apply text-left text-gray;
+}
+
+
 .home-nav-button {
   @apply transition-colors duration-150 ease-in-out border flex-1 min-w-fit border-r-0 last:border-r first:rounded-l-md last:rounded-r-md first:after:rounded-l-md last:after:rounded-r-md hover:no-underline rounded-r-none px-4 py-2 border-light text-gray hover:text-dark hover:cursor-pointer relative after:content-[''] after:opacity-0 after:border after:absolute after:-top-[1px] after:-left-[1px] after:-right-[1px] after:z-10 after:-bottom-[1px] after:border-dark hover:after:opacity-100;
 }
+
