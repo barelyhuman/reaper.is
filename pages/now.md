@@ -3,12 +3,10 @@
 This is more of a page to remind me what I'm supposed to be prioritizing right
 now
 
-- working on improving tillwhen's base functionalities instead of rewriting the
-  entire UI , like I planned earlier
-- done with the base API and Flags for
-  [commitlog](https://github.com/barelyhuman/commitlog), now need to add a
-  parser for a global and local config for it
-- A lua like simplistic language that transpiles to a few other languages
+- writing stuff for rawjs.xyz to help more beginners
+- figuring out a way to make it sustainable while doing just OSS and minor
+  contract work -> [Hire Me?](/hire)
+- working on making [goblin.run](https://goblin.run) much more faster and stable
 
 > **NOTE**: (for future self) Do not! and I say DO FUCKING NOT do more than 3
 > projects at a time, you just can't handle it.
@@ -95,18 +93,18 @@ abstraction.
 example API
 
 ```js
-import { createSchemaGQL } from "typeless-gql";
+import { createSchemaGQL } from 'typeless-gql'
 
-const gql = createSchemaGQL("/path/to/schema.gql");
+const gql = createSchemaGQL('/path/to/schema.gql')
 
 const TypedOperationNode = gql`
   query ping {
     pong
   }
-`;
+`
 
-const response = someExecutionLibrary(TypedOperationNode);
-response.data.pong;
+const response = someExecutionLibrary(TypedOperationNode)
+response.data.pong
 // should autocomplete at `data` and `pong`
 ```
 
