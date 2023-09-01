@@ -6,6 +6,8 @@ date: 01/09/2023
 
 I'm no typing speed expert, nor am I the fastest typer in the world. My typing speed varies from **110-120WPM** depending on amount of coffee intake. 
 
+![](/images/typing-speed.jpeg)
+
 Anyway, 
 I've basically setup a daily routine that helps me warmup before I start working and this has also helped increase my speed over time where 110WPM is a very easy goal for me to reach.
 
