@@ -27,7 +27,7 @@ The first instance is for you to type very comfortably without trying to race th
 Now, we need to intentionally increase a bit of our speed, still trying to be comfortable, what I do at this stage is try to type the word in a stretch, wait a bit and then type the next one and keep going at that till I'm done with this
 
 ### Speed up all the way 
-At this point, type like your life depends on it and type as quickly as you think you can. I shift focus to looking at the next letter while typing the current focused letter and keep going, I normally do this 2 types instead of once just because it's fun. 
+At this point, type like your life depends on it and type as quickly as you think you can. I shift focus to looking at the next letter while typing the current focused letter and keep going, I normally do this 2 times instead of once just because it's fun. 
 
 ### Slow back down
 Let the brain and fingers rest at this point and go back to simple glide based typing. 
