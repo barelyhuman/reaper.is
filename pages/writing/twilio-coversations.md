@@ -2,7 +2,7 @@
 title: Working with Twilio Coversations
 published: true
 date: 23/12/2021
-image_url: https://og.barelyhuman.xyz/api?fontSize=13&title=Working+with+Twilio+Coversations&fontSizeTwo=8&color=%23000&backgroundImageURL=https%3A%2F%2Freaper.im%2Fassets%2Fog-post-background.png
+image_url: https://og.barelyhuman.xyz/generate?fontSize=13&title=Working+with+Twilio+Coversations&fontSizeTwo=8&color=%23000&backgroundImageURL=https%3A%2F%2Freaper.im%2Fassets%2Fog-post-background.png
 ---
 
 Complaining about docs has been a global rant for now but then not everyone has the time and man power to write documentation, I don't know why Twilio

@@ -2,7 +2,7 @@
 title: Typescript, VSCode, JSDoc - An overview on managing coding style and restricting developers
 published: true
 date: 23/09/2021
-image_url: https://og.barelyhuman.xyz/api?fontSize=14&title=Typescript%2C+VSCode%2C+JSDoc&subtitle=Reaper&fontSizeTwo=8&color=%23000&backgroundImageURL=https%3A%2F%2Freaper.im%2Fassets%2Fog-post-background.png
+image_url: https://og.barelyhuman.xyz/generate?fontSize=14&title=Typescript%2C+VSCode%2C+JSDoc&subtitle=Reaper&fontSizeTwo=8&color=%23000&backgroundImageURL=https%3A%2F%2Freaper.im%2Fassets%2Fog-post-background.png
 ---
 
 Javascript and Typescript , the unneeded debate as to which is better and which should be used has been around for as long coffeescript existed and
