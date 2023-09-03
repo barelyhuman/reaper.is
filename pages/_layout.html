@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>reaper | Minimalist • Open Source Enthusiast • Programmer</title>
+
+    {{if eq .Data.html.title nil}}
+      <title>reaper | Minimalist • Open Source Enthusiast • Programmer</title>
+    {{else}}
+      <title>{{.Data.html.title}} | reaper</title>
+    {{end}}
+
     <meta charset="UTF-8" />
-    <meta name="title" content="reaper" />
-    <meta
-      name="description"
-      content="Just another Full Stack Developer. I build indie services and CLI tools to help improve and streamline my traditional development workflow. "
-    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {{if .Data.html }}
+      <meta name="title" content="{{.Data.html.title}}" />
+      <meta
+        name="description"
+        content="{{.Data.html.description}}"
+      />
+
+      <meta name="title" content="{{.Data.html.title}}" />
+      <meta name="description" content="{{.Data.html.description}}" />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="{{.Data.html.open_graph.url}}" />
+      <meta property="og:title" content="{{.Data.html.title}}" />
+      <meta property="og:description" content="{{.Data.html.description}}" />
+      {{if .Data.html.open_graph.img }}
+      <meta property="og:image" content="{{.Data.html.open_graph.img}}" />
+      {{end}}
+
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="{{.Data.html.open_graph.url}}" />
+      <meta property="twitter:title" content="{{.Data.html.title}}" />
+      <meta property="twitter:description" content="{{.Data.html.description}}" />
+      {{if .Data.html.open_graph.img }}
+      <meta property="twitter:image" content="{{.Data.html.open_graph.img}}" />
+      {{end}}
+    {{end}}
+
+
     <link rel="stylesheet" href="/styles.css" />
     <link
       rel="alternate"

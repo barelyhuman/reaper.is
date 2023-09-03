@@ -2,7 +2,7 @@
 title: Testing - Tools, Methods, Mentality
 published: true
 date: 06/12/2021
-image_url: https://og.reaper.im/api?fontSize=13&title=Testing+-+Tools%2C+Methods%2C+Mentality&fontSizeTwo=8&color=%23000&backgroundImageURL=https%3A%2F%2Freaper.im%2Fassets%2Fog-post-background.png
+image_url: https://og.barelyhuman.xyz/api?fontSize=13&title=Testing+-+Tools%2C+Methods%2C+Mentality&fontSizeTwo=8&color=%23000&backgroundImageURL=https%3A%2F%2Freaper.im%2Fassets%2Fog-post-background.png
 ---
 
 If you are in a dilemma of whether to write tests or not, I did cover a bit about that in a

@@ -2,7 +2,7 @@
 title: Be Unproductive?
 published: true
 date: 29/11/2021
-image_url: https://og.reaper.im/api?fontSize=14&title=Be+Unproductive&fontSizeTwo=8&color=%23000&backgroundImageURL=https%3A%2F%2Freaper.im%2Fassets%2Fog-post-background.png
+image_url: https://og.barelyhuman.xyz/api?fontSize=14&title=Be+Unproductive&fontSizeTwo=8&color=%23000&backgroundImageURL=https%3A%2F%2Freaper.im%2Fassets%2Fog-post-background.png
 ---
 
 **It's okay to be unproductive.**

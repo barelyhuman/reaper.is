@@ -2,7 +2,7 @@
 title: Workation
 published: true
 date: 25/09/2021
-image_url: https://og.reaper.im/api?fontSize=14&title=Workation&fontSizeTwo=8&color=%23000&backgroundImageURL=https%3A%2F%2Freaper.im%2Fassets%2Fog-post-background.png
+image_url: https://og.barelyhuman.xyz/api?fontSize=14&title=Workation&fontSizeTwo=8&color=%23000&backgroundImageURL=https%3A%2F%2Freaper.im%2Fassets%2Fog-post-background.png
 ---
 
 There's supposed to be a devlog today but there's basically nothing that I did in the past 7 days that would count as enough content for it. There was
