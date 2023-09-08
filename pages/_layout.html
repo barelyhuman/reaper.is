@@ -1,149 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    {{if eq .Data.html.title nil}}
+    <title>reaper | Minimalist • Open Source Enthusiast • Programmer</title>
+    {{else}}
+    <title>{{.Data.html.title}} | reaper</title>
+    {{end}}
 
-<head>
-  {{if eq .Data.html.title nil}}
-  <title>reaper | Minimalist • Open Source Enthusiast • Programmer</title>
-  {{else}}
-  <title>{{.Data.html.title}} | reaper</title>
-  {{end}}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{if .Data.html }}
+    <meta name="title" content="{{.Data.html.title}}" />
+    <meta name="description" content="{{.Data.html.description}}" />
 
-  {{if .Data.html }}
-  <meta name="title" content="{{.Data.html.title}}" />
-  <meta name="description" content="{{.Data.html.description}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{.Data.html.open_graph.url}}" />
+    <meta property="og:title" content="{{.Data.html.title}}" />
+    <meta property="og:description" content="{{.Data.html.description}}" />
+    {{if .Data.html.open_graph.img }}
+    <meta property="og:image" content="{{.Data.html.open_graph.img}}" />
+    {{end}}
 
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{.Data.html.open_graph.url}}" />
-  <meta property="og:title" content="{{.Data.html.title}}" />
-  <meta property="og:description" content="{{.Data.html.description}}" />
-  {{if .Data.html.open_graph.img }}
-  <meta property="og:image" content="{{.Data.html.open_graph.img}}" />
-  {{end}}
-
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="{{.Data.html.open_graph.url}}" />
-  <meta property="twitter:title" content="{{.Data.html.title}}" />
-  <meta property="twitter:description" content="{{.Data.html.description}}" />
-  {{if .Data.html.open_graph.img }}
-  <meta property="twitter:image" content="{{.Data.html.open_graph.img}}" />
-  {{end}} {{else}}
-  <meta name="title" content="reaper | developer" />
-  <meta name="description" content="I'm a Developer from India interested in the wide variety of cool things
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{{.Data.html.open_graph.url}}" />
+    <meta property="twitter:title" content="{{.Data.html.title}}" />
+    <meta property="twitter:description" content="{{.Data.html.description}}" />
+    {{if .Data.html.open_graph.img }}
+    <meta property="twitter:image" content="{{.Data.html.open_graph.img}}" />
+    {{end}} {{else}}
+    <meta name="title" content="reaper | developer" />
+    <meta
+      name="description"
+      content="I'm a Developer from India interested in the wide variety of cool things
         that programming gives you the power to build. I've spent over 6 years in
         the industry working on Web Dev, Internal Tooling and Automation. In my own
         time, I build open source projects to kill my curiosity in fields and
         domains that my work doesn't allow me to. I like to keep things simple and
-        straightforward, so is my attitude." />
-  {{end}}
+        straightforward, so is my attitude."
+    />
+    {{end}}
 
+    <style>
+      body {
+        display: none;
+      }
+    </style>
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="reaper"
+      href="https://reaper.is/rss.xml"
+    />
+  </head>
+
+  <body
+    class="max-w-3xl text-dark flex flex-col justify-between md:justify-center md:min-h-screen"
+  >
+    <div class="h-56 block"></div>
+    <div
+      class="max-w-3xl p-4 text-xs xl:text-base max-h-fit leading-relaxed md:px-24 min-h-fit flex flex-col justify-around gap-4"
+    >
+      <div>
+        {{if .Data.showNav }}
+        <a class="items-center text-sm mb-10 flex align-middle w-fit" href="/">
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-arrow-left"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M5 12l14 0"></path>
+              <path d="M5 12l6 6"></path>
+              <path d="M5 12l6 -6"></path>
+            </svg>
+          </span>
+          Back</a
+        >
+        {{end}}
+      </div>
+      {{.Content}}
+    </div>
+    <div
+      id="themer"
+      class="flex flex-col fixed md:top-10 md:right-10 top-5 right-5"
+    >
+      <div
+        class="hover:bg-light h-10 w-10 p-2 items-center justify-center flex rounded-md hover:cursor-pointer"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95"></path>
+          <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44"></path>
+          <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92"></path>
+          <path d="M8.56 20.31a9 9 0 0 0 3.44 .69"></path>
+          <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95"></path>
+          <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44"></path>
+          <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92"></path>
+          <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
+        </svg>
+      </div>
+      <div
+        id="theme-list"
+        class="flex absolute w-[200px] right-0 top-10 flex-col hidden"
+      ></div>
+    </div>
+  </body>
+
+  <script type="module" defer>
+    import {
+      init,
+      getCurrentTheme,
+      setTheme,
+    } from 'https://esm.sh/@barelyreaper/themer@2.0.1/'
+
+    const themes = [
+      'light',
+      'dark',
+      'hacker',
+      'system',
+      'rose-pine',
+      'rose-pine-dawn',
+    ]
+
+    const themerToggle = document.getElementById('themer')
+    const themerList = document.getElementById('theme-list')
+
+    loadStyle('/styles.css', () => {
+      // sub to the browser changes
+      init()
+      addThemeHandlers()
+    })
+
+    function addThemeHandlers() {
+      themerToggle.addEventListener('touchend', () => {
+        themerList.classList.toggle('hidden')
+      })
+
+      themerToggle.addEventListener('mouseenter', () => {
+        themerList.classList.remove('hidden')
+      })
+
+      themerToggle.addEventListener('mouseleave', () => {
+        themerList.classList.add('hidden')
+      })
+
+      themes.forEach(theme => {
+        const d = document.createElement('button')
+        d.innerHTML = `${theme}`
+
+        d.addEventListener('touchend', () => {
+          setTheme(theme)
+        })
+
+        d.addEventListener('click', () => {
+          setTheme(theme)
+        })
+        ;[
+          'inline-flex',
+          'justify-content',
+          'items-center',
+          'w-full',
+          'px-2',
+          'py-2',
+          'hover:bg-light',
+          'rounded-md',
+        ].map(x => d.classList.add(x))
+
+        themerList.appendChild(d)
+      })
+    }
+
+    function loadStyle(url, hook = () => {}) {
+      let style = document.createElement('style')
+      style.textContent = `@import "${url}"`
+      let handler = setInterval(function () {
+        try {
+          style.sheet.cssRules
+          hook()
+          clearInterval(handler)
+        } catch (e) {}
+      }, 10)
+      document.head.appendChild(style)
+    }
+  </script>
   <script src="//unpkg.com/alpinejs" defer></script>
-
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="alternate" type="application/rss+xml" title="reaper" href="https://reaper.is/rss.xml" />
-</head>
-
-<body class="max-w-3xl text-dark flex flex-col justify-between md:justify-center md:min-h-screen">
-  <div class="h-56 block"></div>
-  <div
-    class="max-w-3xl p-4 text-xs xl:text-base max-h-fit leading-relaxed md:px-24 min-h-fit flex flex-col justify-around gap-4">
-    <div>
-      {{if .Data.showNav }}
-      <a class="items-center text-sm mb-10 flex align-middle w-fit" href="/">
-        <span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="18" height="18"
-            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M5 12l14 0"></path>
-            <path d="M5 12l6 6"></path>
-            <path d="M5 12l6 -6"></path>
-          </svg>
-        </span>
-        Back</a>
-      {{end}}
-    </div>
-    {{.Content}}
-  </div>
-  <div id="themer" class="flex flex-col fixed md:top-10 md:right-10 top-5 right-5">
-    <div class="hover:bg-light h-10 w-10 p-2 items-center justify-center flex rounded-md hover:cursor-pointer">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" stroke-width="2"
-        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95"></path>
-        <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44"></path>
-        <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92"></path>
-        <path d="M8.56 20.31a9 9 0 0 0 3.44 .69"></path>
-        <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95"></path>
-        <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44"></path>
-        <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92"></path>
-        <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
-      </svg>
-    </div>
-    <div id="theme-list" class="flex absolute w-[200px] right-0 top-10 flex-col hidden"></div>
-  </div>
-</body>
-<script type="module">
-  import {
-    init,
-    getCurrentTheme,
-    setTheme,
-  } from 'https://esm.sh/@barelyreaper/themer@2.0.1/'
-
-  const themes = [
-    'light',
-    'dark',
-    'hacker',
-    'system',
-    'rose-pine',
-    'rose-pine-dawn',
-  ]
-
-  // sub to the browser changes
-  init()
-
-  const themerToggle = document.getElementById('themer')
-  const themerList = document.getElementById('theme-list')
-
-  themerToggle.addEventListener('touchend', () => {
-    themerList.classList.toggle('hidden')
-  })
-
-  themerToggle.addEventListener('mouseenter', () => {
-    themerList.classList.remove('hidden')
-  })
-
-  themerToggle.addEventListener('mouseleave', () => {
-    themerList.classList.add('hidden')
-  })
-
-  themes.forEach(theme => {
-    const d = document.createElement('button')
-    d.innerHTML = `${theme}`
-
-    d.addEventListener('touchend', () => {
-      setTheme(theme)
-    })
-
-    d.addEventListener('click', () => {
-      setTheme(theme)
-    })
-      ;[
-        'inline-flex',
-        'justify-content',
-        'items-center',
-        'w-full',
-        'px-2',
-        'py-2',
-        'hover:bg-light',
-        'rounded-md',
-      ].map(x => d.classList.add(x))
-
-    themerList.appendChild(d)
-  })
-</script>
-
 </html>
