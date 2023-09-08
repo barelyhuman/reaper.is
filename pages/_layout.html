@@ -141,7 +141,7 @@
       'system',
       'rose-pine',
       'rose-pine-dawn',
-      "plastic"
+      'plastic',
     ]
 
     const themerToggle = document.getElementById('themer')
@@ -200,6 +200,7 @@
           style.sheet.cssRules
           hook()
           clearInterval(handler)
+          document.head.removeChild(style)
         } catch (e) {}
       }, 10)
       document.head.appendChild(style)
