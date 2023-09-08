@@ -7,6 +7,7 @@ module.exports = {
         dark: 'var(--dark)',
         light: 'var(--light)',
         gray: 'var(--gray)',
+        accent: 'var(--accent)',
       },
     },
   },

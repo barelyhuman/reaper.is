@@ -10,9 +10,12 @@
   --gray: #8c97ac;
   --light: #e9ecf8;
   --bg: #fff;
+  --accent: black;
 }
 
-[x-cloak] { display: none !important; }
+[x-cloak] {
+  display: none !important;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -20,6 +23,7 @@
     --light: #333;
     --gray: #898989;
     --dark: #efefef;
+    --accent: white;
   }
 }
 
@@ -28,6 +32,7 @@ body[data-theme='light'] {
   --gray: #8c97ac;
   --light: #e9ecf8;
   --bg: #fff;
+  --accent: black;
 }
 
 body[data-theme='dark'] {
@@ -42,20 +47,31 @@ body[data-theme='hacker'] {
   --light: #27391a;
   --gray: #bfdaab;
   --dark: #98c379;
+  --accent: #98c379;
 }
 
-body[data-theme="rose-pine"]{
+body[data-theme='rose-pine'] {
   --bg: #191724;
   --light: #393552;
   --gray: #908caa;
   --dark: #e0def4;
+  --accent: #31748f;
 }
 
-body[data-theme="rose-pine-dawn"]{
+body[data-theme='rose-pine-dawn'] {
   --bg: #faf4ed;
   --light: #f2e9e1;
   --gray: #797593;
   --dark: #575279;
+  --accent: #31748f;
+}
+
+body[data-theme='plastic'] {
+  --bg: #181a1f;
+  --light: #0d1117;
+  --gray: #a9b2c3;
+  --dark: #c6ccd7;
+  --accent: #98c379;
 }
 
 body {
@@ -105,8 +121,6 @@ th {
   @apply text-left text-gray;
 }
 
-
 .home-nav-button {
   @apply transition-colors duration-150 ease-in-out border flex-1 min-w-fit border-r-0 last:border-r first:rounded-l-md last:rounded-r-md first:after:rounded-l-md last:after:rounded-r-md hover:no-underline rounded-r-none px-4 py-2 border-light text-gray hover:text-dark hover:cursor-pointer relative after:content-[''] after:opacity-0 after:border after:absolute after:-top-[1px] after:-left-[1px] after:-right-[1px] after:z-10 after:-bottom-[1px] after:border-dark hover:after:opacity-100;
 }
-
