@@ -1,52 +1,45 @@
 <div class="bg-logo">
-  <svg
-    width="36"
-    height="36"
-    viewBox="0 0 36 36"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <mask
-      id="mask0_1112_68053"
-      style="mask-type: alpha"
-      maskUnits="userSpaceOnUse"
-      x="2"
-      y="2"
-      width="32"
-      height="32"
-    >
-      <rect
-        x="17.6113"
-        y="3.1753"
-        width="20.9655"
-        height="20.9655"
-        rx="3.0739"
-        transform="rotate(45 17.6113 3.1753)"
-        stroke="var(--light)"
-        stroke-width="3.94089"
-      />
+  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="mask0_1112_68053" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="32" height="32">
+      <rect x="17.6113" y="3.1753" width="20.9655" height="20.9655" rx="3.0739" transform="rotate(45 17.6113 3.1753)"
+        stroke="var(--light)" stroke-width="3.94089" />
     </mask>
     <g mask="url(#mask0_1112_68053)">
-      <rect
-        x="17.6465"
-        y="3.1753"
-        width="20.9655"
-        height="20.9655"
-        rx="3.23153"
-        transform="rotate(45 17.6465 3.1753)"
-        stroke="currentColor"
-        stroke-width="3.94089"
-      />
-      <path
-        d="M27.1483 4.56592L21.0005 10.9896L17.6113 11.896V38.8123L40.3897 21.1965L27.1483 4.56592Z"
-        fill="var(--light)"
-      />
+      <rect x="17.6465" y="3.1753" width="20.9655" height="20.9655" rx="3.23153" transform="rotate(45 17.6465 3.1753)"
+        stroke="currentColor" stroke-width="3.94089" />
+      <path d="M27.1483 4.56592L21.0005 10.9896L17.6113 11.896V38.8123L40.3897 21.1965L27.1483 4.56592Z"
+        fill="var(--light)" />
     </g>
   </svg>
 </div>
-<div>
+<div x-data="{showDescription:false}">
   <h1 class="text-3xl text-">Reaper</h1>
-  <p class="text-gray">Minimalist • Open Source Enthusiast • Developer</p>
+  <p class="text-gray flex items-center gap-3">
+    Minimalist • Open Source Enthusiast • Developer
+    <span x-on:click="showDescription=!showDescription">
+      <svg class="w-4 h-4" x-show="!showDescription" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+        viewBox="0 0 15 15">
+        <path fill="currentColor" fill-rule="evenodd"
+          d="M3.135 6.158a.5.5 0 0 1 .707-.023L7.5 9.565l3.658-3.43a.5.5 0 0 1 .684.73l-4 3.75a.5.5 0 0 1-.684 0l-4-3.75a.5.5 0 0 1-.023-.707Z"
+          clip-rule="evenodd" />
+      </svg>
+      <svg class="w-4 h-4" x-show="showDescription" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+        viewBox="0 0 15 15">
+        <path fill="currentColor" fill-rule="evenodd"
+          d="M3.135 8.842a.5.5 0 0 0 .707.023L7.5 5.435l3.658 3.43a.5.5 0 0 0 .684-.73l-4-3.75a.5.5 0 0 0-.684 0l-4 3.75a.5.5 0 0 0-.023.707Z"
+          clip-rule="evenodd" />
+      </svg>
+    </span>
+  </p>
+  <p class="text-dark max-h-0 mt-5 overflow-hidden transition-all" x-ref="descContainer"
+    x-bind:style="showDescription? 'max-height:' + $refs.descContainer.scrollHeight + 'px':''" x-cloak>
+    I'm a Developer from India interested in the wide variety of cool things
+    that programming gives you the power to build. I've spent over 6 years in
+    the industry working on Web Dev, Internal Tooling and Automation. In my own
+    time, I build open source projects to kill my curiosity in fields and
+    domains that my work doesn't allow me to. I like to keep things simple and
+    straightforward, so is my attitude.
+  </p>
 </div>
 <nav class="mt-3 flex flex-wrap w-fit justify-between items-center gap-0">
   <a class="home-nav-button" href="/writing">Writing</a>
@@ -57,8 +50,7 @@
 
 <a href="/hire" class="w-fit text-inherit hover:no-underline cursor-pointer">
   <div
-    class="bg-emerald-50 border border-emerald-100 hover:border-emerald-600 transition-colors text-xs flex items-center gap-2 text-emerald-700 w-fit px-4 py-1 rounded-full"
-  >
+    class="bg-emerald-50 border border-emerald-100 hover:border-emerald-600 transition-colors text-xs flex items-center gap-2 text-emerald-700 w-fit px-4 py-1 rounded-full">
     <span>Available for Hire</span>
   </div>
 </a>

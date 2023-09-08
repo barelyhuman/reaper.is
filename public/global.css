@@ -12,6 +12,8 @@
   --bg: #fff;
 }
 
+[x-cloak] { display: none !important; }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #181819;
