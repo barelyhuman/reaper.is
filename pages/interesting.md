@@ -5,6 +5,8 @@
 
 Basically collection of links I'd like to share with people
 
+- [Yagiz Nizipli](http://yagniz.co) - Co-Author of
+  [Ada URL](https://github.com/ada-url/ada)
 - [Tom Lienard](http://tom.lnrd.fr) - Author of [Lagon](https://lagon.app)
 - [Minimal VSCode UI - Daniel Roe](https://gist.github.com/danielroe/5ea82608dc680fe6c0179240803437ab)
 - [Framer Motion Visualizer - Morse](https://framer-motion-visualizer.vercel.app)
