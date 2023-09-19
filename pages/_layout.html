@@ -221,7 +221,7 @@
     function handleURLChange() {
       window.addEventListener('DOMContentLoaded', () => {
         const anchors = document.getElementsByTagName('a')
-        for (let i = 0; i <= anchors.length; i += 1) {
+        for (let i = 0; i < anchors.length; i += 1) {
           const elem = anchors[i]
           elem.addEventListener('click', e => {
             nprogress.set(0.25)
