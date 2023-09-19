@@ -218,15 +218,9 @@
     }
 
     function handleURLChange() {
-      window.addEventListener(
-        'DOMContentLoaded',
-        () => {
-          nprogress.start()
-        },
-        {
-          once: true,
-        }
-      )
+      setTimeout(() => {
+        nprogress.start()
+      }, 0)
 
       window.addEventListener(
         'load',
