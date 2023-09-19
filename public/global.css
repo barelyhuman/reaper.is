@@ -13,12 +13,8 @@
   --accent: black;
 }
 
-[x-cloak] {
-  display: none !important;
-}
-
 @media (prefers-color-scheme: dark) {
-  :root {
+  body:not([data-theme]){
     --bg: #181819;
     --light: #333;
     --gray: #898989;

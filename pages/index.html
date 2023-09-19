@@ -82,7 +82,8 @@
     </span>
   </p>
   <p
-    class="text-dark max-h-0 mt-5 overflow-hidden transition-all"
+    class="text-dark max-h-0 overflow-hidden transition-all"
+    x-bind:class="showDescription?'mt-5':''"
     x-ref="descContainer"
     x-bind:style="showDescription? 'max-height:' + $refs.descContainer.scrollHeight + 'px':''"
     x-cloak
