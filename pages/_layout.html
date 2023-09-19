@@ -157,6 +157,7 @@
     const themerList = document.getElementById('theme-list')
 
     handleURLChange()
+
     loadStyle('/styles.css', () => {
       // sub to the browser changes
       init()
@@ -218,14 +219,33 @@
     }
 
     function handleURLChange() {
-      setTimeout(() => {
-        nprogress.start()
-      }, 0)
+      window.addEventListener('DOMContentLoaded', () => {
+        const anchors = document.getElementsByTagName('a')
+        for (let i = 0; i <= anchors.length; i += 1) {
+          const elem = anchors[i]
+          elem.addEventListener('click', e => {
+            nprogress.set(0.25)
+            return false
+          })
+        }
+      })
+
+      window.addEventListener(
+        'DOMContentLoaded',
+        () => {
+          nprogress.set(0.5)
+        },
+        {
+          once: true,
+        }
+      )
 
       window.addEventListener(
         'load',
         () => {
-          nprogress.done()
+          setTimeout(() => {
+            nprogress.done(true)
+          }, 0)
         },
         {
           once: true,
