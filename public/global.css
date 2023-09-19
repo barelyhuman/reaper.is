@@ -14,7 +14,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  body:not([data-theme]) {
+  :root {
     --bg: #181819;
     --light: #333;
     --gray: #898989;
