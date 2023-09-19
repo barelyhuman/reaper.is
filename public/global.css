@@ -94,14 +94,14 @@ a {
 }
 
 pre {
-  @apply border border-light whitespace-pre-wrap rounded-md px-4 py-4;
+  @apply border border-light whitespace-pre-wrap rounded-md px-4 py-4 overflow-auto;
 }
 
 code {
   @apply bg-light text-dark font-mono;
 }
 
-pre > code {
+pre > code.hljs {
   @apply bg-transparent text-dark font-mono;
 }
 

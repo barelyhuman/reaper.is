@@ -5,7 +5,7 @@ b: build
 w: watch 
 
 build:
-	./bin/alvu --highlight --highlight-theme="algol_nu" --hard-wrap=false
+	./bin/alvu --hard-wrap=false
 	./bin/tailwindcss -i ./public/global.css -o ./dist/styles.css --minify
 	./bin/pagefind --source "dist"
 
@@ -19,7 +19,7 @@ watchStyles:
 	./bin/tailwindcss -i ./public/global.css -o ./dist/styles.css --watch
 
 watchPages:
-	./bin/alvu -highlight-theme="algol_nu" -hard-wrap=false -serve 
+	./bin/alvu -hard-wrap=false -serve 
 
 watch:
 	${MAKE} -j4 watchPages watchStyles 
