@@ -42,8 +42,8 @@
     />
     {{end}}
     <style>
-      body{
-        display:none
+      body {
+        display: none;
       }
 
       [x-cloak] {
@@ -141,6 +141,7 @@
       setTheme,
     } from 'https://esm.sh/@barelyreaper/themer@2.0.1/'
     import highlight from 'https://esm.sh/highlight.js@11.8.0'
+    import nprogress from 'https://esm.sh/nprogress'
 
     const themes = [
       'light',
@@ -155,6 +156,7 @@
     const themerToggle = document.getElementById('themer')
     const themerList = document.getElementById('theme-list')
 
+    handleURLChange()
     loadStyle('/styles.css', () => {
       // sub to the browser changes
       init()
@@ -213,6 +215,28 @@
         } catch (e) {}
       }, 10)
       document.head.appendChild(style)
+    }
+
+    function handleURLChange() {
+      window.addEventListener(
+        'DOMContentLoaded',
+        () => {
+          nprogress.start()
+        },
+        {
+          once: true,
+        }
+      )
+
+      window.addEventListener(
+        'load',
+        () => {
+          nprogress.done()
+        },
+        {
+          once: true,
+        }
+      )
     }
   </script>
   <script src="//unpkg.com/alpinejs" defer></script>
