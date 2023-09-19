@@ -94,7 +94,7 @@ a {
 }
 
 pre {
-  @apply border border-light whitespace-pre-wrap rounded-md px-4 py-4 overflow-auto;
+  @apply border border-light rounded-md px-4 py-4 overflow-auto;
 }
 
 code {
