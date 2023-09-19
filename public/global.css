@@ -36,6 +36,7 @@ body[data-theme='dark'] {
   --light: #333;
   --gray: #898989;
   --dark: #efefef;
+  --accent: white;
 }
 
 body[data-theme='hacker'] {
