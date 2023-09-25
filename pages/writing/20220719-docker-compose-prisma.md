@@ -7,7 +7,8 @@ date: 19/07/2022
 Pointers,
 
 - Make sure you have `links` defined for the `app` service
-- The `connect_timeout` is a necessary param for the connection string if you are on M1
+- The `connect_timeout` is a necessary param for the connection string if you
+  are on M1
 
 Everything else is pretty much standard docker compose
 
@@ -43,5 +44,7 @@ volumes:
   pgdata1: {}
 ```
 
-This post is a simple note for me for future, since I ended up spending quite a bit of time researching as to why the prisma client wouldn't connect
-in the docker compose during migration commands but work when the application is run in the same composed container.
+This post is a simple note for me for future, since I ended up spending quite a
+bit of time researching as to why the prisma client wouldn't connect in the
+docker compose during migration commands but work when the application is run in
+the same composed container.

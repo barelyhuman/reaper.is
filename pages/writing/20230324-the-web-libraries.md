@@ -78,8 +78,8 @@ execution in the definition phase instead of the render phase of the function.
 
 ```jsx
 function Component({ signalProp }) {
-	const x = signalProp * 2
-	return <>{x}</>
+  const x = signalProp * 2
+  return <>{x}</>
 }
 ```
 
@@ -127,8 +127,8 @@ renderSpanNodes(spanNodes)
 
 const input = getInputElement()
 input.on('keypress', evt => {
-	if (evt.code === 'Escape') resetState()
-	updateSpanNodes(evt.target.value)
+  if (evt.code === 'Escape') resetState()
+  updateSpanNodes(evt.target.value)
 })
 ```
 
@@ -150,15 +150,15 @@ const input$ = xs.of(inputEvents).startsWith('')
 const escape$ = xs.from(input$).map(event => event.code === 'Escape')
 
 const words$ = xs.from(escape$).fold((acc, i) => {
-	if (i === true) return generateRandomWords()
-	return acc
+  if (i === true) return generateRandomWords()
+  return acc
 }, generateRandomWords())
 
 const value$ = xs.from(input$).map(e => e.target.value)
 
 xs.combine(value$, words$).map(([inputValue, words]) => {
-	// view construction
-	return div()
+  // view construction
+  return div()
 })
 ```
 

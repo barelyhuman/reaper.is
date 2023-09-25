@@ -87,24 +87,27 @@ compared to the original approach I mentioned which would need you to build and
 run which would create quite a few dangling images.
 
 **Example**
+
 ```js
-import {connect} from "@dagger.io/dagger"
+import { connect } from '@dagger.io/dagger'
 
 // Connect dagger's buildkit instance
-connect(async (client) => {
+connect(
+  async client => {
+    const containerDef = client
+      // name the pipeline
+      .pipeline('test')
+      // create a container
+      .container()
+      // from the following image
+      .from('node:16-alpine')
+      // then execute the following command with the next set of args
+      .withExec(['npm', '-v'])
 
-  const containerDef = client
-    // name the pipeline
-    .pipeline("test")
-    // create a container
-    .container()
-    // from the following image
-    .from("node:16-alpine")
-    // then execute the following command with the next set of args
-    .withExec(["npm", "-v"])
-
-  const result = await containerDef.stdout()
-}, { LogOutput: process.stdout })
+    const result = await containerDef.stdout()
+  },
+  { LogOutput: process.stdout }
+)
 ```
 
 ## Now, to add the Bass
@@ -126,22 +129,22 @@ I was able to learn enough of it to write a few tiny scripts.
 
 ;define that the function receives an argument `src`
 (defn test [src]
-    ; use the `node:16` image 
+    ; use the `node:16` image
     (from (linux/node :16)
       ; cd into the src argument
       (cd src
-        ; run the sequence of commands 
+        ; run the sequence of commands
         ($ npm i -g pnpm)
         ($ pnpm i)
         ($ pnpm test))))
 
-; Main is the entry function 
-; so here we define the args we might get 
+; Main is the entry function
+; so here we define the args we might get
 ; from stdin
 
 (defn main _
   (for [{:src src} *stdin*]
-    ; we then go through the args of stdin, take the value for `--src` and pass it 
+    ; we then go through the args of stdin, take the value for `--src` and pass it
     ; to the function test
     (run (test src))))
 ```
@@ -167,14 +170,12 @@ and create the same environment everywhere for you. Though based on experience
 and review from a lot of people who worked with Nix, the language can get a
 little confusing to learn as compared to something like Bass.
 
-I'll add an example from someone's gist here because my nix config files are rather 
-unimpressive
+I'll add an example from someone's gist here because my nix config files are
+rather unimpressive
 
-This will setup react native and android SDK for you as soon as you activate your shell 
-in the project folder
+This will setup react native and android SDK for you as soon as you activate
+your shell in the project folder
 
 <script src="https://gist.github.com/kamilchm/15916525bf1a1171e5e0942686844298.js"></script>
 
-
-That's basically about it for now. 
-Adios! 
+That's basically about it for now. Adios!
