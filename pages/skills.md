@@ -4,15 +4,15 @@ An incomplete list of tech that I've worked with professionally and few that I l
 
 ## Languages
 
-&rarr; JS - [Proof Of Work](https://github.com/barelyhuman?tab=repositories&q=&type=&language=javascript&sort=)\
-&rarr; TS - [Proof Of Work](https://github.com/barelyhuman?tab=repositories&q=&type=&language=typescript&sort=)\
-&rarr; GO - [Proof Of Work](https://github.com/barelyhuman?tab=repositories&q=&type=&language=go&sort=)\
-&rarr; NimLang - [Proof of Work](https://github.com/barelyhuman?tab=repositories&q=&type=&language=nim&sort=)
+&rarr; JS - [Projects](https://github.com/barelyhuman?tab=repositories&q=&type=&language=javascript&sort=)\
+&rarr; TS - [Projects](https://github.com/barelyhuman?tab=repositories&q=&type=&language=typescript&sort=)\
+&rarr; GO - [Projects](https://github.com/barelyhuman?tab=repositories&q=&type=&language=go&sort=)\
+&rarr; NimLang - [Projects](https://github.com/barelyhuman?tab=repositories&q=&type=&language=nim&sort=)
 
 ## Core Theory
 
 &rarr; Clean Arch / Hexagonal Arch / Onion Arch -
-[Proof Of Work](https://github.com/barelyhuman/hexa-mono)\
+[Projects](https://github.com/barelyhuman/hexa-mono)\
 &rarr; Functional Programming\
 &rarr; Greenfield and Brownfield Migration\
 &rarr; Version Management\
@@ -27,10 +27,10 @@ An incomplete list of tech that I've worked with professionally and few that I l
 &rarr; CSS3\
 &rarr; TailwindCSS\
 &rarr; (p)React -
-[Proof Of Work](https://github.com/barelyhuman?tab=repositories&q=react&type=&language=&sort=stargazers)\
+[Projects](https://github.com/barelyhuman?tab=repositories&q=react&type=&language=&sort=stargazers)\
 &rarr; Angular (v8-v11)\
 &rarr; Vue -
-[Proof Of Work](https://github.com/barelyhuman?tab=repositories&q=&type=&language=vue&sort=stargazers)
+[Projects](https://github.com/barelyhuman?tab=repositories&q=&type=&language=vue&sort=stargazers)
 
 > **Note**: I don't have a preferred frontend library, I've worked with most of
 > them that exist but I've spent a lot more time working with (p)react and
@@ -39,15 +39,15 @@ An incomplete list of tech that I've worked with professionally and few that I l
 ## Mobile Tech
 
 &rarr; React Native -
-[Proof Of Work](https://github.com/barelyhuman?tab=repositories&q=react+native&type=&language=&sort=stargazers)
+[Projects](https://github.com/barelyhuman?tab=repositories&q=react+native&type=&language=&sort=stargazers)
 
 ## Backend
 
 &rarr; Express -
-[Proof Of Work](https://github.com/barelyhuman?tab=repositories&q=backend&type=public&language=&sort=stargazers)\
+[Projects](https://github.com/barelyhuman?tab=repositories&q=backend&type=public&language=&sort=stargazers)\
 &rarr; Fastify / HAPI\
 &rarr; Go Lang + STD Library -
-[POW:Goblin](https://github.com/barelyhuman/goblin) [POW:commitlog-web](https://github.com/barelyhuman/commitlog-web)
+[Goblin](https://github.com/barelyhuman/goblin) [commitlog-web](https://github.com/barelyhuman/commitlog-web)
 
 > **Note**: Common procedures like Scaling, Clusters, Master-Slave Database /
 > Read Replicas, Sharding,etc have been not added to the list since I can't put
