@@ -93,18 +93,18 @@ abstraction.
 example API
 
 ```js
-import { createSchemaGQL } from 'typeless-gql'
+import { createSchemaGQL } from "typeless-gql";
 
-const gql = createSchemaGQL('/path/to/schema.gql')
+const gql = createSchemaGQL("/path/to/schema.gql");
 
 const TypedOperationNode = gql`
   query ping {
     pong
   }
-`
+`;
 
-const response = someExecutionLibrary(TypedOperationNode)
-response.data.pong
+const response = someExecutionLibrary(TypedOperationNode);
+response.data.pong;
 // should autocomplete at `data` and `pong`
 ```
 
@@ -388,15 +388,18 @@ vary from project to project
 
 #### `codename`: bundle-drop
 
-Heard of code-push? No? Basically that but self hostable, I'm not talking about
-a replica of App Center, but just the set of code required for react-native apps
-to be able to get the bundle from a remote source and you being able to upload
-this bundle to a self hosted instance.
+Heard of codepush?
+
+Basically that but self hostable. I'm not talking about a replica of the entire
+App Center. Just the convenience of DX required for react-native apps to be able
+to get the bundle from a remote source and you being able to upload this bundle
+to a self hosted instance (S3/Blob/DO Spaces/etc).
 
 Expo has a wrapper around this but is closely tied to expo and harder to
 implement without it. Another one was from walmart labs called livecode, which
 can be configured to point to self uploaded files but the DX could be improved
-and it only works in dev mode so there's no way to send in OTA Updates.
+and it only works in dev mode so there's no way to send in OTA Updates to
+production apps.
 
 **Expectations**
 
@@ -404,5 +407,3 @@ and it only works in dev mode so there's no way to send in OTA Updates.
 - Ability to add in token/OTP based blockage while uploading
 - React Native side will need implementation on both Android and iOS which is
   going to be a little more work but isn't that hard
-
-
