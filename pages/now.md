@@ -385,3 +385,24 @@ crosses the max depth, stop the splitting.
 Most of the splitting is to happen on temporary files but since it is all
 string, can be done with rope algorithms since the size of these files might
 vary from project to project
+
+#### `codename`: bundle-drop
+
+Heard of code-push? No? Basically that but self hostable, I'm not talking about
+a replica of App Center, but just the set of code required for react-native apps
+to be able to get the bundle from a remote source and you being able to upload
+this bundle to a self hosted instance.
+
+Expo has a wrapper around this but is closely tied to expo and harder to
+implement without it. Another one was from walmart labs called livecode, which
+can be configured to point to self uploaded files but the DX could be improved
+and it only works in dev mode so there's no way to send in OTA Updates.
+
+**Expectations**
+
+- Upload to a specific registry standard interface
+- Ability to add in token/OTP based blockage while uploading
+- React Native side will need implementation on both Android and iOS which is
+  going to be a little more work but isn't that hard
+
+
