@@ -112,6 +112,8 @@ There's more stuff that I could share but it might get controvertial if it
 followed up the points I mentioned here so I'm going to break it down into
 another post and publish that someday.
 
-That's all for now.
+That's all for now in terms of growing to be decent at what you do, keep doing
+it for yourself first, you can do it for others once you are happy with what you
+build for yourself.
 
 **Adios**!
