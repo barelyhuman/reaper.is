@@ -1,6 +1,7 @@
 ---
 title: Iterative GraphQL
 date: 01/07/2022
+published: true
 ---
 
 I wrote a post talking about actual pros and cons of using GraphQL in a post

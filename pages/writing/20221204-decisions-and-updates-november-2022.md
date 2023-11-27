@@ -1,6 +1,7 @@
 ---
 title: Decisions and Updates November 2022
 date: 04/12/2022
+published: true
 ---
 
 Here's what has happened in the past month and a summary of why they happened.

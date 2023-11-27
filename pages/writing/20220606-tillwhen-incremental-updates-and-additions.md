@@ -1,6 +1,7 @@
 ---
 date: 06/06/2022
 title: We're polishing TillWhen, finally.
+published: true
 ---
 
 About 2 years ago (25 May 2020), I decided to speed code a timetracking app in a

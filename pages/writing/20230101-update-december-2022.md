@@ -1,6 +1,7 @@
 ---
 title: Decisions and Updates December 2022
 date: 01/01/2023
+published: true
 ---
 
 **Happy New Year** humans!

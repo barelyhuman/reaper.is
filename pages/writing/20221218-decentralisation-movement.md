@@ -1,6 +1,7 @@
 ---
 title: 'Re: On the current decentralisation movement'
 date: 18/12/2022
+published: true
 ---
 
 > This is like a reply or more like, my thoughts after reading the post from

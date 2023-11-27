@@ -1,6 +1,7 @@
 ---
 title: Atomic Forms in React
 date: 09/07/2022
+published: true
 ---
 
 I've mostly worked with Formik for most of my react form validations and the one

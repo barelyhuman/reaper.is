@@ -1,6 +1,7 @@
 ---
 title: An attempt to reduce the monorepo complexity
 date: 15/06/2022
+published: true
 ---
 
 > **Note**: This involves ESM quite a bit so you might wanna read about ESM

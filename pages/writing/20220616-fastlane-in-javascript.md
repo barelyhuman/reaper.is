@@ -1,6 +1,7 @@
 ---
 title: Writing fastlane scripts in Javascript
 date: 16/06/2022
+published: true
 ---
 
 3 Posts back to back!? Yes, lot's of content out there right now.

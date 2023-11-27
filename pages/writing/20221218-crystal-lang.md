@@ -1,6 +1,7 @@
 ---
 title: Playing around with Crystal Lang
 date: 18/12/2022
+published: true
 ---
 
 I'm no professional "Programming Language Reviewer" but I think readers at this
