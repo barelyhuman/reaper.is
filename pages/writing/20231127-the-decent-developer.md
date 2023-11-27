@@ -7,30 +7,33 @@ date: 27/11/2023
 Over the years, this post has taken a different form everytime I wished to write
 about it. It's been written as a guide for other developers to read through.
 It's been a cry for help from a developer who wasn't able to achieve anything.
-There's also was a version where I just felt I couldn't really produce any value
-for anyone anyway.
+There also was a version where I just felt I couldn't really produce any value
+for anyone anyway and was going to rant about not having a direction/purpose in
+life.
 
 I don't know if I'll publish this version either because I don't know where this
-version is headed either. I never do, most of what I write here is a immediate
+version is headed either. I never do, most of what I write here is an immediate
 jot down of whatever I'm thinking. I don't know if it justifies the spelling and
-grammatical errors but they are mostly because it's basically a long form
-thought.
+grammatical errors but, they are mostly because what you are reading is a just a
+long form thought.
 
 ## Defining Value
 
 A lot of what I've built over the years were based on simple ideas I wished were
 accessible to people, it started off as a journey to build tiny, no nonsense
-apps for everyone to use at a very low price tag or even no price tag. This
-changed to building for developers since I could understand that market better
-and maybe do something for them, over the last few years I've gotten down to
-building for myself. The feeling of freedom when you start doing this is really
-something else; this did fade for a while since I couldn't give these things
-time due to my day job but I'm hoping I'll be able to change that or get it in
-control over the next few months.
+apps for everyone to use at a low price tag or even no price tag.
 
-"What value does it provide?",that's almost always the bottom line for most
-people. Does it have to though? If a problem is a niche one, I don't think I
-need to build something that solves it for everyone.
+This changed to building for developers since, I thought I could understand that
+market better and maybe do something for them. Over the last few years I moved
+to just building for myself. The feeling of freedom when you start doing this is
+really something else; this did fade for a while since I couldn't give these
+things time due to my day job but I'm hoping I'll be able to change that or get
+it in control over the next few months.
+
+"What value does it provide for the general public?", tired of this question at
+this point. Does it have to? If a problem is a niche one, I don't think I need
+to build something that solves it for everyone, everytime. Let me enjoy my hobby
+a bit.
 
 You think `musync` is an app anyone needs? It's a spotify to spotify sync since
 spotify doesn't like being able to share your Liked Songs as a playlist. So I
@@ -80,17 +83,16 @@ That brings us to the best part
 A lot of your work as a developer is going to involve going through boring parts
 and using boring software and sometimes you'll have to write targeted software
 and evaluate new tech. Some developers find the latter more interesting and some
-find the former a more fun thing.
+find the former the _fun_ part of their work.
 
 One of them is more focused on enjoying what they do and one of them is focused
-on completing what they have in mind and both parties are right here and have
-different goals so comparing them makes no sense in the first place.
+on completing their work. Both parties are right, and have different goals so
+comparing them makes no sense in the first place.
 
 The point I wanted to make was, being a developer isn't always fun, 80% of your
 time is spent thinking and predicting problems that might show up and
-controlling yourself from solving them to early in the implementation. The
-remaining 20% is spent thinking about variable names, which honestly isn't a fun
-thing to do.
+controlling yourself from solving them too early. The remaining 20% is spent
+thinking about variable names, which honestly isn't that fun either.
 
 It's not a magic formula but know that a lot of what you code isn't going to
 make sense to anyone else unless they understand the requirement and understand
