@@ -4,8 +4,7 @@ This is more of a page to remind me what I'm supposed to be prioritizing right
 now
 
 - writing stuff for rawjs.xyz to help more beginners
-- figuring out a way to make it sustainable while doing just OSS and minor
-  contract work -> [Hire Me?](/hire)
+- working on curating more and more minimal websites on [minweb.site](https://minweb.site)
 - working on making [goblin.run](https://goblin.run) much more faster and stable
 
 > **NOTE**: (for future self) Do not! and I say DO FUCKING NOT do more than 3
