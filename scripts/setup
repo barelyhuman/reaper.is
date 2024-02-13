@@ -71,8 +71,15 @@ install_alvu(){
   chmod +x ./bin/alvu
 }
 
+#esbuild
+install_esbuild(){
+  curl -sLf https://goblin.run/github.com/evanw/esbuild/cmd/esbuild | PREFIX=./bin sh
+  chmod +x ./bin/esbuild
+}
+
 mkdir -p ./bin
 
 install_tailwind
 install_pagefind
 install_alvu
+# install_esbuild

@@ -50,11 +50,18 @@
         display: none !important;
       }
     </style>
-    <link rel="stylesheet" href="/styles.css" />
+
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://esm.sh" />
+
     <link
-      rel="stylesheet"
-      href="https://unpkg.com/highlight.js@11.8.0/styles/ascetic.css"
+      href="/styles.css"
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
+    <noscript><link rel="stylesheet" href="/styles.css" /></noscript>
+
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -134,7 +141,7 @@
     </div>
   </body>
 
-  <script type="module">
+  <script type="module" defer>
     import {
       init,
       getCurrentTheme,
@@ -162,8 +169,16 @@
       // sub to the browser changes
       init()
       addThemeHandlers()
+      addHighlighterStyles()
       highlight.highlightAll()
     })
+
+    function addHighlighterStyles() {
+      const el = document.createElement('link')
+      el.href = 'https://unpkg.com/highlight.js@11.8.0/styles/ascetic.css'
+      el.rel="stylesheet"
+      document.head.appendChild(el)
+    }
 
     function addThemeHandlers() {
       themerToggle.addEventListener('touchend', () => {
