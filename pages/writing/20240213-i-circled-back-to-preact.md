@@ -37,7 +37,7 @@ The other iteration was what most modern meta frameworks do and it was to use
 This was a lower effort since I didn't have to implement most of the basics of a
 meta framework from scratch and instead just write a plugin for vite. This
 didn't sit with the plainjs mentality but was necessary to be able to quickly
-evalute the usability of my love for ArrowJS.
+evaluate the usability of my love for ArrowJS.
 
 ## ArrowJS
 
@@ -100,9 +100,9 @@ I still like the concept and would continue to use it for simple apps where I
 don't need build tooling but this does change the priority of what `nomen` and
 `adex` will focus on.
 
-The development for both of them would start moving forward on making working
+The development for both of them would start moving forward to make working
 with preact a lot easier since it's going to get hard for preact's team to keep
-up with every new change that react might bring to the stage.
+up with every new change that react might bring to the stage and I want first class frameworks and libraries for preact instead. 
 
 I personally think it's about time the preact ecosystem starts building itself
 slowly and steadily to avoid piggybacking on the react ecosystem.
