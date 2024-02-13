@@ -70,7 +70,7 @@ body[data-theme='plastic'] {
 }
 
 body {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
   font-size: 81.3%; /*13px*/
   background: var(--bg);
 }
