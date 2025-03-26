@@ -1,10 +1,8 @@
 {
+    "name":"reaper-is",
+    "compatibility_date":"2025-03-26",
     "assets": {
       "directory": "./dist"
-    },
-    "compatibility_date":"2025-03-21",
-    "observability": {
-      "enabled": true
     }
   }
   
