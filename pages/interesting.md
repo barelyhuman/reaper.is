@@ -4,7 +4,7 @@
 ## Interesting Stuff
 
 Basically collection of links I'd like to share with people
-
+- [LowTechMagazine](https://solar.lowtechmagazine.com/)
 - [Bring your own JS](https://byojs.dev)
 - [snow-fall component](https://zachleat.github.io/snow-fall/demo.html) - webcomponent for adding snowfall to web elements
 - [Open Props](https://open-props.style/#overview) - Consistent utility variables for sane and consistent CSS development.
