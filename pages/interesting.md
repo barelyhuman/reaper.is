@@ -4,6 +4,7 @@
 ## Interesting Stuff
 
 Basically collection of links I'd like to share with people
+- [k0s cluster managment](https://docs.k0sproject.io/v1.21.2+k0s.1/)
 - [LowTechMagazine](https://solar.lowtechmagazine.com/)
 - [Bring your own JS](https://byojs.dev)
 - [snow-fall component](https://zachleat.github.io/snow-fall/demo.html) - webcomponent for adding snowfall to web elements
