@@ -1,4 +1,4 @@
-# Market
+# Store
 
 <div class="pt-6 border-t border-t-light grid grid-cols-1 sm:grid-cols-2">
     <div>
