@@ -25,11 +25,11 @@ function Writer(source_data)
 	local downloads_table = {}
 
 	for k, pkg_name in ipairs(packages) do
-		local download_count = get_downloads_for_pkg(pkg_name)
-		table.insert(downloads_table, {
-			title = pkg_name,
-			downloads = download_count,
-		})
+		-- local download_count = get_downloads_for_pkg(pkg_name)
+		-- table.insert(downloads_table, {
+		-- 	title = pkg_name,
+		-- 	downloads = download_count,
+		-- })
 	end
 
 	return json.encode({
