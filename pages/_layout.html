@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     {{if eq .Data.html.title nil}}
@@ -68,6 +68,24 @@
       title="reaper"
       href="https://reaper.is/rss.xml"
     />
+
+    <link rel="stylesheet" href="/vendor/highlightjs/styles/ascetic.min.css" />
+    <script
+      src="/vendor/highlightjs/highlight.min.js"
+    ></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script
+      src="/vendor/highlightjs/languages/go.min.js"
+    ></script>
+    <script
+      src="/vendor/highlightjs/languages/javascript.min.js"
+    ></script>
+    <script
+      src="/vendor/highlightjs/languages/diff.min.js"
+    ></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </head>
 
   <body
@@ -102,8 +120,7 @@
               <path d="M5 12l6 -6"></path>
             </svg>
           </span>
-          Back</a
-        >
+          Back</a>
         {{end}}
       </div>
       {{.Content}}
