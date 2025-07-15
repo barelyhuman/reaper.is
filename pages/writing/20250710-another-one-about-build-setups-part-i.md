@@ -14,8 +14,13 @@ quite a bit on my [twitter/X profile](https://x.com/barelyreaper), and so this
 post is also in the same direction—except I plan to show you how simple it
 actually is.
 
-This is a long-ass post, so you might want to start this when you have a clear
-mind and can follow along. You don't need to, but it'd be nice.
+This is a 2 part long-ass post, so you might want to start this when you have a
+clear mind and can follow along. You don't need to, but it'd be nice.
+
+- You can read the
+  [Part 2 here](/writing/20250713-another-one-about-build-setups-part-ii)
+
+**TOC**
 
 - [Meta Frameworks](#meta-frameworks)
 - [Features](#features)
@@ -292,8 +297,8 @@ We still have a useless button...
 
 Why? Because while we added the wrapper, there's no way the browser knows that
 it needs to fetch the `browser.jsx` file. And another problem: it's a file with
-JSX code, which means we need to transpile/compile it to pure JS so the
-browser can understand it.
+JSX code, which means we need to transpile/compile it to pure JS so the browser
+can understand it.
 
 Let's deal with the latter problem first. We'll modify the build.js to also
 create a bundle for the browser, and the output will be in `dist/client`. You
@@ -332,8 +337,9 @@ await esbuild.build({
 });
 ```
 
-Cool, now we have a browser build and a server build where we can write JSX. Back to the original
-problem: how does the browser know where to fetch the client file from?
+Cool, now we have a browser build and a server build where we can write JSX.
+Back to the original problem: how does the browser know where to fetch the
+client file from?
 
 Two steps:
 
@@ -342,8 +348,9 @@ Two steps:
 
 #### Serving Assets
 
-We need to make some mods so that the browser can ask the server to send a specific file. This is how it would get CSS files in the future, but for now we want it
-to get the compiled `browser.js` file from the `./dist/client` folder.
+We need to make some mods so that the browser can ask the server to send a
+specific file. This is how it would get CSS files in the future, but for now we
+want it to get the compiled `browser.js` file from the `./dist/client` folder.
 
 Let's use a simple library called `send` to help us with this. A few things: we
 are writing this code with the assumption that the folder structure looks like
@@ -394,9 +401,10 @@ const handleRequest = async (req, res) => {
 };
 ```
 
-At this point you should be able to build and run the server and open the browser to
-`localhost:3000/assets/browser.js`, and it should show you your bundled
-JavaScript code in the browser. Let's change the wrapper HTML code to send this file as a part of our rendered app
+At this point you should be able to build and run the server and open the
+browser to `localhost:3000/assets/browser.js`, and it should show you your
+bundled JavaScript code in the browser. Let's change the wrapper HTML code to
+send this file as a part of our rendered app
 
 ```diff
 const handleRequest = async (req, res) => {
@@ -423,7 +431,8 @@ const handleRequest = async (req, res) => {
 }
 ```
 
-Also make sure to update the `build.js` file to exclude `send` in the external deps in the server's build.
+Also make sure to update the `build.js` file to exclude `send` in the external
+deps in the server's build.
 
 ```diff
 import esbuild from "esbuild";
