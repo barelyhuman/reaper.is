@@ -219,10 +219,10 @@ Okay, moving on, there's
 - A more seamless api and routing layer.
 
 There's no end to improving the developer experience. But since the first 3 are
-required for any basic app we'll add that to our example repo that you can refer
+required for any basic app we'll add that to our [example repo](https://github.com/barelyhuman/preact-ssr-node-cf-example) that you can refer
 to and get working with.
 
-The repo also makes 2 tiny changes,
+[The repo](https://github.com/barelyhuman/preact-ssr-node-cf-example) also makes 2 tiny changes,
 
 1. It uses the fetch standard as the interface for request and response
 2. There's different entry files for cloudflare and node so you can use this on
