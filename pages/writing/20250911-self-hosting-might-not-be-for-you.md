@@ -1,5 +1,5 @@
 ---
-title: You don't need to self host
+title: Self hosting might not be for you
 published: true
 date: 11/09/2025
 ---
