@@ -32,12 +32,38 @@
 ## Work Experience
 
 <div class="flex flex-col gap-4 mt-10">
+
+  <div class="flex flex-col gap-2 pl-4 border-l border-light">
+      <h4>Bruno</h4>
+      <div class="flex flex-col gap-4">
+        <div>
+          <p class="text-gray">Senior Software Architect</p>
+          <p class="text-xs text-gray">Oct 2025 - Present</p>
+        </div>
+        <div class="mt-6 text-gray">
+      <ul>
+  <li>Added support for websockets to their OSS desktop app</li>
+    </ul>
+    </div>  
+      </div>
+  </div>
+
+  <div class="flex flex-col gap-2 pl-4 border-l border-light">
+      <h4>Turbot</h4>
+      <div class="flex flex-col gap-4">
+        <div>
+          <p class="text-gray">Senior Software Architect</p>
+          <p class="text-xs text-gray">May 2025 - Aug 2025</p>
+        </div>
+        <div class="mt-6 text-gray">Worked on modernising the turbot enterprise app and simplifying overall user experience when dealing with cloud governance </div>  
+      </div>
+  </div>
   <div class="flex flex-col gap-2 pl-4 border-l border-light">
       <h4>NearForm</h4>
       <div class="flex flex-col gap-4">
         <div>
           <p class="text-gray">Senior Software Developer</p>
-          <p class="text-xs text-gray">Jan 2024 - Present</p>
+          <p class="text-xs text-gray">Jan 2024 - May 2025</p>
         </div>
         <div class="mt-6 text-gray">Work with OSS contributions from NearForm to various parts of the Node.js ecosystem Maintaining application at scale Making sure infrastructure design is optimal and fun to work with</div>  
       </div>
