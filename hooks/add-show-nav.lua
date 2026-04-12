@@ -15,9 +15,18 @@ function Writer(filedata)
 		end
 	end
 
+	local backLink = "/"
+	local source_path = source_data.source_path or ""
+	local section = source_path:match("pages/([^/]+)/")
+	if section then
+		backLink = "/" .. section .. "/"
+	end
+
+
 	return json.encode({
 		data = {
 			showNav = showNav,
+			backLink = backLink,
 		},
 	})
 end
