@@ -22,6 +22,10 @@ function Writer(filedata)
 		backLink = "/" .. section .. "/"
 	end
 
+	if section == "/writing" and source_path == "/writing/index.md" {
+		backLink = "/"
+	}
+
 
 	return json.encode({
 		data = {
