@@ -4,28 +4,12 @@ local json = require("json")
 
 function Writer(filedata)
 	local source_data = json.decode(filedata)
-	local ignored_pages = { "index" }
-	local name = string.gsub(source_data.name, ".md", "")
-	name = string.gsub(name, ".html", "")
-	local showNav = true
+	local name = string.gsub(string.gsub(source_data.name, ".md", ""), ".html", "")
+	local showNav = name ~= "index"
 
-	for page_index = 1, #ignored_pages do
-		if name == ignored_pages[page_index] then
-			showNav = false
-		end
-	end
-
-	local backLink = "/"
 	local source_path = source_data.source_path or ""
 	local section = source_path:match("pages/([^/]+)/")
-
-	if section then
-		backLink = "/" .. section .. "/"
-	end
-
-	if section == "writing" and source_path == "pages/writing/index.md"  then
-		backLink = "/"
-	end
+	local backLink = (section and source_path ~= "pages/writing/index.md") and "/" .. section .. "/" or "/"
 
 	return json.encode({
 		data = {
