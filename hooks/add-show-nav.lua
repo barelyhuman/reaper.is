@@ -18,14 +18,14 @@ function Writer(filedata)
 	local backLink = "/"
 	local source_path = source_data.source_path or ""
 	local section = source_path:match("pages/([^/]+)/")
+
 	if section then
 		backLink = "/" .. section .. "/"
 	end
 
-	if section == "/writing" and source_path == "/writing/index.md" {
+	if section == "writing" and source_path == "pages/writing/index.md"  then
 		backLink = "/"
-	}
-
+	end
 
 	return json.encode({
 		data = {
