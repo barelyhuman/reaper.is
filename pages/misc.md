@@ -1,5 +1,4 @@
 ---
-
 ---
 
 ## Blog Links
@@ -33,5 +32,5 @@
 
 ## Other Links
 
-- [Cheatsheets](/cheatsheets/index.html)
-- [Bookmarks](/interesting.html)
+- [Cheatsheets](/cheatsheets)
+- [Bookmarks](/interesting)
