@@ -1,101 +1,111 @@
-<div class="bg-logo">
-  <svg
-    width="36"
-    height="36"
-    viewBox="0 0 36 36"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <mask
-      id="mask0_1112_68053"
-      style="mask-type: alpha"
-      maskUnits="userSpaceOnUse"
-      x="2"
-      y="2"
-      width="32"
-      height="32"
+<canvas
+  id="tron-lines"
+  class="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"
+  style="opacity: 0.35"
+></canvas>
+
+<div class="relative z-10">
+  <div class="bg-logo">
+    <svg
+      width="36"
+      height="36"
+      viewBox="0 0 36 36"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <rect
-        x="17.6113"
-        y="3.1753"
-        width="20.9655"
-        height="20.9655"
-        rx="3.0739"
-        transform="rotate(45 17.6113 3.1753)"
-        stroke="var(--light)"
-        stroke-width="3.94089"
-      />
-    </mask>
-    <g mask="url(#mask0_1112_68053)">
-      <rect
-        x="17.6465"
-        y="3.1753"
-        width="20.9655"
-        height="20.9655"
-        rx="3.23153"
-        transform="rotate(45 17.6465 3.1753)"
-        stroke="currentColor"
-        stroke-width="3.94089"
-      />
-      <path
-        d="M27.1483 4.56592L21.0005 10.9896L17.6113 11.896V38.8123L40.3897 21.1965L27.1483 4.56592Z"
-        fill="var(--light)"
-      />
-    </g>
-  </svg>
+      <mask
+        id="mask0_1112_68053"
+        style="mask-type: alpha"
+        maskUnits="userSpaceOnUse"
+        x="2"
+        y="2"
+        width="32"
+        height="32"
+      >
+        <rect
+          x="17.6113"
+          y="3.1753"
+          width="20.9655"
+          height="20.9655"
+          rx="3.0739"
+          transform="rotate(45 17.6113 3.1753)"
+          stroke="var(--light)"
+          stroke-width="3.94089"
+        />
+      </mask>
+      <g mask="url(#mask0_1112_68053)">
+        <rect
+          x="17.6465"
+          y="3.1753"
+          width="20.9655"
+          height="20.9655"
+          rx="3.23153"
+          transform="rotate(45 17.6465 3.1753)"
+          stroke="currentColor"
+          stroke-width="3.94089"
+        />
+        <path
+          d="M27.1483 4.56592L21.0005 10.9896L17.6113 11.896V38.8123L40.3897 21.1965L27.1483 4.56592Z"
+          fill="var(--light)"
+        />
+      </g>
+    </svg>
+  </div>
+  <div>
+    <h1 class="text-3xl text-">Reaper</h1>
+    <p class="flex gap-3 items-center text-gray">Just another programmer...</p>
+    <p class="overflow-hidden mt-5 h-auto transition-all text-dark">
+      I am a seasoned developer from India with over
+      <span id="exp-years" class="font-semibold text-gray"> 7 years </span> of
+      experience specializing in Web Development, Tooling, Automation, and
+      Parsers. I have a strong passion for experimenting with diverse
+      programming languages and exploring new domains, with a focus on creating
+      efficient, scalable solutions.
+    </p>
+    <br />
+    <p>
+      My open-source contributions reflect my commitment to innovation and
+      simplicity, always striving to do more with less while maintaining high
+      standards of quality.
+    </p>
+  </div>
+  <div>
+    <nav class="mt-2">
+      <ul class="flex gap-12 pl-0 ml-0 list-none">
+        <li class="list-none">
+          <a
+            class="inline-block underline-offset-8 hover:cursor-pointer"
+            href="/writing"
+            >Writing</a
+          >
+        </li>
+        <li class="list-none">
+          <a
+            class="inline-block underline-offset-8 hover:cursor-pointer"
+            href="/work"
+            >Work</a
+          >
+        </li>
+        <li class="list-none">
+          <a
+            class="inline-block underline-offset-8 hover:cursor-pointer"
+            href="/store"
+            >Store</a
+          >
+        </li>
+        <li class="list-none">
+          <a
+            class="inline-block underline-offset-8 hover:cursor-pointer"
+            href="/misc"
+            >Misc</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
 </div>
-<div>
-  <h1 class="text-3xl text-">Reaper</h1>
-  <p class="flex gap-3 items-center text-gray">Just another programmer...</p>
-  <p class="overflow-hidden mt-5 h-auto transition-all text-dark">
-    I am a seasoned developer from India with over
-    <span id="exp-years" class="font-semibold text-gray"> 7 years </span> of
-    experience specializing in Web Development, Tooling, Automation, and
-    Parsers. I have a strong passion for experimenting with diverse programming
-    languages and exploring new domains, with a focus on creating efficient,
-    scalable solutions.
-  </p>
-  <br />
-  <p>
-    My open-source contributions reflect my commitment to innovation and
-    simplicity, always striving to do more with less while maintaining high
-    standards of quality.
-  </p>
-</div>
-<div>
-  <nav class="mt-2">
-    <ul class="flex gap-12 pl-0 ml-0 list-none">
-      <li class="list-none">
-        <a
-          class="inline-block underline-offset-8 hover:cursor-pointer"
-          href="/writing"
-          >Writing</a
-        >
-      </li>
-      <li class="list-none">
-        <a
-          class="inline-block underline-offset-8 hover:cursor-pointer"
-          href="/work"
-          >Work</a
-        >
-      </li>
-      <li class="list-none">
-        <a
-          class="inline-block underline-offset-8 hover:cursor-pointer"
-          href="/store"
-          >Store</a
-        >
-      </li>
-      <li class="list-none">
-        <a
-          class="inline-block underline-offset-8 hover:cursor-pointer"
-          href="/misc"
-          >Misc</a
-        >
-      </li>
-    </ul>
-  </nav>
-</div>
+
+<script src="/tron-cycles.js"></script>
 <script type="module">
   const updateExp = () => {
     const started = new Date(2017, 8, 1)
