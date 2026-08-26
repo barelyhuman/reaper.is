@@ -37,14 +37,36 @@
       <h4>Bruno</h4>
       <div class="flex flex-col gap-4">
         <div>
-          <p class="text-gray">Senior Software Architect</p>
-          <p class="text-xs text-gray">Oct 2025 - Present</p>
+          <p class="text-gray">Senior Software Developer</p>
+          <p class="text-xs text-gray">May 2026 - Present</p>
         </div>
-        <div class="mt-6 text-gray">
-      <ul>
-  <li>Added support for websockets to their OSS desktop app</li>
-    </ul>
-    </div>  
+        <div class="text-gray">
+          <ul>
+            <li>Own the org's AWS infrastructure end-to-end, including the SOC2 compliance work that keeps the company audit-ready</li>
+            <li>Self-hosted CI on AWS that scales with PR load, so the suite doesn't bottleneck merges or burn Actions minutes</li>
+            <li>Lead security across Bruno's app and infrastructure - threat surface, access, and hardening as a continuous practice</li>
+            <li>Raised the bar on CI sanity and test coverage so regressions get caught before they ship</li>
+            <li>Made feature releases more consistent by tightening the path from merge to production</li>
+          </ul>
+        </div>  
+      </div>
+  </div>
+
+
+  <div class="flex flex-col gap-2 pl-4 border-l border-light">
+      <h4>Bruno</h4>
+      <div class="flex flex-col gap-4">
+        <div>
+          <p class="text-gray">Senior Software Developer</p>
+          <p class="text-xs text-gray">Oct 2025 - May 2026</p>
+        </div>
+        <div class="text-gray">
+          <ul>
+            <li>Shipped WebSocket support in the OSS desktop app, unlocking real-time workflows that weren't possible before</li>
+            <li>Hardened core product features so everyday usage is more reliable under load and edge cases</li>
+            <li>Drove UI consistency and release automations across OSS drops so shipping felt repeatable, not ad-hoc</li>
+          </ul>
+        </div>  
       </div>
   </div>
 
