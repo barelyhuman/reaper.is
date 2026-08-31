@@ -67,7 +67,7 @@ install_pagefind(){
 
 #alvu
 install_alvu(){
-  curl -sLf https://goblin.run/github.com/barelyhuman/alvu | PREFIX=./bin sh
+  curl -sLf https://goblin.run/github.com/barelyhuman/alvu@v0.2.16-beta.0 | PREFIX=./bin sh
   chmod +x ./bin/alvu
 }
 
