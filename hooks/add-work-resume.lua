@@ -63,6 +63,55 @@ ${about}
 	)
 end
 
+local function skill_row_template(data)
+	return lib.interp(
+		[=[<div class="skill-row">
+<span class="skill-name">${name}</span>
+<span class="skill-keywords">${keywords}</span>
+</div>]=],
+		data
+	)
+end
+
+local skills = {
+	{
+		name = "Frontend",
+		keywords = "React.js, Angular, Preact, Vue.js, SASS, TypeScript, JavaScript",
+	},
+	{
+		name = "Backend",
+		keywords = "Node.js, Fastify, LoopBack.io, Express, GraphQL, REST APIs, Golang, Microservices",
+	},
+	{
+		name = "Testing & Quality",
+		keywords = "Jest, Vitest, Mocha, Playwright, Unit Testing, Integration Testing, Custom Testing Utilities",
+	},
+	{
+		name = "Security",
+		keywords = "Auth, JWT, OWASP, Auth0, API Security, Opaque Tokens",
+	},
+	{
+		name = "Architecture",
+		keywords = "Microservices, Event-Driven Architecture, Message Queues, Kafka, Caching Strategies",
+	},
+	{
+		name = "DevOps & Monitoring",
+		keywords = "Docker, CI/CD, GitHub Actions, Infrastructure Automation, Grafana, Dynatrace, Azure Monitoring, Build Systems",
+	},
+	{
+		name = "Databases",
+		keywords = "PostgreSQL, MySQL, MongoDB, Redis, Performance Optimization, Sharding, Foreign Data Wrappers",
+	},
+	{
+		name = "Cloud",
+		keywords = "AWS, GCP, Azure",
+	},
+	{
+		name = "Project Management",
+		keywords = "Kanban, JIRA, Code Reviews, Technical Mentoring",
+	},
+}
+
 local side_projects = {
 	{
 		name = "Ping",
@@ -167,6 +216,11 @@ function Writer(filedata)
 		side_project_cards = side_project_cards .. side_project_template(project)
 	end
 
+	local skill_rows = ""
+	for _, skill in ipairs(skills) do
+		skill_rows = skill_rows .. skill_row_template(skill)
+	end
+
 	local work_cards = ""
 	for _, entry in ipairs(work) do
 		work_cards = work_cards .. card_template(entry)
@@ -174,6 +228,7 @@ function Writer(filedata)
 
 	content = lib.interp(content, {
 		side_project_cards = side_project_cards,
+		skill_rows = skill_rows,
 		work_cards = work_cards,
 	})
 

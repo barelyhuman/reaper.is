@@ -1,7 +1,7 @@
 <main class="resume-page flex flex-col gap-4 leading-relaxed">
   <style>
     hr {
-      border-color: var(--gray-5);
+      border-color: var(--light);
       width: 100%;
     }
     .card-wrapper {
@@ -22,7 +22,7 @@
       margin-bottom: 0.35rem;
     }
     .card .about {
-      color: var(--gray-4);
+      color: var(--gray);
     }
     .card .about ul {
       margin: 0;
@@ -36,7 +36,7 @@
       flex-wrap: wrap;
     }
     .card .role {
-      color: var(--gray-5);
+      color: var(--gray);
     }
     .card .links-group .link-item {
       transition: color 250ms ease-out;
@@ -48,10 +48,56 @@
       cursor: pointer;
     }
 
+    .contact-line {
+      color: var(--gray);
+    }
+    .contact-line a {
+      color: inherit;
+    }
+    .contact-line a:hover {
+      color: var(--dark);
+    }
+    .contact-line .separator {
+      margin: 0 0.2rem;
+      opacity: 0.6;
+    }
+
+    .print-only {
+      display: none;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+      column-gap: 2rem;
+      row-gap: 0.9rem;
+      margin: 10px 0px;
+    }
+    .skill-row {
+      break-inside: avoid;
+    }
+    .skill-row .skill-name {
+      display: block;
+      font-weight: 600;
+    }
+    .skill-row .skill-keywords {
+      color: var(--gray);
+    }
+
     @media print {
       @page {
         size: portrait;
-        margin: 8mm;
+        margin: 10mm 12mm;
+      }
+
+      :root,
+      body,
+      body[data-theme] {
+        --bg: #fff;
+        --dark: #2e3440;
+        --gray: #64748b;
+        --light: #e9ecf8;
+        --accent: #000;
       }
 
       html,
@@ -59,7 +105,9 @@
         display: block !important;
         min-height: auto !important;
         font-size: 10px !important;
-        line-height: 1.3 !important;
+        line-height: 1.35 !important;
+        background: #fff;
+        color: var(--dark);
       }
 
       body > div {
@@ -67,7 +115,7 @@
         gap: 0 !important;
         max-width: 100% !important;
         font-size: 10px !important;
-        line-height: 1.3 !important;
+        line-height: 1.35 !important;
       }
 
       #themer,
@@ -79,9 +127,20 @@
         display: none !important;
       }
 
+      .print-only {
+        display: inline;
+      }
+
       .resume-page {
         gap: 0.35rem !important;
-        line-height: 1.3 !important;
+        line-height: 1.35 !important;
+      }
+
+      .work {
+        order: 2;
+      }
+      .side-projects {
+        order: 3;
       }
 
       .resume-page > section:first-of-type {
@@ -89,9 +148,10 @@
       }
 
       .resume-page h1 {
-        font-size: 1.35rem;
+        font-size: 1.5rem;
         margin: 0;
         line-height: 1.2;
+        letter-spacing: -0.01em;
       }
 
       .resume-page > section:first-of-type p {
@@ -99,26 +159,60 @@
         font-size: 0.95em;
       }
 
+      .contact-line {
+        color: var(--gray);
+      }
+      .contact-line a {
+        color: inherit;
+        text-decoration: none;
+      }
+
       .card-wrapper {
-        margin-top: 0.35rem;
+        margin-top: 0.5rem;
       }
 
       .card-wrapper h2 {
-        font-size: 1rem;
-        margin: 0.2rem 0 0.15rem;
+        font-size: 0.85rem;
+        margin: 0.4rem 0 0.3rem;
         line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        border-bottom: 1px solid #d4d4d8;
+        padding-bottom: 0.2rem;
+        break-after: avoid;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.5rem;
+        row-gap: 0.15rem;
+        margin: 0.1rem 0;
+      }
+      .skill-row {
+        break-inside: avoid;
+      }
+      .skill-row .skill-name {
+        display: inline;
+      }
+      .skill-row .skill-name::after {
+        content: ' — ';
+        font-weight: 400;
+      }
+      .skill-row .skill-keywords {
+        color: var(--gray);
       }
 
       .card {
         break-inside: auto;
         margin: 0.1rem 0;
         padding: 0;
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.35rem;
       }
 
       .card-header {
         display: block;
         margin-bottom: 0.05rem;
+        break-after: avoid;
       }
 
       .card h3 {
@@ -126,6 +220,7 @@
         margin: 0;
         line-height: 1.2;
         display: inline;
+        break-after: avoid;
       }
 
       .card .role {
@@ -178,6 +273,19 @@
       Developer and Open Source Enthusiast specialising in web and tooling
       development
     </p>
+    <p class="contact-line">
+      <a href="mailto:contact@reaper.is">contact@reaper.is</a>
+      <span class="separator">·</span>
+      <a href="https://reaper.is">reaper.is</a>
+      <span class="separator">·</span>
+      <span>Bangalore, IN</span>
+      <span class="print-only">· +91 98853 17891</span>
+    </p>
+  </section>
+  <hr />
+  <section class="card-wrapper skills">
+    <h2 id="skills">Skills</h2>
+    <div class="skills-grid">${skill_rows}</div>
   </section>
   <hr />
   <section class="card-wrapper side-projects">
