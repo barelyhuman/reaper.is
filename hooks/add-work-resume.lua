@@ -36,15 +36,15 @@ end
 local function card_template(data)
 	return lib.interp(
 		[=[<div class="card">
+<div class="card-header">
 <h3>${name}</h3>
+<div class="role">${role}</div>
+</div>
 <div class="about">
 ${about}
 </div>
-<div class="footer">
-<div class="role">${role}</div>
 <div class="links-group">
 ${links}
-</div>
 </div>
 </div>]=],
 		data
@@ -74,7 +74,7 @@ local side_projects = {
 	},
 	{
 		name = "Goblin",
-		about = "Go allows building beautiful CLI programs and you might be serving to a userbase that may or may not have go lang installed. This is where Goblin comes in. It builds the binary for the user's system on demand. There's some limitations to it but that's the basic concept",
+		about = "Builds Go binaries on demand for users without Go installed",
 	},
 	{
 		name = "CRI",
@@ -149,7 +149,7 @@ local work = {
 	},
 	{
 		name = "RetailIO",
-		about = "Met my first set of mentors here, worked on the UI of 2 products. SuperTax and RetailIO, one with React and one with Angular respectively. The time spent was short due to various unforseen reasons but it was worth it. Made components and a tiny UI library for the above 2 products internally",
+		about = "Built UI for SuperTax (React) and RetailIO (Angular); created shared components and a small internal UI library",
 		role = "Frontend Developer · Jan 2018 - Apr 2018",
 		links = external_link_template({
 			link = "https://retailio.in/",
