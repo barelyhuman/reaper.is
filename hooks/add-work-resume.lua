@@ -33,240 +33,212 @@ ${link}
 	)
 end
 
-local function source_link_template(data)
-	return lib.interp(
-		[=[<a class="link-item" href="${link}">
-<svg
-xmlns="http://www.w3.org/2000/svg"
-class="icon icon-tabler icon-tabler-brand-github"
-width="20"
-height="20"
-viewBox="0 0 24 24"
-stroke-width="2"
-stroke="currentColor"
-fill="none"
-stroke-linecap="round"
-stroke-linejoin="round"
->
-<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-<path
-    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
-></path>
-</svg>
-${repo}
-</a>]=],
-		data
-	)
-end
-
 local function card_template(data)
 	return lib.interp(
 		[=[<div class="card">
+<div class="card-header">
 <h3>${name}</h3>
+<div class="role">${role}</div>
+</div>
 <div class="about">
 ${about}
 </div>
-<div class="footer">
-<div class="role">${role}</div>
 <div class="links-group">
 ${links}
-</div>
 </div>
 </div>]=],
 		data
 	)
 end
 
-local oss_work = {
-	[1] = {},
+local function side_project_template(data)
+	return lib.interp(
+		[=[<div class="card">
+<h3>${name}</h3>
+<div class="about">
+${about}
+</div>
+</div>]=],
+		data
+	)
+end
+
+local function skill_row_template(data)
+	return lib.interp(
+		[=[<div class="skill-row">
+<span class="skill-name">${name}</span>
+<span class="skill-keywords">${keywords}</span>
+</div>]=],
+		data
+	)
+end
+
+local function contribution_template(data)
+	return lib.interp(
+		[=[<div class="contrib-line">
+<span class="contrib-name">${name}</span>
+<span class="contrib-desc">${description}</span>
+</div>]=],
+		data
+	)
+end
+
+local skills = {
+	{
+		name = "Frontend",
+		keywords = "React.js, Angular, Preact, Vue.js, SASS, TypeScript, JavaScript",
+	},
+	{
+		name = "Backend",
+		keywords = "Node.js, Fastify, LoopBack.io, Express, GraphQL, REST APIs, Golang, Microservices",
+	},
+	{
+		name = "Testing & Quality",
+		keywords = "Jest, Vitest, Mocha, Playwright, Unit Testing, Integration Testing, Custom Testing Utilities",
+	},
+	{
+		name = "Security",
+		keywords = "Auth, JWT, OWASP, Auth0, API Security, Opaque Tokens",
+	},
+	{
+		name = "Architecture",
+		keywords = "Microservices, Event-Driven Architecture, Message Queues, Kafka, Caching Strategies",
+	},
+	{
+		name = "DevOps & Monitoring",
+		keywords = "Docker, CI/CD, GitHub Actions, Infrastructure Automation, Grafana, Dynatrace, Azure Monitoring, Build Systems",
+	},
+	{
+		name = "Databases",
+		keywords = "PostgreSQL, MySQL, MongoDB, Redis, Performance Optimization, Sharding, Foreign Data Wrappers",
+	},
+	{
+		name = "Cloud",
+		keywords = "AWS, GCP, Azure",
+	},
+	{
+		name = "Project Management",
+		keywords = "Kanban, JIRA, Code Reviews, Technical Mentoring",
+	},
+}
+
+local side_projects = {
+	{
+		name = "Ping",
+		about = "A non intrusive and simple uptime status check",
+	},
 	{
 		name = "preact-island-plugins",
-		about = [[
-            Bundler plugins to be able to generate server and client code to write preact components as islands or partially hydrated server rendered components
-        ]],
-		role = "Author",
-		links = source_link_template({
-			link = "https://github.com/barelyhuman/preact-island-plugins",
-			repo = "barelyhuman/preact-island-plugins",
-		}),
+		about = "Low Level plugins to help build island based frameworks and build servers for preact",
 	},
 	{
-		name = "preact-native",
-		about = [[
-            An attempt at creating an abstraction layer over the react native bridge to add in support for other
-            web frameworks to be able to make use of the cross platform renderer
-        ]],
-		role = "Author",
-		links = source_link_template({
-			link = "https://github.com/barelyhuman/preact-native",
-			repo = "barelyhuman/preact-native",
-		}),
+		name = "Goblin",
+		about = "Builds Go binaries on demand for users without Go installed",
 	},
 	{
-		name = "goblin.run",
-		about = [[
-            A simple service that allows you to build go lang binaries on the fly for the requested system.
-            Gives CLI authors a easy way to provide their binaries to the end users.
-        ]],
-		role = "Author",
-		links = source_link_template({
-			link = "https://github.com/barelyhuman/goblin",
-			repo = "barelyhuman/goblin",
-		}) .. external_link_template({
-			link = "https://goblin.run",
-		}),
-	},
-	{
-		name = "alvu",
-		about = [[
-            The very static site generator powering this website and the resume. An attempt at building a
-            scriptable static site generator that uses the simplicity of Lua to add programmatic computation
-            at build time
-        ]],
-		role = "Author",
-		links = source_link_template({
-			link = "https://github.com/barelyhuman/alvu",
-			repo = "barelyhuman/alvu",
-		}) .. external_link_template({
-			link = "https://barelyhuman.github.io/alvu",
-		}),
-	},
-	{
-		name = "jotai-form",
-		about = "A derivative of jotai state atoms to make it easier to work with forms",
-		role = "Maintainer",
-		links = source_link_template({
-			link = "https://github.com/jotaijs/jotai-form",
-			repo = "barelyhuman/alvu",
-		}),
-	},
-	{
-		name = "Zustand",
-		about = "A micro state management library for react, also easier to learn when compared to other alternatives",
-		role = "Contributor",
-		links = source_link_template({
-			link = "https://github.com/pmndrs/zustand",
-			repo = "pmndrs/zustand",
-		}),
-	},
-	{
-		name = "Jotai",
-		about = "Atom based state management for vanilla js and react based on treating primitive state as atoms",
-		role = "Contributor",
-		links = source_link_template({
-			link = "https://github.com/pmndrs/jotai",
-			repo = "pmndrs/jotai",
-		}),
-	},
-	{
-		name = "Valtio",
-		about = [[
-            Proxy based state handling for react and vanilla js.
-            Makes state changes more natural as compared to the hooks
-        ]],
-		role = "Contributor",
-		links = source_link_template({
-			link = "https://github.com/pmndrs/valtio",
-			repo = "pmndrs/valtio",
-		}),
-	},
-	{
-		name = "eslint-plugin-valtio",
-		about = [[
-            ESLINT plugin for valtio users to avoid making mistakes when
-            working with proxy and snapshot based state
-        ]],
-		role = "Contributor",
-		links = source_link_template({
-			link = "https://github.com/pmndrs/eslint-plugin-valtio",
-			repo = "pmndrs/eslint-plugin-valtio",
-		}),
+		name = "mark",
+		about = "Quick web markdown editor with settings sync and raw mode support",
 	},
 	{
 		name = "commitlog",
-		about = [[
-           A tool built for programmers who work with more than one language and would
-           prefer a common versioning and changelog generation tooling
-        ]],
-		role = "Author",
-		links = source_link_template({
-			link = "https://github.com/barelyhuman/commitlog",
-			repo = "barelyhuman/commitlog",
-		}),
+		about = "Generate changelogs straight from Git commit history",
+	},
+}
+
+local contributions = {
+	{
+		name = "tRPC",
+		description = "Migration codemods in the upgrade CLI: TypeScript program scanner for import paths, AST walker fixes (3 merged PRs)",
+	},
+	{
+		name = "zustand",
+		description = "Core collaborator on build tooling and ESM/CJS interop fixes across v4 releases",
+	},
+	{
+		name = "jotai",
+		description = "Helped fix dual ESM/CJS package exports as a core collaborator",
+	},
+	{
+		name = "eslint-plugin-valtio",
+		description = "Maintainer: AST rules, performance fixes, and releases (2nd top contributor)",
+	},
+	{
+		name = "jotai-form",
+		description = "Long-time maintainer of form atoms for the jotai ecosystem",
 	},
 }
 
 local work = {
-	[1] = {},
+	{
+		name = "Bruno",
+		about = [[<ul>
+<li>Own the org's AWS infrastructure and SOC2 compliance work</li>
+<li>Self-hosted AWS CI that scales with PR load</li>
+<li>Lead security across the app and infrastructure, including threat surface, access control, and hardening</li>
+<li>Keep CI and test coverage reliable so regressions surface before release</li>
+<li>Tighten the merge-to-production path for consistent feature releases</li>
+</ul>]],
+		role = "Senior Software Developer, May 2026 - Present",
+		links = external_link_template({
+			link = "https://www.usebruno.com/",
+		}),
+	},
+	{
+		name = "Bruno",
+		about = [[<ul>
+<li>Shipped WebSocket support in the OSS desktop app for real-time workflows</li>
+<li>Hardened core product features for reliability under load and edge cases</li>
+<li>Improved UI consistency and release automation across OSS drops</li>
+</ul>]],
+		role = "Senior Software Developer, Oct 2025 - May 2026",
+		links = external_link_template({
+			link = "https://www.usebruno.com/",
+		}),
+	},
+	{
+		name = "Turbot",
+		about = "Worked on modernising the turbot enterprise app and simplifying overall user experience when dealing with cloud governance",
+		role = "Senior Software Architect, May 2025 - Aug 2025",
+		links = "",
+	},
 	{
 		name = "NearForm",
-		about = [[
-            Work with OSS contributions from NearForm to various parts of the Node.js ecosystem
-			Maintaining application at scale 
-			Making sure infrastructure design is optimal and fun to work with
-        ]],
-		role = "Senior Software Developer (Jan 2024 - Present)",
+		about = "Work with OSS contributions from NearForm to various parts of the Node.js ecosystem. Maintain applications at scale and keep infrastructure design optimal",
+		role = "Senior Software Developer, Jan 2024 - May 2025",
 		links = external_link_template({
 			link = "https://www.nearform.com/",
 		}),
 	},
 	{
 		name = "Fountane",
-		about = [[
-            Managing teams, handling guidance,
-            making sure the architecture and automations works and finally, get hands dirty with code.
-        ]],
-		role = "Principal Developer (Nov 2019 - Jan 2024)",
+		about = "Managing teams, handling guidance, making sure the architecture and automations work, and getting hands dirty with code",
+		role = "Principal Developer, Nov 2019 - Jan 2024",
 		links = external_link_template({
 			link = "https://fountane.com",
 		}),
 	},
 	{
 		name = "Valuefy",
-		about = [[
-            Fintech is hard, number crunching, maintaing curation engines and handling wealth management based transactions
-            all with the help of some code and making sure it worked
-        ]],
-		role = "Full Stack Developer (Sep 2018 - Sep 2019)",
+		about = "Fintech is hard, number crunching, maintaining curation engines and handling wealth management based transactions all with the help of some code and making sure it worked",
+		role = "Full Stack Developer, Sep 2018 - Sep 2019",
 		links = external_link_template({
 			link = "https://valuefy.com/",
 		}),
 	},
 	{
 		name = "Cartisan",
-		about = [[
-            Worked with talented individuals on getting the simple car service and invoicing platform for the Indian market.
-            This involved managing sequences of operations and avoiding race conditions, keep data clean, and refactoring some old code
-        ]],
-		role = "Full Stack Developer (Apr 2018 - Sep 2018)",
+		about = "Worked with talented individuals on getting the simple car service and invoicing platform for the Indian market. This involved managing sequences of operations and avoiding race conditions, keep data clean, and refactoring some old code",
+		role = "Full Stack Developer, Apr 2018 - Sep 2018",
 		links = external_link_template({
 			link = "https://wearexenon.com/",
 		}),
 	},
 	{
 		name = "RetailIO",
-		about = [[
-Met my first set of mentors here, worked on the UI of 2 products. SuperTax and RetailIO, one with React and one with Angular respectively.
-The time spent was short due to various unforseen reasons but it was worth it.
-
-Made components and a tiny UI library for the above 2 products internally
-]],
-		role = "Frontend Developer (Apr 2018 - Sep 2018)",
+		about = "Built UI for SuperTax (React) and RetailIO (Angular); created shared components and a small internal UI library",
+		role = "Frontend Developer, Jan 2018 - Apr 2018",
 		links = external_link_template({
 			link = "https://retailio.in/",
-		}),
-	},
-	{
-		name = "HoppApp",
-		about = [[
-Talk about getting lucky before even graduating and working as the Core/Founding frontend engineer for a startup.
-
-Built the Admin portal for a ride sharing app that HoppApp was building, learnt the basics of industrial standards for
-a Senior Developer at Oracle and experience that got me addicted to working with just startups.
-]],
-		role = "Angular Developer (Sep 2016 - May 2017)",
-		links = external_link_template({
-			link = "https://www.hoppapp.com/",
 		}),
 	},
 }
@@ -275,22 +247,31 @@ function Writer(filedata)
 	local source_data = json.decode(filedata)
 
 	local content = source_data.content
-	local oss_cards = ""
+	local side_project_cards = ""
 
-	for k, v in pairs(oss_work) do
-		oss_cards = oss_cards .. card_template(v)
+	for _, project in ipairs(side_projects) do
+		side_project_cards = side_project_cards .. side_project_template(project)
+	end
+
+	local skill_rows = ""
+	for _, skill in ipairs(skills) do
+		skill_rows = skill_rows .. skill_row_template(skill)
+	end
+
+	local contribution_rows = ""
+	for _, entry in ipairs(contributions) do
+		contribution_rows = contribution_rows .. contribution_template(entry)
 	end
 
 	local work_cards = ""
-	for k, v in pairs(work) do
-		work_cards = work_cards .. card_template(v)
+	for _, entry in ipairs(work) do
+		work_cards = work_cards .. card_template(entry)
 	end
 
 	content = lib.interp(content, {
-		oss_cards = oss_cards,
-	})
-
-	content = lib.interp(content, {
+		side_project_cards = side_project_cards,
+		skill_rows = skill_rows,
+		contribution_rows = contribution_rows,
 		work_cards = work_cards,
 	})
 

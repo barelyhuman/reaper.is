@@ -18,7 +18,7 @@
   <div class="flex flex-col gap-2 pl-4 border-l border-light">
       <h4>Goblin</h4>
       <div class="flex flex-col gap-4">
-        <div class="text-gray">Go allows building beautiful CLI programs and you might be serving to a userbase that may or may not have go lang installed. This is where Goblin comes in. It builds the binary for the user's system on demand. There's some limitations to it but that's the basic concept</div>
+        <div class="text-gray">Builds Go binaries on demand for users without Go installed</div>
       </div>
   </div>
   <div class="flex flex-col gap-2 pl-4 border-l border-light">
@@ -131,7 +131,7 @@
         <p class="text-gray">Frontend Developer</p>
         <p class="text-xs text-gray">Jan 2018- Apr 2018</p>
       </div>
-      <div class="mt-6 text-gray">Met my first set of mentors here, worked on the UI of 2 products. SuperTax and RetailIO, one with React and one with Angular respectively. The time spent was short due to various unforseen reasons but it was worth it. Made components and a tiny UI library for the above 2 products internally</div>  
+      <div class="mt-6 text-gray">Built UI for SuperTax (React) and RetailIO (Angular); created shared components and a small internal UI library</div>  
     </div>
 </div>
 
