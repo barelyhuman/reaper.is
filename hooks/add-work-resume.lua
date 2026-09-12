@@ -73,6 +73,16 @@ local function skill_row_template(data)
 	)
 end
 
+local function contribution_template(data)
+	return lib.interp(
+		[=[<div class="contrib-line">
+<span class="contrib-name">${name}</span>
+<span class="contrib-desc">${description}</span>
+</div>]=],
+		data
+	)
+end
+
 local skills = {
 	{
 		name = "Frontend",
@@ -126,8 +136,35 @@ local side_projects = {
 		about = "Builds Go binaries on demand for users without Go installed",
 	},
 	{
-		name = "CRI",
-		about = "Custom Rom Index, a simple straightforward curation of custom roms for various android devices",
+		name = "mark",
+		about = "Quick web markdown editor with settings sync and raw mode support",
+	},
+	{
+		name = "commitlog",
+		about = "Generate changelogs straight from Git commit history",
+	},
+}
+
+local contributions = {
+	{
+		name = "tRPC",
+		description = "Migration codemods in the upgrade CLI: TypeScript program scanner for import paths, AST walker fixes (3 merged PRs)",
+	},
+	{
+		name = "zustand",
+		description = "Core collaborator on build tooling and ESM/CJS interop fixes across v4 releases",
+	},
+	{
+		name = "jotai",
+		description = "Helped fix dual ESM/CJS package exports as a core collaborator",
+	},
+	{
+		name = "eslint-plugin-valtio",
+		description = "Maintainer: AST rules, performance fixes, and releases (2nd top contributor)",
+	},
+	{
+		name = "jotai-form",
+		description = "Long-time maintainer of form atoms for the jotai ecosystem",
 	},
 }
 
@@ -135,13 +172,13 @@ local work = {
 	{
 		name = "Bruno",
 		about = [[<ul>
-<li>Own the org's AWS infrastructure end-to-end, including the SOC2 compliance work that keeps the company audit-ready</li>
-<li>Self-hosted CI on AWS that scales with PR load, so the suite doesn't bottleneck merges or burn Actions minutes</li>
-<li>Lead security across Bruno's app and infrastructure - threat surface, access, and hardening as a continuous practice</li>
-<li>Raised the bar on CI sanity and test coverage so regressions get caught before they ship</li>
-<li>Made feature releases more consistent by tightening the path from merge to production</li>
+<li>Own the org's AWS infrastructure and SOC2 compliance work</li>
+<li>Self-hosted AWS CI that scales with PR load</li>
+<li>Lead security across the app and infrastructure, including threat surface, access control, and hardening</li>
+<li>Keep CI and test coverage reliable so regressions surface before release</li>
+<li>Tighten the merge-to-production path for consistent feature releases</li>
 </ul>]],
-		role = "Senior Software Developer · May 2026 - Present",
+		role = "Senior Software Developer, May 2026 - Present",
 		links = external_link_template({
 			link = "https://www.usebruno.com/",
 		}),
@@ -149,11 +186,11 @@ local work = {
 	{
 		name = "Bruno",
 		about = [[<ul>
-<li>Shipped WebSocket support in the OSS desktop app, unlocking real-time workflows that weren't possible before</li>
-<li>Hardened core product features so everyday usage is more reliable under load and edge cases</li>
-<li>Drove UI consistency and release automations across OSS drops so shipping felt repeatable, not ad-hoc</li>
+<li>Shipped WebSocket support in the OSS desktop app for real-time workflows</li>
+<li>Hardened core product features for reliability under load and edge cases</li>
+<li>Improved UI consistency and release automation across OSS drops</li>
 </ul>]],
-		role = "Senior Software Developer · Oct 2025 - May 2026",
+		role = "Senior Software Developer, Oct 2025 - May 2026",
 		links = external_link_template({
 			link = "https://www.usebruno.com/",
 		}),
@@ -161,29 +198,29 @@ local work = {
 	{
 		name = "Turbot",
 		about = "Worked on modernising the turbot enterprise app and simplifying overall user experience when dealing with cloud governance",
-		role = "Senior Software Architect · May 2025 - Aug 2025",
+		role = "Senior Software Architect, May 2025 - Aug 2025",
 		links = "",
 	},
 	{
 		name = "NearForm",
-		about = "Work with OSS contributions from NearForm to various parts of the Node.js ecosystem. Maintaining application at scale. Making sure infrastructure design is optimal and fun to work with",
-		role = "Senior Software Developer · Jan 2024 - May 2025",
+		about = "Work with OSS contributions from NearForm to various parts of the Node.js ecosystem. Maintain applications at scale and keep infrastructure design optimal",
+		role = "Senior Software Developer, Jan 2024 - May 2025",
 		links = external_link_template({
 			link = "https://www.nearform.com/",
 		}),
 	},
 	{
 		name = "Fountane",
-		about = "Managing teams, handling guidance, making sure the architecture and automations works and finally, get hands dirty with code",
-		role = "Principal Developer · Nov 2019 - Jan 2024",
+		about = "Managing teams, handling guidance, making sure the architecture and automations work, and getting hands dirty with code",
+		role = "Principal Developer, Nov 2019 - Jan 2024",
 		links = external_link_template({
 			link = "https://fountane.com",
 		}),
 	},
 	{
 		name = "Valuefy",
-		about = "Fintech is hard, number crunching, maintaing curation engines and handling wealth management based transactions all with the help of some code and making sure it worked",
-		role = "Full Stack Developer · Sep 2018 - Sep 2019",
+		about = "Fintech is hard, number crunching, maintaining curation engines and handling wealth management based transactions all with the help of some code and making sure it worked",
+		role = "Full Stack Developer, Sep 2018 - Sep 2019",
 		links = external_link_template({
 			link = "https://valuefy.com/",
 		}),
@@ -191,7 +228,7 @@ local work = {
 	{
 		name = "Cartisan",
 		about = "Worked with talented individuals on getting the simple car service and invoicing platform for the Indian market. This involved managing sequences of operations and avoiding race conditions, keep data clean, and refactoring some old code",
-		role = "Full Stack Developer · Apr 2018 - Sep 2018",
+		role = "Full Stack Developer, Apr 2018 - Sep 2018",
 		links = external_link_template({
 			link = "https://wearexenon.com/",
 		}),
@@ -199,7 +236,7 @@ local work = {
 	{
 		name = "RetailIO",
 		about = "Built UI for SuperTax (React) and RetailIO (Angular); created shared components and a small internal UI library",
-		role = "Frontend Developer · Jan 2018 - Apr 2018",
+		role = "Frontend Developer, Jan 2018 - Apr 2018",
 		links = external_link_template({
 			link = "https://retailio.in/",
 		}),
@@ -221,6 +258,11 @@ function Writer(filedata)
 		skill_rows = skill_rows .. skill_row_template(skill)
 	end
 
+	local contribution_rows = ""
+	for _, entry in ipairs(contributions) do
+		contribution_rows = contribution_rows .. contribution_template(entry)
+	end
+
 	local work_cards = ""
 	for _, entry in ipairs(work) do
 		work_cards = work_cards .. card_template(entry)
@@ -229,6 +271,7 @@ function Writer(filedata)
 	content = lib.interp(content, {
 		side_project_cards = side_project_cards,
 		skill_rows = skill_rows,
+		contribution_rows = contribution_rows,
 		work_cards = work_cards,
 	})
 

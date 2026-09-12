@@ -84,6 +84,23 @@
       color: var(--gray);
     }
 
+    .contrib-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+      column-gap: 2rem;
+      row-gap: 0.9rem;
+      margin: 10px 0px;
+    }
+    .contrib-line {
+      break-inside: avoid;
+    }
+    .contrib-line .contrib-name {
+      font-weight: 600;
+    }
+    .contrib-line .contrib-desc {
+      color: var(--gray);
+    }
+
     @media print {
       @page {
         size: portrait;
@@ -136,11 +153,18 @@
         line-height: 1.35 !important;
       }
 
+      .contributions {
+        order: 1;
+      }
       .work {
         order: 2;
       }
       .side-projects {
         order: 3;
+      }
+      .skills {
+        order: 4;
+        break-before: page;
       }
 
       .resume-page > section:first-of-type {
@@ -195,10 +219,31 @@
         display: inline;
       }
       .skill-row .skill-name::after {
-        content: ' — ';
+        content: ': ';
         font-weight: 400;
       }
       .skill-row .skill-keywords {
+        color: var(--gray);
+      }
+
+      .contrib-grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.5rem;
+        row-gap: 0.15rem;
+        margin: 0.1rem 0;
+      }
+      .contrib-line {
+        break-inside: avoid;
+        margin-bottom: 0.15rem;
+      }
+      .contrib-line .contrib-name {
+        font-weight: 600;
+      }
+      .contrib-line .contrib-name::after {
+        content: ': ';
+        font-weight: 400;
+      }
+      .contrib-line .contrib-desc {
         color: var(--gray);
       }
 
@@ -212,6 +257,7 @@
       .card-header {
         display: block;
         margin-bottom: 0.05rem;
+        font-size: 0;
         break-after: avoid;
       }
 
@@ -224,12 +270,12 @@
       }
 
       .card .role {
-        font-size: 0.85em;
+        font-size: 0.85rem;
         display: inline;
       }
 
       .card .role::before {
-        content: ' · ';
+        content: ', ';
       }
 
       .card .about {
@@ -275,11 +321,11 @@
     </p>
     <p class="contact-line">
       <a href="mailto:contact@reaper.is">contact@reaper.is</a>
-      <span class="separator">·</span>
+      <span class="separator">|</span>
       <a href="https://reaper.is">reaper.is</a>
-      <span class="separator">·</span>
+      <span class="separator">|</span>
       <span>Bangalore, IN</span>
-      <span class="print-only">· +91 98853 17891</span>
+      <span class="print-only">| +91 98853 17891</span>
     </p>
   </section>
   <hr />
@@ -291,6 +337,11 @@
   <section class="card-wrapper side-projects">
     <h2 id="side-projects">Side Projects</h2>
     <div>${side_project_cards}</div>
+  </section>
+  <hr />
+  <section class="card-wrapper contributions">
+    <h2 id="open-source">Open Source</h2>
+    <div class="contrib-grid">${contribution_rows}</div>
   </section>
   <hr />
   <section class="card-wrapper work">
