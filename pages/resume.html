@@ -17,6 +17,10 @@
     .card .about {
       color: var(--gray-4);
     }
+    .card .about ul {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
     .card .footer {
       display: flex;
       gap: 10px;
@@ -90,61 +94,15 @@
       development
     </p>
   </section>
-
-  <section>
-    <h3>About</h3>
-    <p>
-      I've been a fullstack developer since 2017. I enjoy building tools,
-      parsers (DSLs) and fixing existing broken codebases. I enjoy the chaos of
-      a codebase for some weird reason
-    </p>
-    <br />
-    <p>
-      Majority of my professional work has been in and around solving web and
-      web architechture problems. This includes building compliant,secure and
-      scalable web apps, setting up automations for various tasks, managing
-      development processes and guiding beginners
-    </p>
-    <br />
-    <p>
-      For specific skills, do refer to the <a href="/skills">Skills</a> page
-    </p>
-  </section>
-  <section>
-    <h2>Online Presence / Contact</h2>
-    <p>
-      <strong>Website</strong>:
-      <a href="https://reaper.is">https://reaper.is</a>
-    </p>
-    <p>
-      <strong>GitHub</strong>:
-      <a href="https://github.com/barelyhuman"> @barelyhuman </a>
-    </p>
-    <p>
-      <strong>E-Mail</strong>:
-      <a href="mailto:contact@reaper.is"> contact@reaper.is </a>
-    </p>
+  <hr />
+  <section class="card-wrapper side-projects">
+    <h2 id="side-projects">Side Projects</h2>
+    <div>${side_project_cards}</div>
   </section>
   <hr />
   <section class="card-wrapper work">
-    <h2 id="professional-exp">Professional Experience</h2>
+    <h2 id="work-experience">Work Experience</h2>
     <div>${work_cards}</div>
-  </section>
-  <hr />
-  <section class="card-wrapper oss">
-    <h2 id="oss-learnings">Open Source Contributions</h2>
-    <div>${oss_cards}</div>
-  </section>
-  <hr />
-  <section class="mt-10">
-    <h2>Ending Note</h2>
-    <p>
-      I am passionate about collaborating with open source companies and
-      contributing to the development of impactful projects. As a minimalist, I
-      believe in creating simple and efficient solutions that solve complex
-      problems. I'm just an email away if you wish to discuss about potential
-      opportunities or collaborations.
-    </p>
   </section>
   <div>
     <div class="p-3 rounded-md border text-gray border-gray note">
