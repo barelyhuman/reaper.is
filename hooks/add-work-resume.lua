@@ -194,9 +194,16 @@ local work = {
 		links = external_link_template({
 			link = "https://www.usebruno.com/",
 		}),
+	},
 	{
 		name = "NearForm",
-		about = "Work with OSS contributions from NearForm to various parts of the Node.js ecosystem. Maintain applications at scale and keep infrastructure design optimal",
+		about = [[<ul>
+<li>Contributed to Mercurius (Fastify's GraphQL plugin) and @fastify/send</li>
+<li>Drove performance initiatives for a high-scale production product</li>
+<li>Improved reliability of Redis and search workflows built on top of it</li>
+<li>Published on NearForm's blog about JavaScript memory management and garbage collection</li>
+<li>Maintained applications at scale and kept infrastructure design practical to work with</li>
+</ul>]],
 		role = "Senior Software Developer, Jan 2024 - May 2025",
 		links = external_link_template({
 			link = "https://www.nearform.com/",
@@ -204,7 +211,14 @@ local work = {
 	},
 	{
 		name = "Fountane",
-		about = "Managing teams, handling guidance, making sure the architecture and automations work, and getting hands dirty with code",
+		about = [[<ul>
+<li>Led engineering for Parkpoolr and Trunkdrop; shipped Impowered and Connecting Outdoors from architecture through launch</li>
+<li>Owned tech stack, architecture, and CI/CD across web and hybrid mobile client projects</li>
+<li>Standardised dev processes and org-wide automation so teams could ship under tight studio deadlines</li>
+<li>Rolled out GraphQL/Hasura and internal DIY frameworks to cut API and scaffolding time on new builds</li>
+<li>Built mobile release tooling: version sync across npm, Gradle, and iOS; Fastlane/Xcode CI on Mac runners</li>
+<li>Mentored developers and maintained multiple production codebases for studio clients</li>
+</ul>]],
 		role = "Principal Developer, Nov 2019 - Jan 2024",
 		links = external_link_template({
 			link = "https://fountane.com",
