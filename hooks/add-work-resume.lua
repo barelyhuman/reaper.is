@@ -194,6 +194,13 @@ local work = {
 		links = external_link_template({
 			link = "https://www.usebruno.com/",
 		}),
+	},
+	{
+		name = "Turbot",
+		about = "Worked on modernising the turbot enterprise app and simplifying overall user experience when dealing with cloud governance",
+		role = "Senior Software Architect, May 2025 - Aug 2025",
+		links = "",
+	},
 	{
 		name = "NearForm",
 		about = "Work with OSS contributions from NearForm to various parts of the Node.js ecosystem. Maintain applications at scale and keep infrastructure design optimal",
