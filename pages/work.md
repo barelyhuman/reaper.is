@@ -98,7 +98,16 @@
         <p class="text-gray">Principal Developer</p>
         <p class="text-xs text-gray">Nov 2019 - Jan 2024</p>
       </div>
-      <div class="mt-6 text-gray">Managing teams, handling guidance, making sure the architecture and automations works and finally, get hands dirty with code</div>  
+      <div class="text-gray">
+        <ul>
+          <li>Led engineering for Parkpoolr and Trunkdrop; shipped Impowered and Connecting Outdoors from architecture through launch</li>
+          <li>Owned tech stack, architecture, and CI/CD across web and hybrid mobile client projects</li>
+          <li>Standardised dev processes and org-wide automation so teams could ship under tight studio deadlines</li>
+          <li>Rolled out GraphQL/Hasura and internal DIY frameworks to cut API and scaffolding time on new builds</li>
+          <li>Built mobile release tooling: version sync across npm, Gradle, and iOS; Fastlane/Xcode CI on Mac runners</li>
+          <li>Mentored developers and maintained multiple production codebases for studio clients</li>
+        </ul>
+      </div>
     </div>
 </div>
 

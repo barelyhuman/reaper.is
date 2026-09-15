@@ -205,7 +205,14 @@ local work = {
 	},
 	{
 		name = "Fountane",
-		about = "Managing teams, handling guidance, making sure the architecture and automations work, and getting hands dirty with code",
+		about = [[<ul>
+<li>Led engineering for Parkpoolr and Trunkdrop; shipped Impowered and Connecting Outdoors from architecture through launch</li>
+<li>Owned tech stack, architecture, and CI/CD across web and hybrid mobile client projects</li>
+<li>Standardised dev processes and org-wide automation so teams could ship under tight studio deadlines</li>
+<li>Rolled out GraphQL/Hasura and internal DIY frameworks to cut API and scaffolding time on new builds</li>
+<li>Built mobile release tooling: version sync across npm, Gradle, and iOS; Fastlane/Xcode CI on Mac runners</li>
+<li>Mentored developers and maintained multiple production codebases for studio clients</li>
+</ul>]],
 		role = "Principal Developer, Nov 2019 - Jan 2024",
 		links = external_link_template({
 			link = "https://fountane.com",
