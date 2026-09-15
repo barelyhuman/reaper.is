@@ -121,8 +121,9 @@
       body {
         display: block !important;
         min-height: auto !important;
-        font-size: 10px !important;
-        line-height: 1.35 !important;
+        max-width: none !important;
+        width: 100% !important;
+        margin: 0 !important;
         background: #fff;
         color: var(--dark);
       }
@@ -130,9 +131,9 @@
       body > div {
         padding: 0 !important;
         gap: 0 !important;
-        max-width: 100% !important;
-        font-size: 10px !important;
-        line-height: 1.35 !important;
+        margin: 0 !important;
+        max-width: none !important;
+        width: 100% !important;
       }
 
       #themer,
@@ -150,6 +151,7 @@
 
       .resume-page {
         gap: 0.35rem !important;
+        font-size: 10pt !important;
         line-height: 1.35 !important;
       }
 
@@ -161,10 +163,11 @@
       }
       .side-projects {
         order: 3;
+        break-before: page;
+        page-break-before: always;
       }
       .skills {
         order: 4;
-        break-before: page;
       }
 
       .resume-page > section:first-of-type {
@@ -248,7 +251,7 @@
       }
 
       .card {
-        break-inside: auto;
+        break-inside: avoid;
         margin: 0.1rem 0;
         padding: 0;
         margin-bottom: 0.35rem;
@@ -304,8 +307,14 @@
         row-gap: 0.1rem;
       }
 
+      .side-projects .card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
       .side-projects .card h3 {
         display: block;
+        break-after: avoid;
       }
 
       .side-projects .card .about {
@@ -351,7 +360,10 @@
   <div>
     <div class="p-3 rounded-md border text-gray border-gray note">
       <h6 class="text-accent">Tip:</h6>
-      <p>This page is print media friendly</p>
+      <p>
+        Print-friendly: use A4, set margins to None (or Minimum) so browser
+        defaults don't stack on the page margins.
+      </p>
     </div>
   </div>
 </main>
