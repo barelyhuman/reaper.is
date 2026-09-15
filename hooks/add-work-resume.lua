@@ -197,7 +197,12 @@ local work = {
 	},
 	{
 		name = "NearForm",
-		about = "Work with OSS contributions from NearForm to various parts of the Node.js ecosystem. Maintain applications at scale and keep infrastructure design optimal",
+		about = [[<ul>
+<li>Contributed OSS back to the Node.js ecosystem as part of NearForm's open source work</li>
+<li>Drove performance initiatives for a high-scale production product</li>
+<li>Improved reliability of Redis and search workflows built on top of it</li>
+<li>Maintained applications at scale and kept infrastructure design practical to work with</li>
+</ul>]],
 		role = "Senior Software Developer, Jan 2024 - May 2025",
 		links = external_link_template({
 			link = "https://www.nearform.com/",

@@ -87,7 +87,14 @@
           <p class="text-gray">Senior Software Developer</p>
           <p class="text-xs text-gray">Jan 2024 - May 2025</p>
         </div>
-        <div class="mt-6 text-gray">Work with OSS contributions from NearForm to various parts of the Node.js ecosystem Maintaining application at scale Making sure infrastructure design is optimal and fun to work with</div>  
+        <div class="text-gray">
+          <ul>
+            <li>Contributed OSS back to the Node.js ecosystem as part of NearForm's open source work</li>
+            <li>Drove performance initiatives for a high-scale production product</li>
+            <li>Improved reliability of Redis and search workflows built on top of it</li>
+            <li>Maintained applications at scale and kept infrastructure design practical to work with</li>
+          </ul>
+        </div>
       </div>
   </div>
 
