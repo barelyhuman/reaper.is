@@ -89,9 +89,10 @@
         </div>
         <div class="text-gray">
           <ul>
-            <li>Contributed OSS back to the Node.js ecosystem as part of NearForm's open source work</li>
+            <li>Contributed to Mercurius (Fastify's GraphQL plugin) and @fastify/send</li>
             <li>Drove performance initiatives for a high-scale production product</li>
             <li>Improved reliability of Redis and search workflows built on top of it</li>
+            <li>Published on NearForm's blog about JavaScript memory management and garbage collection</li>
             <li>Maintained applications at scale and kept infrastructure design practical to work with</li>
           </ul>
         </div>
