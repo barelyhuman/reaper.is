@@ -101,6 +101,10 @@
       color: var(--gray);
     }
 
+    .contrib-link {
+      text-decoration: underline;
+    }
+
     @media print {
       @page {
         size: portrait;
@@ -161,13 +165,8 @@
       .work {
         order: 2;
       }
-      .side-projects {
-        order: 3;
-        break-before: page;
-        page-break-before: always;
-      }
       .skills {
-        order: 4;
+        order: 3;
       }
 
       .resume-page > section:first-of-type {
@@ -250,6 +249,10 @@
         color: var(--gray);
       }
 
+      .contrib-link {
+        text-decoration: underline;
+      }
+
       .card {
         break-inside: avoid;
         margin: 0.1rem 0;
@@ -299,27 +302,6 @@
       .card .about li + li {
         margin-top: 0.05rem;
       }
-
-      .side-projects > div {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 0.75rem;
-        row-gap: 0.1rem;
-      }
-
-      .side-projects .card {
-        break-inside: avoid;
-        page-break-inside: avoid;
-      }
-
-      .side-projects .card h3 {
-        display: block;
-        break-after: avoid;
-      }
-
-      .side-projects .card .about {
-        margin-top: 0;
-      }
     }
   </style>
   <section>
@@ -341,11 +323,6 @@
   <section class="card-wrapper skills">
     <h2 id="skills">Skills</h2>
     <div class="skills-grid">${skill_rows}</div>
-  </section>
-  <hr />
-  <section class="card-wrapper side-projects">
-    <h2 id="side-projects">Side Projects</h2>
-    <div>${side_project_cards}</div>
   </section>
   <hr />
   <section class="card-wrapper contributions">

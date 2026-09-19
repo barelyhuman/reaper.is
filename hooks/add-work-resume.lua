@@ -54,7 +54,7 @@ end
 local function side_project_template(data)
 	return lib.interp(
 		[=[<div class="card">
-<h3>${name}</h3>
+<h3><a href="${link}">${name}</a></h3>
 <div class="about">
 ${about}
 </div>
@@ -76,7 +76,7 @@ end
 local function contribution_template(data)
 	return lib.interp(
 		[=[<div class="contrib-line">
-<span class="contrib-name">${name}</span>
+<span class="contrib-name"><a class="contrib-link" href="${link}">${name}</a></span>
 <span class="contrib-desc">${description}</span>
 </div>]=],
 		data
@@ -122,53 +122,58 @@ local skills = {
 	},
 }
 
-local side_projects = {
-	{
-		name = "Ping",
-		about = "A non intrusive and simple uptime status check",
-	},
-	{
-		name = "preact-island-plugins",
-		about = "Low Level plugins to help build island based frameworks and build servers for preact",
-	},
-	{
-		name = "Goblin",
-		about = "Builds Go binaries on demand for users without Go installed",
-	},
-	{
-		name = "mark",
-		about = "Quick web markdown editor with settings sync and raw mode support",
-	},
-	{
-		name = "commitlog",
-		about = "Generate changelogs straight from Git commit history",
-	},
-}
+local side_projects = {}
 
 local contributions = {
 	{
 		name = "gardener",
 		description = "Cloudflare Workers AI agent that inspects codebases for stale deps, test gaps, doc drift, and anti-patterns; auto-opens PRs with fixes as a composite GitHub Action",
+		link = "https://github.com/barelyhuman/gardener",
+	},
+	{
+		name = "adex",
+		description = "Preact framework built on top of Vite to make it easier to write full stack apps",
+		link = "https://github.com/barelyhuman/adex",
+	},
+	{
+		name = "conflicto",
+		description = "Worktree and diff viewer app with a terminal compatible with AI agents",
+		link = "https://github.com/barelyhuman/conflicto",
+	},
+	{
+		name = "preact-island-plugins",
+		description = "Low level plugins to help build island based frameworks and build servers for preact",
+		link = "https://github.com/barelyhuman/preact-island-plugins",
+	},
+	{
+		name = "Goblin",
+		description = "Builds Go binaries on demand for users without Go installed",
+		link = "https://github.com/barelyhuman/goblin",
 	},
 	{
 		name = "tRPC",
 		description = "Migration codemods in the upgrade CLI: TypeScript program scanner for import paths, AST walker fixes (3 merged PRs)",
+		link = "https://github.com/trpc/trpc",
 	},
 	{
 		name = "zustand",
 		description = "Core collaborator on build tooling and ESM/CJS interop fixes across v4 releases",
+		link = "https://github.com/pmndrs/zustand",
 	},
 	{
 		name = "jotai",
 		description = "Helped fix dual ESM/CJS package exports as a core collaborator",
+		link = "https://github.com/pmndrs/jotai",
 	},
 	{
 		name = "eslint-plugin-valtio",
 		description = "Maintainer: AST rules, performance fixes, and releases (2nd top contributor)",
+		link = "https://github.com/pmndrs/eslint-plugin-valtio",
 	},
 	{
 		name = "jotai-form",
 		description = "Long-time maintainer of form atoms for the jotai ecosystem",
+		link = "https://github.com/jotai-labs/jotai-form",
 	},
 }
 
@@ -217,28 +222,14 @@ local work = {
 		}),
 	},
 	{
-		name = "Valuefy",
-		about = "Fintech is hard, number crunching, maintaining curation engines and handling wealth management based transactions all with the help of some code and making sure it worked",
-		role = "Full Stack Developer, Sep 2018 - Sep 2019",
-		links = external_link_template({
-			link = "https://valuefy.com/",
-		}),
-	},
-	{
-		name = "Cartisan",
-		about = "Worked with talented individuals on getting the simple car service and invoicing platform for the Indian market. This involved managing sequences of operations and avoiding race conditions, keep data clean, and refactoring some old code",
-		role = "Full Stack Developer, Apr 2018 - Sep 2018",
-		links = external_link_template({
-			link = "https://wearexenon.com/",
-		}),
-	},
-	{
-		name = "RetailIO",
-		about = "Built UI for SuperTax (React) and RetailIO (Angular); created shared components and a small internal UI library",
-		role = "Frontend Developer, Jan 2018 - Apr 2018",
-		links = external_link_template({
-			link = "https://retailio.in/",
-		}),
+		name = "Previous Employers",
+		about = [[<ul>
+<li><a href="https://valuefy.com/">Valuefy</a> — Full Stack Developer, Sep 2018 - Sep 2019. Fintech, curation engines, and wealth management transactions</li>
+<li><a href="https://wearexenon.com/">Cartisan</a> — Full Stack Developer, Apr 2018 - Sep 2018. Car service and invoicing platform; managed race conditions and data integrity</li>
+<li><a href="https://retailio.in/">RetailIO</a> — Frontend Developer, Jan 2018 - Apr 2018. Built UI for SuperTax (React) and RetailIO (Angular)</li>
+</ul>]],
+		role = "",
+		links = "",
 	},
 }
 
@@ -246,11 +237,6 @@ function Writer(filedata)
 	local source_data = json.decode(filedata)
 
 	local content = source_data.content
-	local side_project_cards = ""
-
-	for _, project in ipairs(side_projects) do
-		side_project_cards = side_project_cards .. side_project_template(project)
-	end
 
 	local skill_rows = ""
 	for _, skill in ipairs(skills) do
@@ -268,7 +254,6 @@ function Writer(filedata)
 	end
 
 	content = lib.interp(content, {
-		side_project_cards = side_project_cards,
 		skill_rows = skill_rows,
 		contribution_rows = contribution_rows,
 		work_cards = work_cards,
