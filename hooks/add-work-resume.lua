@@ -127,7 +127,7 @@ local side_projects = {}
 local contributions = {
 	{
 		name = "gardener",
-		description = "Cloudflare Workers AI agent that inspects codebases for stale deps, test gaps, doc drift, and anti-patterns; auto-opens PRs with fixes as a composite GitHub Action",
+		description = "Cloudflare Workers agent that audits code for stale deps and anti-patterns; auto-opens fix PRs via GitHub Actions",
 		link = "https://github.com/barelyhuman/gardener",
 	},
 	{
@@ -142,7 +142,7 @@ local contributions = {
 	},
 	{
 		name = "preact-island-plugins",
-		description = "Low level plugins to help build island based frameworks and build servers for preact",
+		description = "Low-level plugins for building island-based Preact frameworks",
 		link = "https://github.com/barelyhuman/preact-island-plugins",
 	},
 	{
@@ -152,7 +152,7 @@ local contributions = {
 	},
 	{
 		name = "tRPC",
-		description = "Migration codemods in the upgrade CLI: TypeScript program scanner for import paths, AST walker fixes (3 merged PRs)",
+		description = "Migration codemods for the upgrade CLI - AST walker fixes (3 merged PRs)",
 		link = "https://github.com/trpc/trpc",
 	},
 	{
@@ -183,9 +183,9 @@ local work = {
 		about = [[<ul>
 <li>Own the org's AWS infrastructure, security posture, and SOC2 compliance work. Locked down threat surface and access controls, then got audit-ready in ~4 months to unblock enterprise deals</li>
 <li>Self-hosted AWS CI that scales with PR load. Cut GitHub runner spend as the team grew by ~10 devs and eliminated queue-based blockers on PRs</li>
-<li>Keep CI and test coverage reliable so regressions surface before release. Raised coverage and caught issues pre-release, driving down rollback and patch-fire-drill frequency</li>
-<li>Shipped WebSocket support in the OSS desktop app for real-time workflows. Unblocked a top community migration barrier; now serving ~2–3% of the 900K+ MAU userbase</li>
-<li>Hardened core product features for reliability under load and edge cases. Improved handling of larger requests where the app historically struggled, lifting customer satisfaction</li>
+<li>Built the pre-release validation pipeline and reliability standards that catch regressions before they ship; went from ~3 patches per release to 0</li>
+<li>Added WebSocket support to the OSS desktop app for real-time workflows, resolving a long-standing community blocker. Now serves ~2–3% of the 900K+ MAU userbase</li>
+<li>Took on load-resilience across the core product; fixed persistent failures from large-request handling, added benchmarking and profiling tooling to catch regressions early, and set standards so those bottlenecks don't resurface</li>
 </ul>]],
 		role = "Staff Software Developer, Oct 2025 - Present",
 		links = external_link_template({
@@ -195,11 +195,10 @@ local work = {
 	{
 		name = "NearForm",
 		about = [[<ul>
-<li>Contributed to Mercurius (Fastify's GraphQL plugin) and @fastify/send</li>
-<li>Drove performance initiatives for a high-scale production product</li>
-<li>Improved reliability of Redis and search workflows built on top of it</li>
+<li>Fixed issues and landed patches in Mercurius (Fastify's GraphQL plugin) and @fastify/send</li>
+<li>Profiled and optimised report generation; parallelised data mapping and aggregation to cut generation time in half</li>
+<li>Designed and architected Redis search caching using hashed indices and lists to eliminate full-database queries; built the caching layer for search workflows</li>
 <li>Published on NearForm's blog about JavaScript memory management and garbage collection</li>
-<li>Maintained applications at scale and kept infrastructure design practical to work with</li>
 </ul>]],
 		role = "Senior Software Developer, Jan 2024 - May 2025",
 		links = external_link_template({
@@ -209,12 +208,12 @@ local work = {
 	{
 		name = "Fountane",
 		about = [[<ul>
-<li>Led engineering for Parkpoolr and Trunkdrop; shipped Impowered and Connecting Outdoors from architecture through launch</li>
+<li>Led Parkpoolr as a founding team member from system design to acquisition by Parking Management Company (PMC)</li>
+<li>Led Trunkdrop and Connecting Outdoors from architecture through launch for Fountane's studio clients</li>
 <li>Owned tech stack, architecture, and CI/CD across web and hybrid mobile client projects</li>
 <li>Standardised dev processes and org-wide automation so teams could ship under tight studio deadlines</li>
 <li>Rolled out GraphQL/Hasura and internal DIY frameworks to cut API and scaffolding time on new builds</li>
 <li>Built mobile release tooling: version sync across npm, Gradle, and iOS; Fastlane/Xcode CI on Mac runners</li>
-<li>Mentored developers and maintained multiple production codebases for studio clients</li>
 </ul>]],
 		role = "Principal Developer, Nov 2019 - Jan 2024",
 		links = external_link_template({
@@ -224,9 +223,9 @@ local work = {
 	{
 		name = "Previous Employers",
 		about = [[<ul>
-<li><a href="https://valuefy.com/">Valuefy</a> — Full Stack Developer, Sep 2018 - Sep 2019. Fintech, curation engines, and wealth management transactions</li>
-<li><a href="https://wearexenon.com/">Cartisan</a> — Full Stack Developer, Apr 2018 - Sep 2018. Car service and invoicing platform; managed race conditions and data integrity</li>
-<li><a href="https://retailio.in/">RetailIO</a> — Frontend Developer, Jan 2018 - Apr 2018. Built UI for SuperTax (React) and RetailIO (Angular)</li>
+<li><a href="https://valuefy.com/">Valuefy</a> - Full Stack Developer, Sep 2018 - Sep 2019. Fintech, curation engines, and wealth management transactions</li>
+<li><a href="https://wearexenon.com/">Cartisan</a> - Full Stack Developer, Apr 2018 - Sep 2018. Car service and invoicing platform; managed race conditions and data integrity</li>
+<li><a href="https://retailio.in/">RetailIO</a> - Frontend Developer, Jan 2018 - Apr 2018. Built UI for SuperTax (React) and RetailIO (Angular)</li>
 </ul>]],
 		role = "",
 		links = "",
