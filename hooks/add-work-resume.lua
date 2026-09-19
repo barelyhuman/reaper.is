@@ -147,6 +147,10 @@ local side_projects = {
 
 local contributions = {
 	{
+		name = "gardener",
+		description = "Cloudflare Workers AI agent that inspects codebases for stale deps, test gaps, doc drift, and anti-patterns; auto-opens PRs with fixes as a composite GitHub Action",
+	},
+	{
 		name = "tRPC",
 		description = "Migration codemods in the upgrade CLI: TypeScript program scanner for import paths, AST walker fixes (3 merged PRs)",
 	},
@@ -172,25 +176,13 @@ local work = {
 	{
 		name = "Bruno",
 		about = [[<ul>
-<li>Own the org's AWS infrastructure and SOC2 compliance work</li>
-<li>Self-hosted AWS CI that scales with PR load</li>
-<li>Lead security across the app and infrastructure, including threat surface, access control, and hardening</li>
-<li>Keep CI and test coverage reliable so regressions surface before release</li>
-<li>Tighten the merge-to-production path for consistent feature releases</li>
+<li>Own the org's AWS infrastructure, security posture, and SOC2 compliance work. Locked down threat surface and access controls, then got audit-ready in ~4 months to unblock enterprise deals</li>
+<li>Self-hosted AWS CI that scales with PR load. Cut GitHub runner spend as the team grew by ~10 devs and eliminated queue-based blockers on PRs</li>
+<li>Keep CI and test coverage reliable so regressions surface before release. Raised coverage and caught issues pre-release, driving down rollback and patch-fire-drill frequency</li>
+<li>Shipped WebSocket support in the OSS desktop app for real-time workflows. Unblocked a top community migration barrier; now serving ~2–3% of the 900K+ MAU userbase</li>
+<li>Hardened core product features for reliability under load and edge cases. Improved handling of larger requests where the app historically struggled, lifting customer satisfaction</li>
 </ul>]],
-		role = "Staff Software Developer, May 2026 - Present",
-		links = external_link_template({
-			link = "https://www.usebruno.com/",
-		}),
-	},
-	{
-		name = "Bruno",
-		about = [[<ul>
-<li>Shipped WebSocket support in the OSS desktop app for real-time workflows</li>
-<li>Hardened core product features for reliability under load and edge cases</li>
-<li>Improved UI consistency and release automation across OSS drops</li>
-</ul>]],
-		role = "Senior Software Developer, Oct 2025 - May 2026",
+		role = "Staff Software Developer, Oct 2025 - Present",
 		links = external_link_template({
 			link = "https://www.usebruno.com/",
 		}),
